@@ -24,7 +24,7 @@
                                     </a>
                                     <div class="link-list-wrapper collapse" id="menu-principale">
                                         <ul class="link-list">
-                                            {{--  
+                                            {{--
                                                 @each('pub_theme::layouts.partials.slim-header-menu-item', $bootstrapItalia->menu()['slim-header-menu'], 'item')
                                             --}}
                                         </ul>
@@ -32,7 +32,7 @@
                                 </nav>
                             </div>
                             <div class="header-slim-right-zone">
-                                
+
                                 <div class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
                                         <span>ITA</span>
@@ -53,7 +53,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 @if (config('bootstrap-italia.auth'))
                                 <div class="it-access-top-wrapper">
                                     @guest
@@ -158,7 +158,7 @@
                                     </div>
                                     <div class="menu-wrapper">
                                         <ul class="navbar-nav">
-                                            {{--  
+                                            {{--
                                                 @each('pub_theme::layouts.partials.header-menu-item', $bootstrapItalia->menu()['header-menu'], 'item')
                                             --}}
                                         </ul>
@@ -207,7 +207,7 @@
                 </section>
                 <section>
                     <div class="row">
-                        {{--  
+                        {{--
                             @each('pub_theme::layouts.partials.footer-menu-item', $bootstrapItalia->menu()['footer-menu'], 'item')
                         --}}
                     </div>
@@ -258,7 +258,7 @@
             <div class="container">
                 <h3 class="sr-only">{{ trans('pub_theme::bootstrap-italia.useful_links') }}</h3>
                 <ul class="it-footer-small-prints-list list-inline mb-0 d-flex flex-column flex-md-row">
-                    {{--  
+                    {{--
                         @each('pub_theme::layouts.partials.footer-bar-item', $bootstrapItalia->menu()['footer-bar'], 'item')
                         --}}
                 </ul>
