@@ -12,7 +12,7 @@
                     @foreach ($item['dropdown'] as $subitem)
                         @if (is_array($subitem))
                             <li><a class="list-item"
-                                   href="{{ $subitem['href'] }}"
+                                   href="{{-- $subitem['href'] --}}"
                                    @if (isset($subitem['target'])) target="{{ $subitem['target'] }}" @endif
                                 ><span>{{ $subitem['text'] }}</span></a></li>
                         @elseif ($subitem === '-')
@@ -45,7 +45,7 @@
                                 @if (is_array($subitem))
                                     <li>
                                         <a class="list-item"
-                                           href="{{ $subitem['href'] }}"
+                                           href="{{-- $subitem['href'] --}}"
                                            @if (isset($subitem['target'])) target="{{ $subitem['target'] }}" @endif
                                         ><span>{{ $subitem['text'] }}</span></a>
                                     </li>
@@ -66,7 +66,7 @@
     </li>
 @else
     <li class="nav-item">
-        <a class="nav-link {{ $item['active'] ? 'active' : '' }}"
+        <a class="nav-link {{-- $item['active'] ? 'active' : '' --}}"
                             href="{{ $item['url'] }}"
                             @if (isset($item['target'])) target="{{ $item['target'] }}" @endif
         ><span>{{ $item['text'] }}</span>
