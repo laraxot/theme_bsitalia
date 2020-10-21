@@ -27,6 +27,10 @@
                                             {{--
                                                 @each('pub_theme::layouts.partials.slim-header-menu-item', $bootstrapItalia->menu()['slim-header-menu'], 'item')
                                             --}}
+                                            @php
+                                               // dddx(config('bootstrap-italia.menu.slim-header'));
+                                            @endphp
+                                            @each('pub_theme::layouts.partials.slim-header-menu-item', config('bootstrap-italia.menu.slim-header'), 'item')
                                         </ul>
                                     </div>
                                 </nav>
@@ -161,6 +165,7 @@
                                             {{--
                                                 @each('pub_theme::layouts.partials.header-menu-item', $bootstrapItalia->menu()['header-menu'], 'item')
                                             --}}
+                                            @each('pub_theme::layouts.partials.header-menu-item',  config('bootstrap-italia.menu.header'), 'item')
                                         </ul>
                                     </div>
 
@@ -210,6 +215,8 @@
                         {{--
                             @each('pub_theme::layouts.partials.footer-menu-item', $bootstrapItalia->menu()['footer-menu'], 'item')
                         --}}
+                        @each('pub_theme::layouts.partials.footer-menu-item', config('bootstrap-italia.menu.footer'), 'item')
+
                     </div>
                 </section>
                 @if (config('bootstrap-italia.address') || config('bootstrap-italia.socials') || config('bootstrap-italia.routes.newsletter'))
@@ -261,6 +268,8 @@
                     {{--
                         @each('pub_theme::layouts.partials.footer-bar-item', $bootstrapItalia->menu()['footer-bar'], 'item')
                         --}}
+                        @each('pub_theme::layouts.partials.footer-bar-item', config('bootstrap-italia.menu.footer-bar'), 'item')
+
                 </ul>
             </div>
         </div>
