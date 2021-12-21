@@ -9,7 +9,7 @@
             @else
                 <li class="page-item">
                     <a class="page-link" href="{{ $paginator->previousPageUrl() }}">
-                        <svg class="icon icon-primary"><use xlink:href="{{ asset('vendor/bootstrap-italia/dist/svg/sprite.svg#it-chevron-left') }}"></use></svg>
+                        <svg class="icon icon-primary"><use xlink:href="{{ Theme::asset('vendor/bootstrap-italia/dist/svg/sprite.svg#it-chevron-left') }}"></use></svg>
                         <span class="sr-only">@lang('pagination.previous')</span>
                     </a>
                 </li>
@@ -49,7 +49,7 @@
             @if ($paginator->hasMorePages())
                 <li class="page-item">
                     <a class="page-link" href="{{ $paginator->nextPageUrl() }}">
-                        <svg class="icon icon-primary"><use xlink:href="{{ asset('vendor/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right') }}"></use></svg>
+                        <svg class="icon icon-primary"><use xlink:href="{{ Theme::asset('vendor/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right') }}"></use></svg>
                         <span class="sr-only">@lang('pagination.next')</span>
                     </a>
                 </li>

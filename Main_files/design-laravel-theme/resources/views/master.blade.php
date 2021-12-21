@@ -10,11 +10,11 @@
         @yield('title_postfix', config('bootstrap-italia.title_postfix', ''))</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{{ asset('vendor/bootstrap-italia/dist/css/bootstrap-italia.min.css') }}" rel="stylesheet">
+    <link href="{{ Theme::asset('vendor/bootstrap-italia/dist/css/bootstrap-italia.min.css') }}" rel="stylesheet">
 
     @yield('bootstrapitalia_css')
 
-    <script>window.__PUBLIC_PATH__ = '{{ asset('vendor/bootstrap-italia/dist/fonts') }}'</script>
+    <script>window.__PUBLIC_PATH__ = '{{ Theme::asset('vendor/bootstrap-italia/dist/fonts') }}'</script>
 </head>
 <body>
 @yield('body')
