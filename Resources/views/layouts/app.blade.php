@@ -14,7 +14,9 @@
     <div class="container-fluid">
         @yield('content')
     </div>
+
     <!-- End Body -->
+     @stack('modals')
    @include('pub_theme::layouts.partials.footer')
    @include('pub_theme::layouts.partials.scripts')
 
