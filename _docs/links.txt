@@ -11,6 +11,7 @@ https://www.npmjs.com/package/bootstrap-italia
 https://github.com/italia/bootstrap-italia
 
 
+<<<<<<< HEAD
 https://italia.github.io/bootstrap-italia/docs/progetti/  componenti
 
 
@@ -19,3 +20,7 @@ https://italia.github.io/bootstrap-italia/docs/esempi/
 https://github.com/italia/bootstrap-italia-playground
 
 https://github.com/italia/design-laravel-theme/
+=======
+
+https://italia.github.io/bootstrap-italia/docs/esempi/
+>>>>>>> 40a2794ae0487f6b8e59d5ac1819b68c59992505
