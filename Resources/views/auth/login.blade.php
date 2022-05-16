@@ -1,3 +1,9 @@
+@php
+//NOTA BENE, ESEMPIO PAGINA DI LOGIN QUI
+//https://docs.italia.it/accounts/login/
+@endphp
+
+
 <x-guest-layout>
     <x-authentication.card>
         <x-slot name="logo">
