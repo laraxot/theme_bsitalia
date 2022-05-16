@@ -11,7 +11,7 @@
                                     <a class="it-opener d-lg-none" data-toggle="collapse" href="#menu-principale" role="button" aria-expanded="false" aria-controls="menu-principale">
                                         <span>{!! config('bootstrap-italia.owner.description') !!}</span>
                                         <svg class="icon">
-                                            <use xlink:href="{{ Theme::asset('vendor/bootstrap-italia/dist/svg/sprite.svg#it-expand') }}"></use>
+                                            <use xlink:href="{{ Theme::asset('pub_theme::dist/svg/sprite.svg') }}#it-expand"></use>
                                         </svg>
                                     </a>
                                     <div class="link-list-wrapper collapse" id="menu-principale">
@@ -33,7 +33,7 @@
                                     <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
                                         <span>ITA</span>
                                         <svg class="icon d-none d-lg-block">
-                                            <use xlink:href="{{ Theme::asset('vendor/bootstrap-italia/dist/svg/sprite.svg#it-expand') }}"></use>
+                                            <use xlink:href="{{ Theme::asset('pub_theme::dist/svg/sprite.svg') }}#it-expand"></use>
                                         </svg>
                                     </a>
                                     <div class="dropdown-menu">
@@ -98,7 +98,7 @@
                                         @if (config('bootstrap-italia.logo'))
                                             @if (config('bootstrap-italia.logo.type') === 'icon')
                                                 <svg class="icon">
-                                                    <use xlink:href="{{ Theme::asset('vendor/bootstrap-italia/dist/svg/sprite.svg#it-') }}{{ config('bootstrap-italia.logo.icon') }}"></use>
+                                                    <use xlink:href="{{ Theme::asset('pub_theme::dist/svg/sprite.svg') }}#it-{{ config('bootstrap-italia.logo.icon') }}"></use>
                                                 </svg>
                                             @else
                                                 <img alt="logo" class="icon" src="{{ config('bootstrap-italia.logo.url') }}">
@@ -125,7 +125,7 @@
                                             <span class="d-none d-md-block">{{ trans('pub_theme::bootstrap-italia.search') }}</span>
                                             <a class="search-link rounded-icon" href="{{ (config('bootstrap-italia.routes.search.type') === 'route') ? route(config('bootstrap-italia.routes.search.route')) : url(config('bootstrap-italia.routes.search.url')) }}" aria-label="{{ trans('pub_theme::bootstrap-italia.search') }}">
                                                 <svg class="icon">
-                                                    <use xlink:href="{{ Theme::asset('vendor/bootstrap-italia/dist/svg/sprite.svg#it-search') }}"></use>
+                                                    <use xlink:href="{{ Theme::asset('pub_theme::dist/svg/sprite.svg') }}#it-search"></use>
                                                 </svg>
                                             </a>
                                         </div>
@@ -144,7 +144,7 @@
                             <nav class="navbar navbar-expand-lg has-megamenu">
                                 <button class="custom-navbar-toggler" type="button" aria-controls="nav10" aria-expanded="false" aria-label="{{ trans('pub_theme::bootstrap-italia.toggle_navigation') }}" data-target="#nav10">
                                     <svg class="icon">
-                                        <use xlink:href="{{ Theme::asset('vendor/bootstrap-italia/dist/svg/sprite.svg#it-burger') }}"></use>
+                                        <use xlink:href="{{ Theme::asset('pub_theme::dist/svg/sprite.svg') }}#it-burger"></use>
                                     </svg>
                                 </button>
                                 <div class="navbar-collapsable" id="nav10">

@@ -10,7 +10,7 @@
                                     @if (config('bootstrap-italia.logo'))
                                         @if (config('bootstrap-italia.logo.type') === 'icon')
                                             <svg class="icon">
-                                                <use xlink:href="{{ Theme::asset('vendor/bootstrap-italia/dist/svg/sprite.svg#it-') }}{{ config('bootstrap-italia.logo.icon') }}"></use>
+                                                <use xlink:href="{{ Theme::asset('pub_theme::dist/svg/sprite.svg') }}#it-{{ config('bootstrap-italia.logo.icon') }}"></use>
                                             </svg>
                                         @else
                                             <img alt="logo" class="icon" src="{{ config('bootstrap-italia.logo.url') }}">
@@ -91,7 +91,7 @@
     </footer>
     <!-- End Footer -->
     <a href="#" aria-hidden="true" data-attribute="back-to-top" class="back-to-top" id="example">
-        <svg class="icon icon-light"><use xlink:href="{{ Theme::asset('vendor/bootstrap-italia/dist/svg/sprite.svg#it-arrow-up') }}"></use></svg>
+        <svg class="icon icon-light"><use xlink:href="{{ Theme::asset('pub_theme::dist/svg/sprite.svg') }}#it-arrow-up"></use></svg>
     </a>
     <div class="cookiebar">
         <p>{!! trans('pub_theme::bootstrap-italia.cookiebar.message') !!}</p>

@@ -3,7 +3,7 @@
         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
             <span>{{ $item['text'] }}</span>
             <svg class="icon icon-xs">
-                <use xlink:href="{{ Theme::asset('vendor/bootstrap-italia/dist/svg/sprite.svg#it-expand') }}"></use>
+                <use xlink:href="{{ Theme::asset('pub_theme::dist/svg/sprite.svg') }}#it-expand"></use>
             </svg>
         </a>
         <div class="dropdown-menu">
@@ -32,7 +32,7 @@
         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
             <span>{{ $item['text'] }}</span>
             <svg class="icon icon-xs">
-                <use xlink:href="{{ Theme::asset('vendor/bootstrap-italia/dist/svg/sprite.svg#it-expand') }}"></use>
+                <use xlink:href="{{ Theme::asset('pub_theme::dist/svg/sprite.svg') }}#it-expand"></use>
             </svg>
         </a>
         <div class="dropdown-menu">
