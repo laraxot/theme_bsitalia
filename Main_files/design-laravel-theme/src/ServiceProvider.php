@@ -1,23 +1,22 @@
 <?php
 
+declare(strict_types=1);
+
 namespace italia\DesignLaravelTheme;
 
-use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\Config\Repository;
-use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Contracts\Container\Container;
-use Illuminate\Pagination\Paginator;
+use Illuminate\Contracts\Events\Dispatcher;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 use italia\DesignLaravelTheme\Console\BootstrapItaliaAuthCommand;
-use italia\DesignLaravelTheme\Events\BuildingMenu;
 use italia\DesignLaravelTheme\Console\BootstrapItaliaMakeCommand;
 use italia\DesignLaravelTheme\Console\MakeBootstrapItaliaCommand;
-use Illuminate\Support\ServiceProvider as BaseServiceProvider;
+use italia\DesignLaravelTheme\Events\BuildingMenu;
 use italia\DesignLaravelTheme\Http\ViewComposers\BootstrapItaliaComposer;
 
-class ServiceProvider extends BaseServiceProvider
-{
-    public function register()
-    {
+class ServiceProvider extends BaseServiceProvider {
+    public function register() {
         $this->app->singleton(BootstrapItalia::class, function (Container $app) {
             return new BootstrapItalia(
                 $app['config']['bootstrap-italia.filters'],
@@ -47,8 +46,7 @@ class ServiceProvider extends BaseServiceProvider
         static::registerMenu($events, $config);
     }
 
-    private function loadViews()
-    {
+    private function loadViews() {
         $viewsPath = $this->packagePath('resources/views');
 
         $this->loadViewsFrom($viewsPath, 'bootstrap-italia');
@@ -58,8 +56,7 @@ class ServiceProvider extends BaseServiceProvider
         ], 'views');
     }
 
-    private function loadTranslations()
-    {
+    private function loadTranslations() {
         $translationsPath = $this->packagePath('resources/lang');
 
         $this->loadTranslationsFrom($translationsPath, 'bootstrap-italia');
@@ -69,8 +66,7 @@ class ServiceProvider extends BaseServiceProvider
         ], 'translations');
     }
 
-    private function publishConfig()
-    {
+    private function publishConfig() {
         $configPath = $this->packagePath('config/bootstrap-italia.php');
 
         $this->publishes([
@@ -80,20 +76,17 @@ class ServiceProvider extends BaseServiceProvider
         $this->mergeConfigFrom($configPath, 'bootstrap-italia');
     }
 
-    private function publishAssets()
-    {
+    private function publishAssets() {
         $this->publishes([
             $this->packagePath('resources/assets') => public_path('vendor/bootstrap-italia'),
         ], 'assets');
     }
 
-    private function packagePath($path)
-    {
+    private function packagePath($path) {
         return __DIR__."/../$path";
     }
 
-    private function registerCommands()
-    {
+    private function registerCommands() {
         // Laravel >=5.2 only
         if (class_exists('Illuminate\\Auth\\Console\\MakeAuthCommand')) {
             $this->commands(MakeBootstrapItaliaCommand::class);
@@ -104,13 +97,11 @@ class ServiceProvider extends BaseServiceProvider
         }
     }
 
-    private function registerViewComposers(Factory $view)
-    {
+    private function registerViewComposers(Factory $view) {
         $view->composer('bootstrap-italia::page', BootstrapItaliaComposer::class);
     }
 
-    public static function registerMenu(Dispatcher $events, Repository $config)
-    {
+    public static function registerMenu(Dispatcher $events, Repository $config) {
         $events->listen(BuildingMenu::class, function (BuildingMenu $event) use ($config) {
             $menu = $config->get('bootstrap-italia.menu');
             call_user_func_array([$event->menu, 'add_slim_header'], $menu['slim-header']);
