@@ -1,11 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace italia\DesignLaravelTheme\Console;
 
 use Illuminate\Auth\Console\MakeAuthCommand;
 
-class MakeBootstrapItaliaCommand extends MakeAuthCommand
-{
+class MakeBootstrapItaliaCommand extends MakeAuthCommand {
     protected $signature = 'make:bootstrapitalia {--views : Only scaffold the authentication views}{--force : Overwrite existing views by default}';
 
     protected $description = 'Scaffold basic BootstrapItalia login and registration views and routes';
@@ -17,19 +18,17 @@ class MakeBootstrapItaliaCommand extends MakeAuthCommand
         'auth/passwords/email.stub'            => 'auth/passwords/email.blade.php',
         'auth/passwords/reset.stub'            => 'auth/passwords/reset.blade.php',
         */
-        'home.stub'                            => 'home.blade.php',
-        'vendor/pagination/bootstrap-4.stub'   => 'vendor/pagination/bootstrap-4.blade.php',
+        'home.stub' => 'home.blade.php',
+        'vendor/pagination/bootstrap-4.stub' => 'vendor/pagination/bootstrap-4.blade.php',
     ];
 
-    public function handle()
-    {
+    public function handle() {
         parent::handle();
 
         $this->info('Bootstrap-italia scaffolding generated successfully.');
     }
 
-    protected function createDirectories()
-    {
+    protected function createDirectories() {
         parent::createDirectories();
 
         if (! is_dir($directory = resource_path('views/vendor/pagination'))) {
@@ -37,8 +36,7 @@ class MakeBootstrapItaliaCommand extends MakeAuthCommand
         }
     }
 
-    protected function exportViews()
-    {
+    protected function exportViews() {
         parent::exportViews();
 
         foreach ($this->bootstrapItaliaViews as $key => $value) {

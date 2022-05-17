@@ -1,7 +1,8 @@
 <?php
 
-return [
+declare(strict_types=1);
 
+return [
     /*
     |--------------------------------------------------------------------------
     | Title
@@ -32,7 +33,6 @@ return [
     |
     |--------------------------------------------------------------------------
     */
-
 
     'logo' => [
         'type' => 'icon',
@@ -85,7 +85,6 @@ return [
     */
 
     'auth' => [
-
         'login' => [
             'type' => 'route',
             'route' => 'login',
@@ -96,9 +95,7 @@ return [
             'route' => 'logout',
             'method' => 'post',
         ],
-
     ],
-
 
     /*
     |--------------------------------------------------------------------------
@@ -112,7 +109,6 @@ return [
     */
 
     'routes' => [
-
         'home' => [
             'type' => 'url',
             'url' => '#',
@@ -169,7 +165,6 @@ return [
         ],
     ],
 
-
     /*
     |--------------------------------------------------------------------------
     | Menu Items
@@ -184,7 +179,7 @@ return [
     | Each menu item should have a text and a URL. A string instead of an array
     | represents a header. The 'can' is a filter on Laravel's built in Gate
     | functionality.
-    | 
+    |
     | Address and contacts-links can be set to false or null.
     |
     | See details in the readme for configuring dropdowns and megamenus.
@@ -242,7 +237,7 @@ return [
                             'text' => 'Link b',
                         ],
                     ],
-                ]
+                ],
             ],
             [
                 'text' => 'Dropdown',
@@ -258,7 +253,7 @@ return [
                         'url' => '/about',
                         'text' => 'About',
                     ],
-                ]
+                ],
             ],
         ],
         'footer' => [
@@ -302,7 +297,7 @@ return [
                 'link' => '#',
                 'text' => 'Mappa del sito',
             ],
-        ]
+        ],
     ],
 
     'address' => '<strong>Comune di Lorem Ipsum</strong><br> Via Roma 0 - 00000 Lorem Ipsum Codice fiscale / P. IVA: 000000000',
@@ -337,5 +332,4 @@ return [
         italia\DesignLaravelTheme\Menu\Filters\ActiveFilter::class,
         italia\DesignLaravelTheme\Menu\Filters\GateFilter::class,
     ],
-
 ];

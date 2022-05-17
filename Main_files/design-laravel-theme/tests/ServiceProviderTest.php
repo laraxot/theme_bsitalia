@@ -1,22 +1,22 @@
 <?php
 
+declare(strict_types=1);
+
 use Illuminate\Config\Repository;
 use Illuminate\Events\Dispatcher;
 use italia\DesignLaravelTheme\Events\BuildingMenu;
 use italia\DesignLaravelTheme\ServiceProvider;
 
-class ServiceProviderTest extends TestCase
-{
-    public function testRegisterMenu()
-    {
+class ServiceProviderTest extends TestCase {
+    public function testRegisterMenu() {
         $events = new Dispatcher();
         $config = new Repository(
             ['bootstrap-italia.menu' => [
-                    'slim-header' => ['slim_header_item'],
-                    'header' => ['header_item'],
-                    'footer' => ['footer_item'],
-                    'footer-bar' => ['footer_bar_item'],
-                ],
+                'slim-header' => ['slim_header_item'],
+                'header' => ['header_item'],
+                'footer' => ['footer_item'],
+                'footer-bar' => ['footer_bar_item'],
+            ],
             ]
         );
 
