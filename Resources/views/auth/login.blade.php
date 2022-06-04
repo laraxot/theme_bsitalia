@@ -43,9 +43,19 @@
 
                 <x-input.group label="Password" type="password" name="password" colSize="4"></x-input.group>
 
-                <div class="form-group">
+                {{-- <div class="form-group">
                     <div class="form-check">
                         <x-forms.inputs.checkbox id="remember_me" name="remember" />
+
+                        <label class="form-check-label" for="remember">
+                            {{ __('Remember Me') }}
+                        </label>
+                    </div>
+                </div> --}}
+
+                <div class="form-group">
+                    <div class="form-check">
+                        <x-theme::checkbox id="remember_me" name="remember" />
 
                         <label class="form-check-label" for="remember">
                             {{ __('Remember Me') }}
