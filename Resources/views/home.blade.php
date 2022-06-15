@@ -5,7 +5,18 @@
 @section('content')
     <div class="container mt-5">
         <div class="row">
+            <div class="col-12 mt-4 mb-4">
+                <div class="d-sm-flex justify-content-between align-items-center">
+                    <h5 class="mb-md-0">
+                        Clips
+                    </h5>
+                </div>
+            </div>
+
             @foreach ($_theme->getClipsDomain() as $media)
+                @php
+                    //dddx([$media, $media->video_url]);
+                @endphp
                 <div class="col-sm-6 col-lg-4">
                     <!-- Video START -->
                     <div class="card position-relative h-100">
@@ -16,7 +27,7 @@
                                 <div class="player-wrapper card-img-top overflow-hidden">
                                     <video class="player-html" controls crossorigin="anonymous"
                                         poster="{{ $media->poster_path }}">
-                                        <source src="{{ $media->file_name }}" type="video/mp4">
+                                        <source src="{{ $media->video_url }}" type="video/mp4">
                                     </video>
                                 </div>
                                 <!-- HTML video END -->
