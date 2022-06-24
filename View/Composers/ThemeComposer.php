@@ -15,6 +15,7 @@ use Modules\Media\Models\SpatieImage;
 use Modules\Mediamonitor\Models\Channel;
 use Modules\Mediamonitor\Models\Media;
 use Modules\Mediamonitor\Models\Ner;
+use Modules\Mediamonitor\Models\Press;
 use Modules\Mediamonitor\Models\Sentence;
 use Modules\Mediamonitor\Services\MediaService;
 use Modules\Xot\Services\FileService;
@@ -64,7 +65,8 @@ class ThemeComposer extends XotBaseComposer {
     }
 
     public function lastMedias() {
-        $last_videos = Media::all()->take(-10);
+        // $last_videos = Media::all()->take(-10);
+        $last_videos = Press::all()->take(-10);
 
         return $last_videos;
     }
