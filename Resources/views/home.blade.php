@@ -1,6 +1,16 @@
 @php
-//dddx($_theme->getClipsDomain());
+//dddx($_theme->lastSitePresses());
+
+//*
+dddx(
+    xotModel('press')
+        ::withAnyTags(['channel_one'], 'target')
+        ->get(),
+);
+/*/
+
 @endphp
+?>
 @extends('pub_theme::layouts.app')
 @section('content')
     <div class="container mt-5">
@@ -13,7 +23,7 @@
                 </div>
             </div>
 
-            @foreach ($_theme->getClipsDomain() as $media)
+            @foreach ($_theme->lastSitePresses() as $media)
                 @php
                     //dddx([$media, $media->video_url]);
                 @endphp

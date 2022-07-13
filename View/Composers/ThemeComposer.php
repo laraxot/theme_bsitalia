@@ -184,6 +184,8 @@ class ThemeComposer extends XotBaseComposer {
         return $rows;
     }
 
+    // forse da cancellare o spostare in mediamonitor
+    /*
     public function getClipsDomain() {
         $domain = getServerName();
         $clips = SpatieImage::withAnyTags([$domain], 'domains')
@@ -191,4 +193,5 @@ class ThemeComposer extends XotBaseComposer {
 
         return $clips;
     }
+    */
 }
