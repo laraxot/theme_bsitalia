@@ -141,57 +141,5 @@ class ThemeComposer extends XotBaseComposer {
         return $subtitles;
     }
 
-    public function myClippings(): Collection {
-        $rows = SpatieImage::where('collection_name', 'clips')
-            ->where('user_id', Auth::id())
-            ->get();
-
-        return $rows;
-    }
-
-    public function myClippingsNoMerge(): Collection {
-        $rows = SpatieImage::where('collection_name', 'clips')
-            ->where('user_id', Auth::id())
-            ->get()
-            ->filter(function ($item) {
-                if (! Arr::exists($item->custom_properties, 'extra')) {
-                    // dddx($item->custom_properties);
-                    return $item;
-                }
-            });
-
-        return $rows;
-    }
-
-    public function myClippingsMerge() {
-        $rows = SpatieImage::where('collection_name', 'clips')
-        ->where('user_id', Auth::id())
-        ->get()->filter(function ($item) {
-            if (Arr::exists($item->custom_properties, 'extra')) {
-                // dddx($item->custom_properties);
-                return $item;
-            }
-        });
-
-        return $rows;
-    }
-
-    public function mySnaps(): Collection {
-        $rows = SpatieImage::where('collection_name', 'snaps')
-            ->where('user_id', Auth::id())
-            ->get();
-
-        return $rows;
-    }
-
-    // forse da cancellare o spostare in mediamonitor
-    /*
-    public function getClipsDomain() {
-        $domain = getServerName();
-        $clips = SpatieImage::withAnyTags([$domain], 'domains')
-            ->get();
-
-        return $clips;
-    }
-    */
+    
 }
