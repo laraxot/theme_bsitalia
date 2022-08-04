@@ -8,17 +8,15 @@
 @section('body')
     @include('pub_theme::layouts.partials.headernav')
     <!-- Body -->
-    {{--
-        <div class="container my-4">
-    --}}
-    <div class="container-fluid">
+    {{-- <div class="container my-4"> --}}
+    <div class="container-fluid" id="app">
         @yield('content')
     </div>
 
     <!-- End Body -->
-     @stack('modals')
-   @include('pub_theme::layouts.partials.footer')
-   @include('pub_theme::layouts.partials.scripts')
+    @stack('modals')
+    @include('pub_theme::layouts.partials.footer')
+    @include('pub_theme::layouts.partials.scripts')
 
 
 @stop
