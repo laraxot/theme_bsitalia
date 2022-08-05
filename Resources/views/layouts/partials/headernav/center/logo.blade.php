@@ -1,4 +1,4 @@
-{{-- <div class="it-brand-wrapper">
+<div class="it-brand-wrapper">
     <a
         href="{{ config('bootstrap-italia.routes.home.type') === 'route' ? route(config('bootstrap-italia.routes.home.route')) : url(config('bootstrap-italia.routes.home.url')) }}">
         @if (config('bootstrap-italia.logo'))
@@ -18,9 +18,9 @@
             <h3 class="no_toc d-none d-md-block">{!! config('bootstrap-italia.tagline') !!}</h3>
         </div>
     </a>
-</div> --}}
-<div class="it-brand-wrapper">
+</div>
+{{-- <div class="it-brand-wrapper">
     <a href="{{ url('/') }}">
         <img class="icon" src="{{ Theme::asset(Theme::metatag('logo_img')) }}" alt="logo" />
     </a>
-</div>
+</div> --}}
