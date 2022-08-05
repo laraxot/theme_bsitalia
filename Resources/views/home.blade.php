@@ -1,19 +1,6 @@
-@php
-//dddx(get_defined_vars());
-@endphp
 @extends('pub_theme::layouts.app')
 @section('content')
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-12 mt-4 mb-4">
-                <div class="d-sm-flex justify-content-between align-items-center">
-                    <h5 class="mb-md-0">
-                        Clips
-                    </h5>
-                </div>
-            </div>
-        </div>
-        @include($view_work . '.medias2')
-        {{-- @include($view_work.'.medias') --}}
-    </div>
+    {{-- <x-home/> --}}
+
+    @include('pub_theme::home.' . config('xra.home', 'show'))
 @endsection
