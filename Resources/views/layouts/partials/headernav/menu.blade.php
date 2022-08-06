@@ -18,8 +18,12 @@
                         </div>
                         <div class="menu-wrapper">
                             <ul class="navbar-nav">
-                                {{-- @each('pub_theme::layouts.partials.header-menu-item', $bootstrapItalia->menu()['header-menu'], 'item') --}}
-                                @each('pub_theme::layouts.partials.header-menu-item', config('bootstrap-italia.menu.header'), 'item')
+                                @each('pub_theme::layouts.partials.headernav.menu.header-menu-item', config('bootstrap-italia.menu.header'), 'item')
+                                @php
+                                    //dddx([config('bootstrap-italia.menu.header'), $_theme->getMenuItemsByName('navbar')]);
+                                    //dddx($_theme->getMenuItemsByName('navbar'));
+                                @endphp
+                                {{-- @each('pub_theme::layouts.partials.headernav.menu.header-menu-item',$_theme->getMenuItemsByName('navbar'),'item') --}}
                             </ul>
                         </div>
 
