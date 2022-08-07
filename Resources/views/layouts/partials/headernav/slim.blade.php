@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="it-header-slim-wrapper-content">
-                    @include('pub_theme::layouts.partials.headernav.slim.logo')
+                    @include('pub_theme::layouts.partials.headernav.slim.heading')
 
                     @include('pub_theme::layouts.partials.headernav.slim.menu')
 

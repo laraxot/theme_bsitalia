@@ -1,19 +1,3 @@
-@php
-$menu_items = $_theme->getMenuItemsByName('navbar');
-/*
-$menu_items_array = $menu_items
-    ->map(function ($item) {
-        $tmp = $item->toArray();
-        $tmp['text'] = $tmp['label'];
-        $tmp['target'] = $tmp['link'];
-        return $tmp;
-    })
-    ->all();
-*/
-//dddx($menu_items_array);
-@endphp
-
-
 <div class="nav-mobile">
     <nav>
         @if ($menu_items->isEmpty())

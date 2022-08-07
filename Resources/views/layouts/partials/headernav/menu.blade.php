@@ -18,12 +18,21 @@
                         </div>
                         <div class="menu-wrapper">
                             <ul class="navbar-nav">
-                                @each('pub_theme::layouts.partials.headernav.menu.header-menu-item', config('bootstrap-italia.menu.header'), 'item')
-                                @php
-                                    //dddx([config('bootstrap-italia.menu.header'), $_theme->getMenuItemsByName('navbar')]);
-                                    //dddx($_theme->getMenuItemsByName('navbar'));
-                                @endphp
-                                {{-- @each('pub_theme::layouts.partials.headernav.menu.header-menu-item',$_theme->getMenuItemsByName('navbar'),'item') --}}
+                                @if ($menu_items->isEmpty())
+                                    @each('pub_theme::layouts.partials.headernav.menu.header-menu-item', config('bootstrap-italia.menu.header'), 'item')
+                                @else
+                                    {{-- html originale in layouts\partials\headernav\menu\header-menu-item.blade.php
+                                    bisognerebbe mettere anche il tasto dropdown,
+                                    rimando a quando avrò un menu adatto --}}
+                                    @foreach ($menu_items as $item)
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="{{ $item->link }}"
+                                                {{-- data-toggle="dropdown" --}} aria-expanded="false">
+                                                <span>{{ $item->label }}</span>
+                                            </a>
+                                        </li>
+                                    @endforeach
+                                @endif
                             </ul>
                         </div>
 
