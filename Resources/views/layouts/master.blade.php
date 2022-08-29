@@ -16,7 +16,7 @@
     <link href="{{ Theme::asset('pub_theme::dist/css/app.css') }}" rel="stylesheet">
     @yield('bootstrapitalia_css')
 
-    <script>window.__PUBLIC_PATH__ = '{{ Theme::asset('pub_theme::dist/fonts') }}'</script>
+    <script>window.__PUBLIC_PATH__ = '{{ asset('') }}'</script>
 </head>
 <body>
 @yield('body')
