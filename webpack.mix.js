@@ -5,15 +5,16 @@ require('laravel-mix-polyfill');
 
 
 
- var public_path = 'Resources/dist';
+var public_path = 'Resources/dist';
 
- mix.js('Resources/js/app.js', 'js');
- 
- mix.sass('Resources/scss/app.scss', 'css');
- 
- mix.vue({ version: 3 });
+mix.js('Resources/js/app.js', 'js');
 
- //mix.setResourceRoot('../');
+mix.sass('Resources/scss/app.scss', 'css');
+//mix.sass('Resources/scss/bootstrap-italia-custom.scss', 'css');
+
+//mix.vue({ version: 3 });
+
+//mix.setResourceRoot('../');
 mix.setPublicPath(public_path);
 
 //Make jQuery Available to Every Module
@@ -23,20 +24,7 @@ mix.autoload({
         //tether: ['Tether', 'windows.Tether'],
 });
 
-mix.extract([
-    'axios',
-    'vue',
-    'tether',
-    'lodash',
-    'popper.js',
-    'jquery',
-    'sweetalert2',
-    'moment',
-    'nouislider',
-    'bootstrap',
-    'video.js',
-    'videojs',
-]);
+mix.extract();
 
 mix.webpackConfig({
     resolve: {
@@ -44,19 +32,7 @@ mix.webpackConfig({
             path.resolve(__dirname, 'node_modules')
         ]
     },
-    plugins: [
-        // fix "process is not defined" error:
-        // (do "npm install process" before running the build)
-        //new webpack.ProvidePlugin({
-        //    Vue: ['vue', 'default']
-              //jQuery: 'jquery',
-              //$: 'jquery'
-        //}),
 
-    ],
-    //externals: {
-    //    "vue": "Vue"
-    //}
 });
 
 //*/
@@ -73,7 +49,7 @@ mix.sourceMaps();
 
 var $from = './Resources/dist';
 
-var $to = '../../../public_html/themes/BsItalia/dist'; 
+var $to = '../../../public_html/themes/BsItalia/dist';
 console.log('from :' + $from);
 console.log('to :' + $to);
 

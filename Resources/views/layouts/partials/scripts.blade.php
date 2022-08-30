@@ -9,16 +9,17 @@
         var lat ="{{ \Request::input('lat') }}";
         var lng ="{{ \Request::input('lng') }}";
     @endif
+    
+    window.__PUBLIC_PATH__ = '/themes/BsItalia/dist/fonts';
 </script>
 @stack('scripts_before')
-{{--
-<script src="{{ Theme::asset('pub_theme::dist/js/bootstrap-italia.bundle.min.js') }}"></script>
---}}
+
 @php
 Theme::add('pub_theme::dist/js/manifest.js');
 Theme::add('pub_theme::dist/js/vendor.js');
 Theme::add('pub_theme::dist/js/app.js');
-//Theme::add('pub_theme::js/theme.js');
+Theme::add('pub_theme::assets/script/scripts.js');
+ 
 @endphp
 {!! Theme::showScripts(false) !!}
 
