@@ -1,27 +1,35 @@
-@extends('pub_theme::layouts.master')
+<!DOCTYPE html>
+<html lang="it">
+  
+    {{--  
+    <head>
+    {% include head.html %}
+    </head>
+    --}}
+    @include('pub_theme::layouts.partials.htmlheader')
+  
+  <body onload="initCoverAnimation()">
+    <a id="skippy" class="visually-hidden-focusable" href="#content">
+      <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+      </div>
+    </a>
 
-@section('bootstrapitalia_css')
-    @stack('css')
-    @yield('css')
-@stop
-
-@section('body')
+    {{--  
+    {% include docs-topbar.html %} 
+    {% include docs-navbar.html %} 
+    --}}
     @include('pub_theme::layouts.partials.headernav')
-    <!-- Body -->
-    {{-- <div class="container my-4"> --}}
-    <div class="container-fluid" id="app">
-        @yield('content')
-    </div>
-
-    <!-- End Body -->
-    @stack('modals')
+    
+    @yield('content')
+    {{--  
+    {% include footer.html %} 
+    --}}
     @include('pub_theme::layouts.partials.footer')
+    {{--  
+    {% include scripts.html %}
+    --}}
     @include('pub_theme::layouts.partials.scripts')
-
-
-@stop
-
-@section('bootstrapitalia_js')
-    @stack('js')
-    @yield('js')
-@stop
+  </body>
+</html>
+{{-- https://github.com/italia/bootstrap-italia/blob/main/_layouts/default.html --}}
