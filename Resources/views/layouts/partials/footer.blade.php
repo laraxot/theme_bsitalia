@@ -1,154 +1,239 @@
-  <footer class="it-footer">
-    <div class="it-footer-main">
-      <div class="container">
-        <section>
-          <div class="row clearfix">
-            <div class="col-sm-12">
-              <div class="it-brand-wrapper">
-                <a href="#">
-                  <svg class="icon">
-                    <use xlink:href="themes/BsItalia/dist/svg/sprites.svg#it-code-circle"></use>
-                  </svg>
-                  <div class="it-brand-text">
-                    <h2 class="no_toc">Lorem Ipsum</h2>
-                    <h3 class="no_toc d-none d-md-block">Inserire qui la tag line</h3>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section>
-          <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-6 pb-2">
-              <h4>
-                <a href="#" title="Vai alla pagina: Amministrazione">Amministrazione</a>
-              </h4>
-              <div class="link-list-wrapper">
-                <ul class="footer-list link-list clearfix">
-                  <li><a class="list-item" href="#" title="Vai alla pagina: Giunta e consiglio">Giunta e consiglio</a>
-                  </li>
-                  <li><a class="list-item" href="#" title="Vai alla pagina: Aree di competenza">Aree di competenza</a>
-                  </li>
-                  <li><a class="list-item" href="#" title="Vai alla pagina: Dipendenti">Dipendenti</a></li>
-                  <li><a class="list-item" href="#" title="Vai alla pagina: Luoghi">Luoghi</a></li>
-                  <li><a class="list-item" href="#"
-                      title="Vai alla pagina: Associazioni e società partecipate">Associazioni e società partecipate</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 pb-2">
-              <h4>
-                <a href="#" title="Vai alla pagina: Servizi">Servizi</a>
-              </h4>
-              <div class="link-list-wrapper">
-                <ul class="footer-list link-list clearfix">
-                  <li><a class="list-item" href="#" title="Vai alla pagina: Pagamenti">Pagamenti</a></li>
-                  <li><a class="list-item" href="#" title="Vai alla pagina: Sostegno">Sostegno</a></li>
-                  <li><a class="list-item" href="#" title="Vai alla pagina: Domande e iscrizioni">Domande e
-                      iscrizioni</a></li>
-                  <li><a class="list-item" href="#" title="Vai alla pagina: Segnalazioni">Segnalazioni</a></li>
-                  <li><a class="list-item" href="#" title="Vai alla pagina: Autorizzazioni e concessioni">Autorizzazioni
-                      e concessioni</a></li>
-                  <li><a class="list-item" href="#" title="Vai alla pagina: Certificati e dichiarazioni">Certificati e
-                      dichiarazioni</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 pb-2">
-              <h4>
-                <a href="#" title="Vai alla pagina: Novità">Novità</a>
-              </h4>
-              <div class="link-list-wrapper">
-                <ul class="footer-list link-list clearfix">
-                  <li><a class="list-item" href="#" title="Vai alla pagina: Notizie">Notizie</a></li>
-                  <li><a class="list-item" href="#" title="Vai alla pagina: Eventi">Eventi</a></li>
-                  <li><a class="list-item" href="#" title="Vai alla pagina: Comunicati stampa">Comunicati stampa</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6">
-              <h4>
-                <a href="#" title="Vai alla pagina: Documenti">Documenti</a>
-              </h4>
-              <div class="link-list-wrapper">
-                <ul class="footer-list link-list clearfix">
-                  <li><a class="list-item" href="#" title="Vai alla pagina: Progetti e attività">Progetti e attività</a>
-                  </li>
-                  <li><a class="list-item" href="#" title="Vai alla pagina: Delibere, determine e ordinanze">Delibere,
-                      determine e ordinanze</a></li>
-                  <li><a class="list-item" href="#" title="Vai alla pagina: Bandi">Bandi</a></li>
-                  <li><a class="list-item" href="#" title="Vai alla pagina: Concorsi">Concorsi</a></li>
-                  <li><a class="list-item" href="#" title="Vai alla pagina: Albo pretorio">Albo pretorio</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="py-4 border-white border-top">
-          <div class="row">
-            <div class="col-lg-4 col-md-4 pb-2">
-              <h4><a href="#" title="Vai alla pagina: Contatti">Contatti</a></h4>
-              <p>
-                <strong>Comune di Lorem Ipsum</strong><br />
-                Via Roma 0 - 00000 Lorem Ipsum Codice fiscale / P. IVA: 000000000
-              </p>
-              <div class="link-list-wrapper">
-                <ul class="footer-list link-list clearfix">
-                  <li><a class="list-item" href="#" title="Vai alla pagina: Posta Elettronica Certificata">Posta
-                      Elettronica Certificata</a></li>
-                  <li>
-                    <a class="list-item" href="#" title="Vai alla pagina: URP - Ufficio Relazioni con il Pubblico">URP -
-                      Ufficio Relazioni con il Pubblico</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 pb-2">
-              <h4><a href="#" title="Vai alla pagina: Lorem Ipsum">Lorem Ipsum</a></h4>
-            </div>
-            <div class="col-lg-4 col-md-4 pb-2">
-              <div class="pb-2">
-                <h4><a href="#" title="Vai alla pagina: Seguici su">Seguici su</a></h4>
-                <ul class="list-inline text-left social">
-                  <li class="list-inline-item">
-                    <a class="p-2 text-white" href="#" target="_blank"><svg class="icon icon-sm icon-white align-top">
-                        <use xlink:href="themes/BsItalia/dist/svg/sprites.svg#it-designers-italia"></use>
-                      </svg><span class="visually-hidden">Designers Italia</span></a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a class="p-2 text-white" href="#" target="_blank"><svg class="icon icon-sm icon-white align-top">
-                        <use xlink:href="themes/BsItalia/dist/svg/sprites.svg#it-twitter"></use>
-                      </svg><span class="visually-hidden">Twitter</span></a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a class="p-2 text-white" href="#" target="_blank"><svg class="icon icon-sm icon-white align-top">
-                        <use xlink:href="themes/BsItalia/dist/svg/sprites.svg#it-medium"></use>
-                      </svg><span class="visually-hidden">Medium</span></a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a class="p-2 text-white" href="#" target="_blank"><svg class="icon icon-sm icon-white align-top">
-                        <use xlink:href="themes/BsItalia/dist/svg/sprites.svg#it-behance"></use>
-                      </svg><span class="visually-hidden">Behance</span></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-    <div class="it-footer-small-prints clearfix">
-      <div class="container">
-        <h3 class="visually-hidden">Sezione Link Utili</h3>
-        <ul class="it-footer-small-prints-list list-inline mb-0 d-flex flex-column flex-md-row">
-          <li class="list-inline-item"><a href="#" title="Note Legali">Media policy</a></li>
-          <li class="list-inline-item"><a href="#" title="Note Legali">Note legali</a></li>
-          <li class="list-inline-item"><a href="#" title="Privacy-Cookies">Privacy policy</a></li>
-          <li class="list-inline-item"><a href="#" title="Mappa del sito">Mappa del sito</a></li>
-        </ul>
-      </div>
-    </div>
-  </footer>
+<footer class="it-footer" id="footer">
+			<div class="it-footer-main">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 footer-items-wrapper logo-wrapper">
+							<img class="ue-logo" src="../assets/images/logo-eu-inverted.svg" alt="logo Unione Europea">
+							<div class="it-brand-wrapper">
+								<a href="#">
+									<svg class="icon" aria-hidden="true">
+										<use xlink:href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-pa"></use>
+									</svg>
+									<div class="it-brand-text">
+										<h2 class="no_toc">Nome del Comune</h2>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-3 footer-items-wrapper">
+							<h3 class="footer-heading-title">Amministrazione</h3>
+							<ul class="footer-list">
+								<li>
+									<a href="#">Organi di governo</a>
+								</li>
+								<li>
+									<a href="#">Aree amministrative</a>
+								</li>
+								<li>
+									<a href="#">Uffici</a>
+								</li>
+								<li>
+									<a href="#">Enti e fondazioni</a>
+								</li>
+								<li>
+									<a href="#">Politici</a>
+								</li>
+								<li>
+									<a href="#">Personale amministrativo</a>
+								</li>
+								<li>
+									<a href="#">Documenti e dati</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-6 footer-items-wrapper">
+							<h3 class="footer-heading-title">Categorie di servizio</h3>
+							<div class="row">
+								<div class="col-md-6">
+									<ul class="footer-list">
+										<li>
+											<a href="#">Anagrafe e stato civile</a>
+										</li>
+										<li>
+											<a href="#">Cultura e tempo libero</a>
+										</li>
+										<li>
+											<a href="#">Vita lavorativa</a>
+										</li>
+										<li>
+											<a href="#">Imprese e commercio</a>
+										</li>
+										<li>
+											<a href="#">Appalti pubblici</a>
+										</li>
+										<li>
+											<a href="#">Catasto e urbanistica</a>
+										</li>
+										<li>
+											<a href="#">Turismo</a>
+										</li>
+										<li>
+											<a href="#">Mobilità e trasporti</a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-md-6">
+									<ul class="footer-list">
+										<li>
+											<a href="#">Educazione e formazione</a>
+										</li>
+										<li>
+											<a href="#">Giustizia e sicurezza pubblica</a>
+										</li>
+										<li>
+											<a href="#">Tributi, finanze e contravvenzioni</a>
+										</li>
+										<li>
+											<a href="#">Ambiente</a>
+										</li>
+										<li>
+											<a href="#">Salute, benessere e assistenza</a>
+										</li>
+										<li>
+											<a href="#">Autorizzazioni</a>
+										</li>
+										<li>
+											<a href="#">Agricoltura e pesca</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 footer-items-wrapper">
+							<h3 class="footer-heading-title">Novità</h3>
+							<ul class="footer-list">
+								<li>
+									<a href="#">Notizie</a>
+								</li>
+								<li>
+									<a href="#">Comunicati</a>
+								</li>
+								<li>
+									<a href="#">Avvisi</a>
+								</li>
+							</ul>
+							<h3 class="footer-heading-title">Vivere il comune</h3>
+							<ul class="footer-list">
+								<li>
+									<a href="#">Luoghi</a>
+								</li>
+								<li>
+									<a href="#">Eventi</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-9 mt-md-4 footer-items-wrapper">
+							<h3 class="footer-heading-title">Contatti</h3>
+							<div class="row">
+								<div class="col-md-4">
+									<p class="footer-info">Comune di Nome Comune<br>
+										Via Roma 123 - 00100 Comune<br>
+										Codice fiscale / P. IVA: 00123456789<br><br>
+										<a href="#">Ufficio Relazioni con il Pubblico</a><br>
+										Numero verde: 800 016 123<br>
+										SMS e WhatsApp: +39 320 1234567<br>
+										Posta Elettronica Certificata<br>
+										Centralino unico: 012 3456
+									</p>
+								</div>
+								<div class="col-md-4">
+									<ul class="footer-list">
+										<li>
+											<a href="#" data-element="faq">Leggi le FAQ</a>
+										</li>
+										<li>
+											<a href="#">Prenotazione appuntamento</a>
+										</li>
+										<li>
+											<a href="#" data-element="report-inefficiency">Segnalazione disservizio</a>
+										</li>
+										<li>
+											<a href="#">Richiesta d'assistenza</a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-md-4">
+									<ul class="footer-list">
+										<li>
+											<a href="#">Amministrazione trasparente</a>
+										</li>
+										<li>
+											<a href="#" data-element="privacy-policy-link">Informativa privacy</a>
+										</li>
+										<li>
+											<a href="#">Note legali</a>
+										</li>
+										<li>
+											<a href="#" data-element="accessibility-link">Dichiarazione di accessibilità</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 mt-md-4 footer-items-wrapper">
+							<h3 class="footer-heading-title">Seguici su</h3>
+							<ul class="list-inline text-start social">
+								<li class="list-inline-item">
+									<a class="p-1 text-white" href="#" target="_blank">
+										<svg class="icon icon-sm icon-white align-top">
+											<use xlink:href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-twitter"></use>
+										</svg>
+										<span class="visually-hidden">Twitter</span>
+									</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="p-1 text-white" href="#" target="_blank">
+										<svg class="icon icon-sm icon-white align-top">
+											<use xlink:href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-facebook"></use>
+										</svg>
+										<span class="visually-hidden">Facebook</span>
+									</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="p-1 text-white" href="#" target="_blank">
+										<svg class="icon icon-sm icon-white align-top">
+											<use xlink:href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-youtube"></use>
+										</svg>
+										<span class="visually-hidden">YouTube</span>
+									</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="p-1 text-white" href="#" target="_blank">
+										<svg class="icon icon-sm icon-white align-top">
+											<use xlink:href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-telegram"></use>
+										</svg>
+										<span class="visually-hidden">Telegram</span>
+									</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="p-1 text-white" href="#" target="_blank">
+										<svg class="icon icon-sm icon-white align-top">
+											<use xlink:href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-whatsapp"></use>
+										</svg>
+										<span class="visually-hidden">Whatsapp</span>
+									</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="p-1 text-white" href="#" target="_blank">
+										<svg class="icon icon-sm icon-white align-top">
+											<use xlink:href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-rss"></use>
+										</svg>
+										<span class="visually-hidden">RSS</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12 footer-items-wrapper">
+							<div class="footer-bottom">
+								<a href="#">Media policy</a>
+								<a href="#">Mappa del sito</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
