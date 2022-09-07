@@ -24,8 +24,6 @@ Theme::add('pub_theme::assets/script/scripts.js');
 
 {!! Theme::showScripts(false) !!}
 
-
-
 <livewire:scripts />
 
 @stack('scripts')
