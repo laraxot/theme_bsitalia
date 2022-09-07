@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="it">
 
+  
   @include('pub_theme::layouts.partials.htmlheader')
 
   <body>
