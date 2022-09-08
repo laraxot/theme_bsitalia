@@ -5,13 +5,10 @@ declare(strict_types=1);
 namespace Themes\BsItalia\View\Composers;
 
 use ErrorException;
-use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use Illuminate\View\View;
-use Modules\Media\Models\SpatieImage;
 use Modules\Mediamonitor\Models\Channel;
 use Modules\Mediamonitor\Models\Media;
 use Modules\Mediamonitor\Models\Ner;
@@ -140,6 +137,4 @@ class ThemeComposer extends XotBaseComposer {
 
         return $subtitles;
     }
-
-    
 }

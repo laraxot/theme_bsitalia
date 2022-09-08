@@ -19,7 +19,7 @@ class HrefFilter implements FilterInterface {
             $item['href'] = $this->makeHref($item);
             if (isset($item['dropdown'])) {
                 foreach ($item['dropdown'] as &$subitem) {
-                    if (! (is_string($subitem))) {
+                    if (! is_string($subitem)) {
                         $subitem['href'] = $this->makeHref($subitem);
                     }
                 }
@@ -28,7 +28,7 @@ class HrefFilter implements FilterInterface {
             if (isset($item['megamenu'])) {
                 foreach ($item['megamenu'] as &$submenu) {
                     foreach ($submenu as $i => &$subitem) {
-                        if (! (is_string($subitem))) {
+                        if (! is_string($subitem)) {
                             $subitem['href'] = $this->makeHref($subitem);
                         }
                         $submenu[$i] = $subitem;

@@ -40,8 +40,10 @@ class BootstrapItaliaAuthCommand extends AuthCommand {
         parent::exportViews();
 
         foreach ($this->bootstrapItaliaViews as $key => $value) {
-            copy(__DIR__.'/stubs/make/views/'.$key,
-                base_path('resources/views/'.$value));
+            copy(
+                __DIR__.'/stubs/make/views/'.$key,
+                base_path('resources/views/'.$value)
+            );
         }
     }
 }
