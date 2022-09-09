@@ -1,6 +1,3 @@
-@php
-    //dddx(get_defined_vars());
-@endphp
 <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-10">
