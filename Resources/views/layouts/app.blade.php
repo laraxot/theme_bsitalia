@@ -20,8 +20,11 @@
     {% include docs-navbar.html %} 
     --}}
     @include('pub_theme::layouts.partials.headernav')
-    
-    @yield('content')
+    <main>
+        <x-breadcrumb ></x-breadcrumb>
+        @yield('content')
+    </main>
+    @include('pub_theme::layouts.partials.modals')
     {{--  
     {% include footer.html %} 
     --}}
