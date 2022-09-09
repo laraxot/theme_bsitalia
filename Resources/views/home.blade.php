@@ -10,7 +10,7 @@
             
             @include('pub_theme::home.vivi')
 			--}}
-			@include('pub_theme::home.' . config('xra.home', 'show'))
+			@include('pub_theme::home.' . config('xra.home', '01'))
 		</main>
         @include('pub_theme::layouts.partials.modals')
         @include('pub_theme::layouts.partials.footer')
