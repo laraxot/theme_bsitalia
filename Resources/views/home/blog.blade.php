@@ -30,208 +30,23 @@
 	<div class="container">
 		<h2 class="title-xxlarge mb-4">Eventi in evidenza</h2>
 		<div class="row g-4">
-			<div class="col-lg-6 col-xl-4">
-				<!--start card-->
-				<x-card-simple type="v2">
-					<x-slot name="img_src">../assets/images/eventi-estate.png</x-slot>
-					<x-slot name="title">Un&#x27;estate indimenticabile!!</x-slot>
-					<x-slot name="txt">Una iniziativa di invito alla lettura nel parco della Vittoria, dove verrà presentato il concorso “vivere il comune”</x-slot>
-					<x-slot name="url">#</x-slot>
-				</x-card-simple>
-				{{--  
-				<div class="card-wrapper shadow-sm rounded cmp-list-card-img">
-					<div class="card card-img no-after rounded">
-						<div class="img-responsive-wrapper cmp-list-card-img__wrapper">
-							<div class="img-responsive img-responsive-panoramic h-100">
-								<figure class="img-wrapper">
-									<img class="rounded-top img-fluid" src="../assets/images/eventi-estate.png" title="titolo immagine" alt="descrizione immagine">
-								</figure>
-								<div class="card-calendar d-flex flex-column justify-content-center">
-									<span class="card-date">26</span>
-									<span class="card-day">Agosto</span>
-								</div>
-							</div>
-						</div>
-						<div class="card-body">
-							<div class="category-top cmp-list-card-img__body">
-								<a class="text-decoration-none fw-bold cmp-list-card-img__body-heading-title" href="#">Categoria</a>
-							</div>
-							<h3 class="cmp-list-card-img__body-title"><a href="#" class="text-decoration-none">Un&#x27;estate indimenticabile</a></h3>
-							<p class="cmp-list-card-img__body-description">Una iniziativa di invito alla lettura nel parco della Vittoria, dove verrà presentato il concorso “vivere il comune”</p>
-							<a class="read-more t-primary text-uppercase cmp-list-card-img__body-link" href="#" aria-label="Leggi di più sulla pagina di Un&#x27;estate indimenticabile">
-								<span class="text">Leggi di più</span>
-								<span class="visually-hidden">su Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span>
-								<svg class="icon icon-primary icon-xs ml-10">
-									<use href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-arrow-right"></use>
-								</svg>
-							</a>
-						</div>
-					</div>
+			@php
+				//dddx($_theme->getFeaturedArticles()->last()->title);
+			@endphp
+			@foreach ($_theme->getFeaturedArticles() as $article)
+				@php
+					//dddx($article->title);
+				@endphp
+				<div class="col-lg-6 col-xl-4">
+					<!--start card-->
+						<x-card-simple type="v2">
+							<x-slot name="img_src">../assets/images/eventi-estate.png</x-slot>
+							<x-slot name="title">aaaa</x-slot>
+							<x-slot name="txt">Una iniziativa di invito alla lettura nel parco della Vittoria, dove verrà presentato il concorso “vivere il comune”</x-slot>
+							<x-slot name="url">#</x-slot>
+						</x-card-simple>
 				</div>
-				--}}
-			</div>
-			<div class="col-lg-6 col-xl-4">
-				<!--start card-->
-				<div class="card-wrapper shadow-sm rounded cmp-list-card-img">
-					<div class="card card-img no-after rounded">
-						<div class="img-responsive-wrapper cmp-list-card-img__wrapper">
-							<div class="img-responsive img-responsive-panoramic h-100">
-								<figure class="img-wrapper">
-									<img class="rounded-top img-fluid" src="../assets/images/eventi-biblioteca-parco.png" title="titolo immagine" alt="descrizione immagine">
-								</figure>
-								<div class="card-calendar d-flex flex-column justify-content-center">
-									<span class="card-date">03</span>
-									<span class="card-day">Luglio</span>
-								</div>
-							</div>
-						</div>
-						<div class="card-body">
-							<div class="category-top cmp-list-card-img__body">
-								<a class="text-decoration-none fw-bold cmp-list-card-img__body-heading-title" href="#">Categoria</a>
-							</div>
-							<h3 class="cmp-list-card-img__body-title"><a href="#" class="text-decoration-none">La biblioteca nel parco</a></h3>
-							<p class="cmp-list-card-img__body-description">Una iniziativa di invito alla lettura nel parco della Vittoria, dove verrà presentato il concorso “vivere il comune”.</p>
-							<a class="read-more t-primary text-uppercase cmp-list-card-img__body-link" href="#" aria-label="Leggi di più sulla pagina di La biblioteca nel parco">
-								<span class="text">Leggi di più</span>
-								<span class="visually-hidden">su Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span>
-								<svg class="icon icon-primary icon-xs ml-10">
-									<use href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-arrow-right"></use>
-								</svg>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-6 col-xl-4">
-				<!--start card-->
-				<div class="card-wrapper shadow-sm rounded cmp-list-card-img">
-					<div class="card card-img no-after rounded">
-						<div class="img-responsive-wrapper cmp-list-card-img__wrapper">
-							<div class="img-responsive img-responsive-panoramic h-100">
-								<figure class="img-wrapper">
-									<img class="rounded-top img-fluid" src="../assets/images/eventi-festa-associazioni.png" title="titolo immagine" alt="descrizione immagine">
-								</figure>
-								<div class="card-calendar d-flex flex-column justify-content-center">
-									<span class="card-date">10</span>
-									<span class="card-day">Giugno</span>
-								</div>
-							</div>
-						</div>
-						<div class="card-body">
-							<div class="category-top cmp-list-card-img__body">
-								<a class="text-decoration-none fw-bold cmp-list-card-img__body-heading-title" href="#">Categoria</a>
-							</div>
-							<h3 class="cmp-list-card-img__body-title"><a href="#" class="text-decoration-none">Festa delle associazioni della sesta circoscrizione</a></h3>
-							<p class="cmp-list-card-img__body-description">Le associazioni della sesta circoscrizione si troveranno nell’auditorium della musica per presentare le attività dell’anno in corso e per fare festa.</p>
-							<a class="read-more t-primary text-uppercase cmp-list-card-img__body-link" href="#" aria-label="Leggi di più sulla pagina di Festa delle associazioni della sesta circoscrizione">
-								<span class="text">Leggi di più</span>
-								<span class="visually-hidden">su Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span>
-								<svg class="icon icon-primary icon-xs ml-10">
-									<use href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-arrow-right"></use>
-								</svg>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-6 col-xl-4">
-				<!--start card-->
-				<div class="card-wrapper shadow-sm rounded cmp-list-card-img">
-					<div class="card card-img no-after rounded">
-						<div class="img-responsive-wrapper cmp-list-card-img__wrapper">
-							<div class="img-responsive img-responsive-panoramic h-100">
-								<figure class="img-wrapper">
-									<img class="rounded-top img-fluid" src="../assets/images/eventi-celluloide-festival.png" title="titolo immagine" alt="descrizione immagine">
-								</figure>
-								<div class="card-calendar d-flex flex-column justify-content-center">
-									<span class="card-date">30</span>
-									<span class="card-day">Maggio</span>
-								</div>
-							</div>
-						</div>
-						<div class="card-body">
-							<div class="category-top cmp-list-card-img__body">
-								<a class="text-decoration-none fw-bold cmp-list-card-img__body-heading-title" href="#">Festival</a>
-								<span class="data">18 MAG 2018</span>
-							</div>
-							<h3 class="cmp-list-card-img__body-title"><a href="#" class="text-decoration-none">Celluloide film festival</a></h3>
-							<p class="cmp-list-card-img__body-description">Sono più di 120 i film in programma: 27 anteprime mondiali, 13 internazionali e 37 italiane, ben oltre metà del programma sarà composta da film mai visti prima in Italia</p>
-							<a class="read-more t-primary text-uppercase cmp-list-card-img__body-link" href="#" aria-label="Leggi di più sulla pagina di Celluloide film festival">
-								<span class="text">Leggi di più</span>
-								<span class="visually-hidden">su Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span>
-								<svg class="icon icon-primary icon-xs ml-10">
-									<use href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-arrow-right"></use>
-								</svg>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-6 col-xl-4">
-				<!--start card-->
-				<div class="card-wrapper shadow-sm rounded cmp-list-card-img">
-					<div class="card card-img no-after rounded">
-						<div class="img-responsive-wrapper cmp-list-card-img__wrapper">
-							<div class="img-responsive img-responsive-panoramic h-100">
-								<figure class="img-wrapper">
-									<img class="rounded-top img-fluid" src="../assets/images/eventi-street-art.png" title="titolo immagine" alt="descrizione immagine">
-								</figure>
-								<div class="card-calendar d-flex flex-column justify-content-center">
-									<span class="card-date">27</span>
-									<span class="card-day">Aprile</span>
-								</div>
-							</div>
-						</div>
-						<div class="card-body">
-							<div class="category-top cmp-list-card-img__body">
-								<a class="text-decoration-none fw-bold cmp-list-card-img__body-heading-title" href="#">Categoria</a>
-							</div>
-							<h3 class="cmp-list-card-img__body-title"><a href="#" class="text-decoration-none">Street art e murales in città</a></h3>
-							<p class="cmp-list-card-img__body-description">Lo sapevi che il nostro Territorio, se imbocchi il vicolo giusto, nasconde opere di street art e bellissimi murales? Scopri con noi dove poterli ammirare.</p>
-							<a class="read-more t-primary text-uppercase cmp-list-card-img__body-link" href="#" aria-label="Leggi di più sulla pagina di Street art e murales in città">
-								<span class="text">Leggi di più</span>
-								<span class="visually-hidden">su Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span>
-								<svg class="icon icon-primary icon-xs ml-10">
-									<use href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-arrow-right"></use>
-								</svg>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-6 col-xl-4">
-				<!--start card-->
-				<div class="card-wrapper shadow-sm rounded cmp-list-card-img">
-					<div class="card card-img no-after rounded">
-						<div class="img-responsive-wrapper cmp-list-card-img__wrapper">
-							<div class="img-responsive img-responsive-panoramic h-100">
-								<figure class="img-wrapper">
-									<img class="rounded-top img-fluid" src="../assets/images/eventi-tram-via.png" title="titolo immagine" alt="descrizione immagine">
-								</figure>
-								<div class="card-calendar d-flex flex-column justify-content-center">
-									<span class="card-date">16</span>
-									<span class="card-day">Marzo</span>
-								</div>
-							</div>
-						</div>
-						<div class="card-body">
-							<div class="category-top cmp-list-card-img__body">
-								<a class="text-decoration-none fw-bold cmp-list-card-img__body-heading-title" href="#">Categoria</a>
-							</div>
-							<h3 class="cmp-list-card-img__body-title"><a href="#" class="text-decoration-none">Tramvia, dibattito aperto a tutti i cittadini</a></h3>
-							<p class="cmp-list-card-img__body-description">In questi giorni si sono aperti o apriranno cantieri che prevedono lavori di risistemazione del fondo stradale, di riqualificazione di spazi verdi..</p>
-							<a class="read-more t-primary text-uppercase cmp-list-card-img__body-link" href="#" aria-label="Leggi di più sulla pagina di Tramvia, dibattito aperto a tutti i cittadini">
-								<span class="text">Leggi di più</span>
-								<span class="visually-hidden">su Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span>
-								<svg class="icon icon-primary icon-xs ml-10">
-									<use href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-arrow-right"></use>
-								</svg>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--end card-->
+			@endforeach
 			<div class="d-flex justify-content-end">
 				<button type="button" class="btn btn-primary px-5 py-3 full-mb">
 				<span class="">Tutti gli eventi</span>

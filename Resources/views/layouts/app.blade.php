@@ -21,9 +21,6 @@
     --}}
     @include('pub_theme::layouts.partials.headernav')
     <main>
-        @php
-          dddx(get_defined_vars());
-        @endphp
         <x-breadcrumb ></x-breadcrumb>
         @yield('content')
     </main>
