@@ -7,8 +7,10 @@
             <x-breadcrumb ></x-breadcrumb>
             {{--  
 			@include('pub_theme::home.disservizi')
-            --}}
+            
             @include('pub_theme::home.vivi')
+			--}}
+			@include('pub_theme::home.' . config('xra.home', 'show'))
 		</main>
         @include('pub_theme::layouts.partials.modals')
         @include('pub_theme::layouts.partials.footer')
