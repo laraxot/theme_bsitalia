@@ -9,7 +9,7 @@
 					<x-lists.container ul_class="footer-list" >
 						<x-lists.item2>
 							<a href="#">Organi di governo</a>
-						</x-lists.item>
+						</x-lists.item2>
 						<li>
 							<a href="#">Aree amministrative</a>
 						</li>
