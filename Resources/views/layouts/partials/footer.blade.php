@@ -6,10 +6,10 @@
 			<div class="row">
 				<div class="col-md-3 footer-items-wrapper">
 					<h3 class="footer-heading-title">Amministrazione</h3>
-					<x-lists.container ul_class="footer-list" >
-						<x-lists.item2>
+					<ul class="footer-list">
+						<li>
 							<a href="#">Organi di governo</a>
-						</x-lists.item2>
+						</li>
 						<li>
 							<a href="#">Aree amministrative</a>
 						</li>
@@ -28,7 +28,7 @@
 						<li>
 							<a href="#">Documenti e dati</a>
 						</li>
-					</x-lists.container>
+					</ul>
 				</div>
 				<div class="col-md-6 footer-items-wrapper">
 					<h3 class="footer-heading-title">Categorie di servizio</h3>
