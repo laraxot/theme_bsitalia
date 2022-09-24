@@ -46,7 +46,13 @@
 					<div class="container">
 						<div class="row mb-2">
 							<div class="card-wrapper px-0 card-overlapping card-teaser-wrapper card-teaser-wrapper-equal card-teaser-block-3">
-								<div class="card card-teaser card-teaser-image card-flex no-after rounded shadow-sm border border-light mb-0">
+								<!-- MF -->
+								<x-card type="homepage_card">
+									<x-slot name="category">Organo test</x-slot>
+									<x-slot name="title">Organo titolo</x-slot>
+								</x-card>
+
+								{{-- <div class="card card-teaser card-teaser-image card-flex no-after rounded shadow-sm border border-light mb-0">
 									<div class="card-image-wrapper with-read-more">
 										<div class="card-body p-3 pb-5">
 											<div class="category-top">
@@ -65,8 +71,8 @@
 											<use xlink:href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-arrow-right"></use>
 										</svg>
 									</a>
-								</div>
-								<div class="card card-teaser no-after rounded shadow-sm mb-0 border border-light">
+								</div> --}}
+								{{-- <div class="card card-teaser no-after rounded shadow-sm mb-0 border border-light">
 									<div class="card-body pb-5">
 										<div class="category-top">
 											<span class="title-xsmall-semi-bold fw-semibold">Organi di governo</span>
@@ -100,7 +106,7 @@
 											<use xlink:href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-arrow-right"></use>
 										</svg>
 									</a>
-								</div>
+								</div> --}}
 							</div>
 						</div>
 						<div class="row row-title pt-5 pt-lg-60 pb-3">
@@ -116,14 +122,15 @@
 									</div>
 								</div>
 								<div class="">
-                                    <x-lists.container ul_class=" ul_class ">
-									{{-- <ul class="splide__list it-carousel-all"> --}}
+                                    {{-- <x-lists.container ul_class="test it-carousel-all"> --}}
+									<ul class="splide__list it-carousel-all">
+										
 										<li class="">
 											<div class="it-single-slide-wrapper h-100">
 												<div class="card-wrapper h-100">
 													<div class="card card-bg">
 														<div class="card-body">
-															<h4 class="card-title pb-4 mb-10">15<span>lun</span></h4>
+															<h4 class="card-title pb-4 mb-10">5515<span>lun</span></h4>
 															<p class="card-text px-2 pb-10 mb-10"><a href="#">Saldo
 																TASI</a>
 															</p>
@@ -259,7 +266,7 @@
 											</div>
 										</li>
 									</ul>
-                                </x-lists.container>
+                                {{-- </x-lists.container> --}}
 								</div>
 							</div>
 						</div>
