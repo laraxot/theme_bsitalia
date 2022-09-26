@@ -33,9 +33,11 @@
 		<div class="row justify-content-center">
 			<div class="col-lg-3 d-none d-lg-block">
 				{{--> cmp-category-list/category-list category=categories--}}
-        <x-category.lists>
-          <x-slot name="categories">{{collect([])}}</x-slot>
-        </x-category.lists>
+				{{--
+				<x-category.lists>
+					<x-slot name="categories"></x-slot>
+				</x-category.lists>
+				--}}
 			</div>
 			<div class="col-lg-8 offset-lg-1">
 				<div class="d-flex justify-content-between border-bottom border-light pb-3 mt-5">
@@ -45,12 +47,19 @@
 					{{-->partials/button/button label="Filtra" label-class="t-primary title-xsmall-semi-bold ms-1"
 					iconBtn="it-funnel" class="p-0 pe-2 d-lg-none" xs=true
 					modalId="modal-categories"--}}
+					<x-partials.button.button>
+						<x-slot name="label">Filtra</x-slot>
+						<x-slot name="label_class">t-primary title-xsmall-semi-bold ms-1</x-slot>
+						<x-slot name="iconBtn">it-funnel</x-slot>
+						<x-slot name="class">p-0 pe-2 d-lg-none</x-slot>
+						<x-slot name="xs">true</x-slot>
+						<x-slot name="modalId">modal-categories</x-slot>
+						<x-slot name="class_icon"></x-slot>
+          			</x-partials.button.button>
 
-          
 
-
-					{{>partials/button/button label="Rimuovi tutti i filtri" label-class="title-xsmall-semi-bold ms-1"
-					class="p-0 pe-2 d-none d-lg-block" xs=true}}
+					{{-->partials/button/button label="Rimuovi tutti i filtri" label-class="title-xsmall-semi-bold ms-1"
+					class="p-0 pe-2 d-none d-lg-block" xs=true--}}
 				</div>
 				<ul class="nav nav-tabs w-100 flex-nowrap border-bottom border-light mb-40 mt-3 shadow-none" id="tabDisservizio"
 					role="tablist">
@@ -67,6 +76,11 @@
 						</a>
 					</li>
 				</ul>
+
+				@php
+				/*
+				
+				
 				<div class="tab-content">
 					<div class="tab-pane fade show active" id="data-ex-disservizio1" role="tabpanel">
 						<div class="row">
@@ -134,6 +148,9 @@
 						</div>
 					</div>
 				</div>
+				*/
+				@endphp
+			
 			</div>
 		</div>
 	</div>
@@ -141,7 +158,7 @@
 		<div class="container">
 			<div class="row d-flex justify-content-center bg-primary">
 				<div class="col-12 col-lg-6 p-lg-0 px-3">
-					{{>cmp-rating/cmp-rating public-template=true}}
+					{{-->cmp-rating/cmp-rating public-template=true--}}
 				</div>
 			</div>
 		</div>
@@ -150,13 +167,13 @@
 		<div class="container">
 			<div class="row d-flex justify-content-center p-contacts">
 				<div class="col-12 col-lg-5">
-					{{>cmp-contacts/cmp-contacts}}
+					{{-->cmp-contacts/cmp-contacts--}}
 				</div>
 			</div>
 		</div>
 	</div>
-	{{!--   {{> cmp-modal/modal-filter-categories categories=categories}} --}}
-	{{>cmp-modal/modal-clickMap}}
+	
+	{{-->cmp-modal/modal-clickMap--}}
 
 </main>
 @endsection
