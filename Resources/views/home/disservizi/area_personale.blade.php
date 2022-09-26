@@ -31,21 +31,29 @@
           <div class="row">
             <div class="col-12 col-lg-3 d-lg-block mb-4 d-none ">
 
-              
+              <x-nav.scroll :linkList="['link1' => ['title'=> 'aaaa', 'url' => '#']]">
+                <x-slot name="accordion_title">INDICE DI PAGINA</x-slot>
+                <x-slot name="id">one</x-slot>
+              </x-nav.scroll>
 
-              {{>cmp-navscroll/cmp-navscroll accordion-title="INDICE DI PAGINA" id="one"
-              link-list=link-list.links-area-personale-scrivania}}
+              {{-- {{>cmp-navscroll/cmp-navscroll accordion-title="INDICE DI PAGINA" id="one"
+              link-list=link-list.links-area-personale-scrivania}} --}}
             </div>
 
-            {{-- <div class="col-12 col-lg-8 offset-lg-1">
+            <div class="col-12 col-lg-8 offset-lg-1">
               <div class="it-page-section mb-40 mb-lg-60" id="latest-posts">
+
+                <x-card type="content_box">
+                </x-card>
+
+
                 {{#>cmp-card/cmp-card-content-box
                 card-title="Ultimi messaggi"
                 header-m0=true
                 h2-class="mb-3"
                 }}
 
-                {{>cmp-card-latest-messages/cmp-card-latest-messages
+                {{-- {{>cmp-card-latest-messages/cmp-card-latest-messages
                 date="05/04/2022"
                 header-m0=true
                 card-title="Richiesta servizio mensa scolastica"
@@ -74,10 +82,10 @@
 
                 {{>partials/button/button label="Vedi altri messaggi" class="btn-xs btn-me btn-label
                 t-primary px-0"}}
-                {{/cmp-card/cmp-card-content-box}}
+                {{/cmp-card/cmp-card-content-box}} --}}
               </div>
 
-              <div class="it-page-section mb-50 mb-lg-90" id="latest-activities">
+              {{-- <div class="it-page-section mb-50 mb-lg-90" id="latest-activities">
                 {{#>cmp-card/cmp-card-content-box
                 card-title="Ultime attività"
                 header-m0=true
@@ -110,8 +118,8 @@
                 {{>partials/button/button label="Vedi altre attività" class="btn-xs btn-me btn-label
                 t-primary px-0"}}
                 {{/cmp-card/cmp-card-content-box}}
-              </div>
-            </div> --}}
+              </div> --}}
+            </div>
           </div>
         </div>
         <div class="tab-pane" id="data-ex-tab2" role="tabpanel"></div>
