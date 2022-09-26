@@ -47,7 +47,7 @@
 						<div class="row mb-2">
 							<div class="card-wrapper px-0 card-overlapping card-teaser-wrapper card-teaser-wrapper-equal card-teaser-block-3">
 								<!-- MF -->
-								<x-card type="homepage_card">
+								<x-card type="homepage">
 									<x-slot name="category">Organo test</x-slot>
 									<x-slot name="title">Organo titolo</x-slot>
 								</x-card>
