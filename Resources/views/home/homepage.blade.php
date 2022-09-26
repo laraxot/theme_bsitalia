@@ -121,15 +121,16 @@
 										<h3 class="mb-0 text-center home-carousel-title">Settembre 2022</h3>
 									</div>
 								</div>
-								<div class="splide__track">
-                                    {{-- <x-lists.containerul_class="testit-carousel-all"> --}}
-									<ul class="splide__listit-carousel-all">
-										<li class="splide__slide">
+								<div class="">
+                                    {{-- <x-lists.container ul_class="test it-carousel-all"> --}}
+									<ul class="splide__list it-carousel-all">
+										
+										<li class="">
 											<div class="it-single-slide-wrapper h-100">
 												<div class="card-wrapper h-100">
 													<div class="card card-bg">
 														<div class="card-body">
-															<h4 class="card-title pb-4 mb-10">15<span>lun</span></h4>
+															<h4 class="card-title pb-4 mb-10">5515<span>lun</span></h4>
 															<p class="card-text px-2 pb-10 mb-10"><a href="#">Saldo
 																TASI</a>
 															</p>
@@ -265,7 +266,7 @@
 											</div>
 										</li>
 									</ul>
-                                	{{-- </x-lists.container> --}}
+                                {{-- </x-lists.container> --}}
 								</div>
 							</div>
 						</div>

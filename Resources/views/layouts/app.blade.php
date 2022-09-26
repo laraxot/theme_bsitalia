@@ -25,6 +25,7 @@
         @yield('content')
     </main>
     @include('pub_theme::layouts.partials.modals')
+    @include('pub_theme::layouts.partials.modals')
     {{--  
     {% include footer.html %} 
     --}}
