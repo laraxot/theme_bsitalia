@@ -1,4 +1,5 @@
-@extends('pub_theme::base.base', ['title' => 'Area personale - Nome del Comune', 'logged' => 'true'])
+{{-- @extends('pub_theme::base.base', ['title' => 'Area personale - Nome del Comune', 'logged' => 'true']) --}}
+@extends('pub_theme::layouts.app', ['title' => 'Area personale - Nome del Comune', 'logged' => 'true'])
 @section('content')
     <main>
         <div class="container" id="main-container">
@@ -92,28 +93,40 @@
 
                             <div class="col-12 col-lg-8 offset-lg-1 px-0 px-sm-3">
                                 <section class="it-page-section mb-40 mb-lg-60" id="practices">
-                                    <x-filter title="Pratiche" id-input="pratiche" id-dropdown="pratiche"></x-filter>
+                                    <x-filter>
+                                        <x-slot name="title">Pratiche</x-slot>
+                                        <x-slot name="id_input">pratiche</x-slot>
+                                        <x-slot name="id_dropdown">pratiche</x-slot>
+                                    </x-filter>
 
                                     <x-accordion accordion=segnalazione-disservizio.area-personale.accordion.pratiche>
                                     </x-accordion>
 
                                     <x-button label="Vedi altre pratiche"
                                         class="accordion-view-more mb-2 pt-3 t-primary
-                  title-xsmall-semi-bold
-                  ps-lg-3">
+                                                title-xsmall-semi-bold
+                                                ps-lg-3">
                                     </x-button>
                                 </section>
 
                                 <section class="it-page-section mb-50 mb-lg-90" id="payments">
-                                    <x-filter title="Pagamenti" id-input="pagamenti" id-dropdown="pagamenti"></x-filter>
+                                    <x-filter>
+                                        <x-slot name="title">Pagamenti</x-slot>
+                                        <x-slot name="id_input">pagamenti</x-slot>
+                                        <x-slot name="id_dropdown">pagamenti</x-slot>
+                                    </x-filter>
 
                                     <x-accordion accordion=segnalazione-disservizio.area-personale.accordion.pagamenti>
                                     </x-accordion>
 
+                                                    {{-- {{>cmp-accordion/cmp-accordion
+                accordion=segnalazione-disservizio.area-personale.accordion.pratiche
+                }} --}}
+
                                     <x-button label="Vedi altri pagamenti"
                                         class="accordion-view-more mb-2 t-primary
-                  title-xsmall-semi-bold
-                  ps-lg-3">
+                                                title-xsmall-semi-bold
+                                                ps-lg-3">
                                     </x-button>
                                 </section>
                             </div>
@@ -140,10 +153,10 @@
 
         <x-modal-message date="15/03/2022" card-title="Iscrizione alla Scuola dell’infanzia"
             description="La
-    graduatoria per l’iscrizione alla Scuola dell’Infanzia, a.a. 2022/2023 è stata pubblicata. Consulta la graduatoria
-    online e perfeziona la pratica."
+                graduatoria per l’iscrizione alla Scuola dell’Infanzia, a.a. 2022/2023 è stata pubblicata. Consulta la graduatoria
+                online e perfeziona la pratica."
             subtitle="Graduatoria 2022/23" link="Graduatoria Scuola dell'infanzia per l'anno
-    scolastico 2022/23">
+                scolastico 2022/23">
         </x-modal-message>
     </main>
 @endsection
