@@ -4,7 +4,8 @@
         <div class="container" id="main-container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-10">
-                    <x-breadcrumbs link1="Home" link2="Servizi" link3="Segnalazione disservizio"></x-breadcrumbs>
+                    <x-breadcrumb type="v2" :rows="$panel->getBreads()">
+                    </x-breadcrumb>
                 </div>
             </div>
         </div>
@@ -12,11 +13,12 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-10">
-                    <x-heading.detail title="Segnalazione disservizio"
+                    <x-heading type="heading".detail title="Segnalazione disservizio"
                         subTitle="Un servizio aperto a tutti i cittadini per segnalare disservizi, guasti e criticità
           rilevati sul territorio comunale."
                         pClass="mb-3" double-button=true label="Segnala disservizio" second-label="Tutte le segnalazioni"
-                        class="text-button" label-tag-up="Servizio attivo" servizio-attivo=true></x-heading.detail>
+                        class="text-button" label-tag-up="Servizio attivo" servizio-attivo=true>
+                        </x-heading.heading.detail>
                 </div>
                 <hr class="d-none d-lg-block mb-0 mt-2">
             </div>
@@ -26,8 +28,9 @@
             <div class="row row-column-menu-left mt-lg-80 mt-3">
 
                 <div class="col-12 col-lg-3 mb-4 border-col">
-                    <x-navscroll accordion-title="INDICE DELLA PAGINA" id="one"
-                        link-list=link-list.segnalazioni-disservizio-1></x-navscroll>
+                    <x-nav type="scroll" accordion-title="INDICE DELLA PAGINA" id="one"
+                        link-list=link-list.segnalazioni-disservizio-1>
+                    </x-nav>
                 </div>
 
                 <div class="col-12 col-lg-8 offset-lg-1">
@@ -174,7 +177,8 @@
                         <x-carousel carousel-title="Contenuti correlati" class="carousel-4-card"></x-carousel>
                     </div>
                     <div class="col-12 col-lg-6 offset-lg-3 p-contacts">
-                        <x-contact></x-contact>
+                        <x-card.rows type="contacts" :rows="collect([])">
+                        </x-card.rows>
                     </div>
                 </div>
             </div>

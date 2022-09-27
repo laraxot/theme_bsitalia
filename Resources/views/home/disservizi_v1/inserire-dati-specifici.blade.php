@@ -4,35 +4,39 @@
         <div class="container" id="main-container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-10">
-                    <x-breadcrumbs link1="Home" link2="Servizi" link3="Segnalazione disservizio"></x-breadcrumbs>
-                    <x-heading title="Segnalazione disservizio"></x-heading>
+                    <x-breadcrumb type="v2" :rows="$panel->getBreads()">
+                    </x-breadcrumb>
+                    <x-heading type="heading" title="Segnalazione disservizio">
+                    </x-heading>
                 </div>
                 <div class="col-12">
-                    <x-info-progress step-list=step-list.disservizio-step-2 step-num="2" step-tot="3" class="mb-lg-80"
-                        step-title="Dati di segnalazione"
+                    <x-info type="progress" step-list=step-list.disservizio-step-2 step-num="2" step-tot="3"
+                        class="mb-lg-80" step-title="Dati di segnalazione"
                         subtitle="I campi contraddistinti dal simbolo asterisco sono obbligatori"
-                        classSubtitle="mt-40 mb-3"></x-info-progress>
+                        classSubtitle="mt-40 mb-3">
+                    </x-info>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-12 col-lg-3 d-lg-block mb-4 d-none ">
-                    <x-navscroll id="one" accordion-title="INFORMAZIONI RICHIESTE"
-                        link-list=link-list.disservizio-dati-specifici></x-navscroll>
+                    <x-nav type="scroll" id="one" accordion-title="INFORMAZIONI RICHIESTE"
+                        link-list=link-list.disservizio-dati-specifici>
+                    </x-nav>
                 </div>
                 <div class="col-12 col-lg-8 offset-lg-1">
                     <div class="steppers-content" aria-live="polite">
                         <div class="it-page-sections-container">
                             <section class="it-page-section" id="report-place">
-                                <x-card.content-box class="p-big p-lg-4" bg-grey=true h2-class="mb-1" header-m0=true
+                                <x-card type="content_box" class="p-big p-lg-4" bg-grey=true h2-class="mb-1" header-m0=true
                                     card-title="Luogo" subtitle="Indica il luogo del disservizio" margin-class="mb-40">
                                     <x-input.autocomplete placeholder="Cerca un luogo*" link=true class="mt-3">
                                     </x-input.autocomplete>
-                                </x-card.content-box>
+                                    </x-card.content_box>
                             </section>
 
                             <section class="it-page-section" id="report-info">
-                                <x-card.content-box class="p-big" bg-grey=true h2-class="mb-3" header-m0=true
+                                <x-card type="content_box" class="p-big" bg-grey=true h2-class="mb-3" header-m0=true
                                     required-icon=true card-title="Disservizio" margin-class="mb-40">
                                     <x-input.select placeholder="Tipo di disservizio*" class="p-md-3 p-lg-4 pb-lg-0"
                                         select-option-list=serv-1-disservizio.list label-text="Tipo di disservizio*"
@@ -68,11 +72,11 @@
                                             allegare alla
                                             segnalazione</p>
                                     </div>
-                                </x-card.content-box>
+                                    </x-card.content_box>
                             </section>
 
                             <section class="it-page-section" id="report-author">
-                                <x-card.content-box h2-class="mb-1" header-m0=true bg-grey=true
+                                <x-card type="content_box" h2-class="mb-1" header-m0=true bg-grey=true
                                     card-title="Autore della segnalazione" subtitle="Informazione su di te">
 
                                     <x-info-button-card big-title="Giulia Bianchi"
@@ -80,7 +84,7 @@
                                         onlyContact=true no-header=true show-more-anagrafica="true"
                                         collapse-id="collapse-parents" modalId="modal-documents" bnt-label-text="Modifica">
                                     </x-info-button-card>
-                                </x-card.content-box>
+                                    </x-card.content_box>
                             </section>
                         </div>
                         <x-nav-steps save="true" saveBtn=true aria-label-save="di segnalazione disservizio">
@@ -95,7 +99,8 @@
             <div class="container">
                 <div class="row d-flex justify-content-center p-contacts">
                     <div class="col-12 col-lg-5">
-                        <x-contact></x-contact>
+                        <x-card.rows type="contacts" :rows="collect([])">
+                        </x-card.rows>
                     </div>
                 </div>
             </div>

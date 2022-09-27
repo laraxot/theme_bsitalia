@@ -4,7 +4,8 @@
         <div class="container" id="main-container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-10">
-                    <x-breadcrumbs link1="Home" link2="Servizi" link3="Segnalazione disservizio"></x-breadcrumbs>
+                    <x-breadcrumb type="v2" :rows="$panel->getBreads()">
+                    </x-breadcrumb>
                 </div>
             </div>
         </div>
@@ -15,8 +16,9 @@
                     <h1 class="title-xxxlarge mb-4">Segnalazione disservizio</h1>
                 </div>
                 <div class="col-12">
-                    <x-info-progress step-list=step-list.disservizio-step-1 step-num="1"
-                        step-title="Autorizzazioni e condizioni" step-tot="3"></x-info-progress>
+                    <x-info type="progress" step-list=step-list.disservizio-step-1 step-num="1"
+                        step-title="Autorizzazioni e condizioni" step-tot="3">
+                    </x-info>
                 </div>
             </div>
         </div>
@@ -53,7 +55,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-lg-6 offset-lg-3 p-contacts">
-                        <x-contact></x-contact>
+                        <x-card.rows type="contacts" :rows="collect([])"></x-card.rows>
                     </div>
                 </div>
             </div>

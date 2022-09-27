@@ -4,11 +4,12 @@
         <div class="container" id="main-container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-10">
-                    <x-breadcrumbs link2="Home" link3="Area personale"></x-breadcrumbs>
-                    <x-heading title="Giulia Rossi" subTitle="CF: GLARSS72H25H501Y"></x-heading>
+                    <x-breadcrumb type="v2" :rows="$panel->getBreads()">
+                    </x-breadcrumb>
+                    <x-heading type="heading" title="Giulia Rossi" subTitle="CF: GLARSS72H25H501Y"></x-heading>
                 </div>
                 <div class="col-12 p-0">
-                    <x-nav-tab></x-nav-tab>
+                    <x-nav type="tab"></x-nav>
                 </div>
             </div>
             <div class="it-page-sections-container">
@@ -17,57 +18,66 @@
                     <div class="tab-pane fade show active" id="data-ex-tab1" role="tabpanel">
                         <div class="row">
                             <div class="col-12 col-lg-3 d-lg-block mb-4 d-none ">
-                                <x-navscroll accordion-title="INDICE DELLA PAGINA" id="one"
-                                    link-list=segnalazione-disservizio.area-personale.navscroll.page-1></x-navscroll>
+                                <x-nav type="scroll" accordion-title="INDICE DELLA PAGINA" id="one"
+                                    link-list=segnalazione-disservizio.area-personale.navscroll.page-1></x-nav>
                             </div>
 
                             <div class="col-12 col-lg-8 offset-lg-1">
                                 <div class="it-page-section mb-40 mb-lg-60" id="latest-posts">
-                                    <x-card.content-box card-title="Ultimi messaggi" header-m0=true h2-class="mb-3">
+                                    <x-card type="content_box" card-title="Ultimi messaggi" header-m0=true h2-class="mb-3">
 
-                                        <x-card.latest-messages date="05/04/2022"
+                                        <x-card type="latest_messages" date="05/04/2022"
                                             card-title="Richiesta servizio mensa scolastica" header-m0=true
                                             description="La richiesta AN4059281 è stata approv..." modalId="modal-message"
-                                            id="1" description-class="text-truncate"></x-card.latest-messages>
+                                            id="1" description-class="text-truncate">
+                                            </x-card.latest_messages>
 
-                                        <x-card.latest-messages date="20/03/2022"
-                                            card-title="Richiesta servizio mensa scolastica" header-m0=true
-                                            description="La richiesta AN4059281 è stata ricevu..." modalId="modal-message"
-                                            id="2" description-class="text-truncate"></x-card.latest-messages>
+                                            <x-card type="latest_messages" date="20/03/2022"
+                                                card-title="Richiesta servizio mensa scolastica" header-m0=true
+                                                description="La richiesta AN4059281 è stata ricevu..."
+                                                modalId="modal-message" id="2" description-class="text-truncate">
+                                                </x-card.latest_messages>
 
-                                        <x-card.latest-messages date="15/02/2022"
-                                            card-title="Iscrizione alla scuola dell’infanzia" header-m0=true
-                                            description="La richiesta AFG059281 è stata ricevu..." modalId="modal-message"
-                                            id="3" description-class="text-truncate"></x-card.latest-messages>
+                                                <x-card type="latest_messages" date="15/02/2022"
+                                                    card-title="Iscrizione alla scuola dell’infanzia" header-m0=true
+                                                    description="La richiesta AFG059281 è stata ricevu..."
+                                                    modalId="modal-message" id="3"
+                                                    description-class="text-truncate">
+                                                    </x-card.latest_messages>
 
-                                        <x-button label="Vedi altri messaggi"
-                                            class="btn-xs btn-me btn-label
-                  t-primary px-0"></x-button>
-                                        <x-card.content-box>
+                                                    <x-button label="Vedi altri messaggi"
+                                                        class="btn-xs btn-me btn-label
+                  t-primary px-0">
+                                                    </x-button>
+                                                </x-card>
                                 </div>
 
                                 <div class="it-page-section mb-50 mb-lg-90" id="latest-activities">
-                                    <x-card.content-box card-title="Ultime attività" header-m0=true h2-class="mb-3">
+                                    <x-card type="content_box" card-title="Ultime attività" header-m0=true h2-class="mb-3">
 
-                                        <x-icon-card card-class="pt-20 pb-4 ps-4 pr-30"
+                                        <x-card type="icon" card-class="pt-20 pb-4 ps-4 pr-30"
                                             title-class="t-primary mb-2 underline title-small-semi-bold" shadow-card=true
                                             card-title="Segnalazione disservizio" header-m0=true date="15/04/2022"
-                                            icon="it-files"></x-icon-card>
+                                            icon="it-files">
+                                        </x-card>
 
-                                        <x-icon-card card-class="pt-20 pb-4 ps-4 pr-30"
+                                        <x-card type="icon" card-class="pt-20 pb-4 ps-4 pr-30"
                                             title-class="t-primary mb-2 underline title-small-semi-bold" shadow-card=true
                                             card-title="Pagamento contravvenzione" header-m0=true date="23/01/2022"
-                                            icon="it-files"></x-icon-card>
+                                            icon="it-files">
+                                        </x-card>
 
-                                        <x-icon-card card-class="pt-20 pb-4 ps-4 pr-30"
+                                        <x-card type="icon" card-class="pt-20 pb-4 ps-4 pr-30"
                                             title-class="t-primary mb-2 underline title-small-semi-bold" shadow-card=true
                                             card-title="Richiesta assegno maternità" header-m0=true date="01/10/2021"
-                                            icon="it-files"></x-icon-card>
+                                            icon="it-files">
+                                        </x-card>
 
                                         <x-button label="Vedi altre attività"
                                             class="btn-xs btn-me btn-label
-                  t-primary px-0"></x-button>
-                                        <x-card.content-box>
+                  t-primary px-0">
+                                        </x-button>
+                                    </x-card>
                                 </div>
                             </div>
                         </div>
@@ -76,8 +86,8 @@
                     <div class="tab-pane" id="data-ex-tab3" role="tabpanel">
                         <div class="row">
                             <div class="d-none d-sm-none d-lg-block col-lg-3">
-                                <x-navscroll accordion-title="INDICE DELLA PAGINA" id="Three"
-                                    link-list=segnalazione-disservizio.area-personale.navscroll.page-3></x-navscroll>
+                                <x-nav type="scroll" accordion-title="INDICE DELLA PAGINA" id="Three"
+                                    link-list=segnalazione-disservizio.area-personale.navscroll.page-3></x-nav>
                             </div>
 
                             <div class="col-12 col-lg-8 offset-lg-1 px-0 px-sm-3">
@@ -121,7 +131,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-lg-6 offset-lg-3 p-contacts">
-                        <x-contact></x-contact>
+                        <x-card.rows type="contacts" :rows="collect([])">
+                        </x-card.rows>
                     </div>
                 </div>
             </div>

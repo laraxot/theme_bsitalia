@@ -4,8 +4,9 @@
         <div class="container" id="main-container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-10">
-                    <x-breadcrumbs link1="Home" link2="Servizi" link3="Segnalazione disservizio"></x-breadcrumbs>
-                    <x-heading heading-p0=true title="Segnalazione inviata" iconTitle="it-check-circle"
+                    <x-breadcrumb type="v2" :rows="$panel->getBreads()">
+                    </x-breadcrumb>
+                    <x-heading type="heading" heading-p0=true title="Segnalazione inviata" iconTitle="it-check-circle"
                         iconClass="mr-10 icon-sm mb-1"
                         subTitle="Grazie, abbiamo ricevuto la tua <strong>segnalazione AN4059281.</strong></p>
         <p class='subtitle-small'>Sarà visibile sulla <a href='#' class='t-primary'> lista di tutte segnalazioni</a> una volta
@@ -13,7 +14,8 @@
         <p class='subtitle-small pt-3 pt-lg-4'>Abbiamo inviato il riepilogo all’email:<br><strong>
             giulia.bianchi@gmail.com</strong>"
                         button=true label="Scarica la ricevuta (PDF 100KB)" bg-white=true outline-primary=true
-                        iconBtn="it-download" sm=true></x-heading>
+                        iconBtn="it-download" sm=true>
+                    </x-heading>
                     <p class="mt-3">
                         <a href="#" class="t-primary text-paragraph">Consulta la richiesta</a>
                         <span class="text-paragraph"> nella tua area riservata</span>
@@ -44,7 +46,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-lg-6 offset-lg-3 p-contacts">
-                        <x-contact></x-contact>
+                        <x-card.rows type="contacts" :rows="collect([])">
+                        </x-card.rows>
                     </div>
                 </div>
             </div>
