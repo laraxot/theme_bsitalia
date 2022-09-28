@@ -17,7 +17,7 @@
                     </x-heading>
                 </div>
                 <div class="col-12 p-0">
-                    <x-nav type="tab"></x-nav>
+                    {{-- <x-nav type="tab"></x-nav> --}}
                 </div>
             </div>
             <div class="it-page-sections-container">
