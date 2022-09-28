@@ -16,8 +16,11 @@
                     <h1 class="title-xxxlarge mb-4">Segnalazione disservizio</h1>
                 </div>
                 <div class="col-12">
-                    <x-info type="progress" step-list=step-list.disservizio-step-1 step-num="1"
-                        step-title="Autorizzazioni e condizioni" step-tot="3">
+                    <x-info type="progress">
+                        <x-slot name="step_list">step_list.disservizio_step_1</x-slot>
+                        <x-slot name="step_num">1</x-slot>
+                        <x-slot name="step_title">Autorizzazioni e condizioni</x-slot>
+                        <x-slot name="step_tot">3</x-slot>
                     </x-info>
                 </div>
             </div>
@@ -46,7 +49,11 @@
                                 privacy</label>
                         </div>
                     </div>
-                    <x-button label="Avanti" primary=true class="mobile-full"></x-button>
+                    <x-button>
+                        <x-slot name="label">Avanti</x-slot>
+                        <x-slot name="primary">true</x-slot>
+                        <x-slot name="class">mobile-full</x-slot>
+                    </x-button>
                 </div>
             </div>
         </div>

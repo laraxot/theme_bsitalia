@@ -7,7 +7,10 @@
                 <div class="col-12 col-lg-10">
                     <x-breadcrumb type="v2" :rows="$panel->getBreads()">
                     </x-breadcrumb>
-                    <x-heading type="heading" title="Giulia Rossi" subTitle="CF: GLARSS72H25H501Y"></x-heading>
+                    <x-heading type="heading">
+                        <x-slot name="title">Giulia Rossi</x-slot>
+                        <x-slot name="subTitle">CF: GLARSS72H25H501Y</x-slot>
+                    </x-heading>
                 </div>
                 <div class="col-12 p-0">
                     <x-nav type="tab"></x-nav>
@@ -19,8 +22,12 @@
                     <div class="tab-pane fade show active" id="data-ex-tab1" role="tabpanel">
                         <div class="row">
                             <div class="col-12 col-lg-3 d-lg-block mb-4 d-none ">
-                                <x-nav type="scroll" accordion-title="INDICE DELLA PAGINA" id="one"
-                                    link-list=segnalazione-disservizio.area-personale.navscroll.page-1></x-nav>
+                                <x-nav type="scroll">
+                                    <x-slot name="accordion_title">INDICE DELLA PAGINA</x-slot>
+                                    <x-slot name="id">one</x-slot>
+                                    <x-slot name="link_list">segnalazione-disservizio.area-personale.navscroll.page-1
+                                    </x-slot>
+                                </x-nav>
                             </div>
 
                             <div class="col-12 col-lg-8 offset-lg-1">
@@ -99,8 +106,10 @@
                                         <x-slot name="id_dropdown">pratiche</x-slot>
                                     </x-filter>
 
-                                    <x-accordion accordion=segnalazione-disservizio.area-personale.accordion.pratiche>
-                                    </x-accordion>
+                                    {{-- <x-accordion accordion=segnalazione-disservizio.area-personale.accordion.pratiche>
+                                    </x-accordion> --}}
+
+                                    <x-accordion.rows :rows="collect([])"></x-accordion.rows>
 
                                     <x-button label="Vedi altre pratiche"
                                         class="accordion-view-more mb-2 pt-3 t-primary
@@ -116,10 +125,12 @@
                                         <x-slot name="id_dropdown">pagamenti</x-slot>
                                     </x-filter>
 
-                                    <x-accordion accordion=segnalazione-disservizio.area-personale.accordion.pagamenti>
-                                    </x-accordion>
+                                    {{-- <x-accordion accordion=segnalazione-disservizio.area-personale.accordion.pagamenti>
+                                    </x-accordion> --}}
 
-                                                    {{-- {{>cmp-accordion/cmp-accordion
+                                    <x-accordion.rows :rows="collect([])"></x-accordion.rows>
+
+                                    {{-- {{>cmp-accordion/cmp-accordion
                 accordion=segnalazione-disservizio.area-personale.accordion.pratiche
                 }} --}}
 
@@ -151,12 +162,13 @@
             </div>
         </div>
 
-        <x-modal-message date="15/03/2022" card-title="Iscrizione alla Scuola dell’infanzia"
+        <x-modal type="message" date="15/03/2022" card-title="Iscrizione alla Scuola dell’infanzia"
             description="La
                 graduatoria per l’iscrizione alla Scuola dell’Infanzia, a.a. 2022/2023 è stata pubblicata. Consulta la graduatoria
                 online e perfeziona la pratica."
-            subtitle="Graduatoria 2022/23" link="Graduatoria Scuola dell'infanzia per l'anno
+            subtitle="Graduatoria 2022/23"
+            link="Graduatoria Scuola dell'infanzia per l'anno
                 scolastico 2022/23">
-        </x-modal-message>
+        </x-modal>
     </main>
 @endsection

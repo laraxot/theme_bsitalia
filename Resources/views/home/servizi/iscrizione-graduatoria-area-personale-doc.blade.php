@@ -36,7 +36,13 @@
 
                 </x-card.content-box>
 
-                <x-icon-list title="Allegati" icon-list=icon-list.allegati-area-personale default=true></x-icon-list>
+                {{-- <x-icon-list title="Allegati" icon-list=icon-list.allegati-area-personale default=true>
+                </x-icon-list> --}}
+
+                <x-lists.icon :rows="collect([])">
+                    <x-slot name="title">Allegati</x-slot>
+                    <x-slot name="default">{{true}}</x-slot>
+                </x-lists.icon>
 
                 <x-timeline title="Tempi e scadenze" timeline=timeline.area-personale></x-timeline>
                 <div class="mb-40 mb-lg-90 mt-lg-30 mt-4">

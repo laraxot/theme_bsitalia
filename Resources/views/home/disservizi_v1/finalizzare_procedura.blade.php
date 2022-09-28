@@ -26,8 +26,14 @@
             <div class="row justify-content-center mb-3 mb-md-5">
 
                 <div class="col-12 col-lg-10">
-                    <x-icon-list title="Servizi correlati" titleClass="mb-lg-4" id-title="related-service"
-                        icon-list=servizi-pagamento.finalizzare-procedura.servizi-correlati-disservizio></x-icon-list>
+                    {{-- <x-icon-list title="Servizi correlati" titleClass="mb-lg-4" id-title="related-service"
+                        icon-list=servizi-pagamento.finalizzare-procedura.servizi-correlati-disservizio></x-icon-list> --}}
+
+                        <x-lists.icon :rows="collect([])">
+                            <x-slot name="title">Servizi correlati</x-slot>
+                            <x-slot name="titleClass">mb-lg-4</x-slot>
+                            <x-slot name="id_title">related-service</x-slot>
+                        </x-lists.icon>
                 </div>
             </div>
         </div>

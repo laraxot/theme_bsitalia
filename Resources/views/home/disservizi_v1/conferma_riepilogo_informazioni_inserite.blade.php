@@ -42,17 +42,18 @@
                         <x-card type="content_box" class="mb-0" bg-grey=true header-m0=true h3-title=true h3-class="mb-4"
                             margin-class="mb-4" card-title="Autore della segnalazione">
 
-                            <x-info-summary.no-modify class="mb-4 mb-lg-30 p-3 p-lg-4" info-title="Giulia Bianchi" info=true
-                                disservizio-page=true info-list=disservizio-info.info-author></x-info-summary.no-modify>
+                            <x-info-summary type="no-modify" class="mb-4 mb-lg-30 p-3 p-lg-4" info-title="Giulia Bianchi"
+                                info=true disservizio-page=true info-list=disservizio-info.info-author></x-info-summary>
 
-                            <x-info-summary.no-modify class="p-3 p-lg-4" info-title="Contatti" info=true
-                                disservizio-page=true info-list=disservizio-info.info-contacts></x-info-summary.no-modify>
+                            <x-info-summarytype="no-modify" class="p-3 p-lg-4" info-title="Contatti" info=true
+                                disservizio-page=true info-list=disservizio-info.info-contacts>
+                                </x-info-summary>
 
-                            </x-card.content_box>
+                                </x-card.content_box>
 
-                            <x-nav-steps next=true modalId="modal-terms" saveBtn=true
-                                aria-label-save="di segnalazione disservizio">
-                            </x-nav-steps>
+                                <x- type="steps" next=true modalId="modal-terms" saveBtn=true
+                                    aria-label-save="di segnalazione disservizio">
+                                    </x-nav>
                 </div>
             </div>
         </div>
@@ -69,6 +70,6 @@
             </div>
         </div>
 
-        <x-modal-terms-and-conditions></x-modal-terms-and-conditions>
+        <x-modal type="terms_and_conditions"></x-modal>
     </main>
 @endsection

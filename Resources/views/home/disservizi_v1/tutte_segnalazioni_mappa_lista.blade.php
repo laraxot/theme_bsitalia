@@ -130,6 +130,6 @@
         </div>
 
 
-        <x-modal-clickMap></x-modal-clickMap>
+        <x-modal type="clickMap"></x-modal>
     </main>
 @endsection
