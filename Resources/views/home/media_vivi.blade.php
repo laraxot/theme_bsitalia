@@ -39,26 +39,25 @@
     <div class="bg-grey-dsk py-5">
       <div class="container">
         <h2 class="title-xxlarge mb-4">Eventi in evidenza</h2>
-
-        <x-card.rows type="list_img" :rows="collect([])">
-          <x-slot name="img_path">roma-colosseo.png</x-slot>
+        <x-card.rows type="list_img" :rows="collect([])" label="Tutti gli eventi" buttonNext="true">
         </x-card>
-
-
-        {{>cmp-list-card-img/cmp-list-card-img cards=cards.card-events label="Tutti gli eventi" buttonNext=true}}
+        {{-- {{>cmp-list-card-img/cmp-list-card-img cards=cards.card-events label="Tutti gli eventi" buttonNext=true}} --}}
       </div>
     </div>
-    {{-- 
+
     <div class="container p-3 p-md-5">
       <h2 class="title-xxlarge mb-40 ">Luoghi in evidenza</h2>
-      {{>cmp-list-card-img/cmp-list-card-img cards=cards.card-places label="Tutti i luoghi" buttonNext=true}}
+      <x-card.rows type="list_img" :rows="collect([])" label="Tutti i luoghi" buttonNext="true">
+      </x-card>
+      {{-- {{>cmp-list-card-img/cmp-list-card-img cards=cards.card-places label="Tutti i luoghi" buttonNext=true}} --}}
     </div>
 
     <div class="bg-primary">
       <div class="container">
         <div class="row d-flex justify-content-center bg-primary">
           <div class="col-12 col-lg-6">
-            {{>cmp-rating/cmp-rating public-template=true}}
+            <x-rating public_template="true"></x-rating>
+            {{-- {{>cmp-rating/cmp-rating public-template=true}} --}}
           </div>
         </div>
       </div>
@@ -68,10 +67,11 @@
       <div class="container">
         <div class="row d-flex justify-content-center p-contacts">
           <div class="col-12 col-lg-6">
-            {{>cmp-contacts/cmp-contacts city-problems=true}}
+            <x-contacts city_problems="true"></x-contacts>
+            {{-- {{>cmp-contacts/cmp-contacts city-problems=true}} --}}
           </div>
         </div>
       </div>
-    </div> --}}
+    </div>
   </main>
   

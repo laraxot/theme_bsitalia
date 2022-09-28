@@ -1,10 +1,11 @@
-@extends('pub_theme::base.base', ['title' => 'Segnalazione disservizio - Nome del Comune', 'headerActive3' => 'true'])
+{{-- @extends('pub_theme::base.base', ['title' => 'Segnalazione disservizio - Nome del Comune', 'headerActive3' => 'true']) --}}
+@extends('pub_theme::layouts.app')
 @section('content')
     <main>
         <div class="container" id="main-container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-10">
-                    <x-breadcrumb type="v2" :rows="$panel->getBreads()">
+                    <x-breadcrumb.rows type="v2" :rows="$_panel->getBreads()">
                     </x-breadcrumb>
                 </div>
             </div>
@@ -16,12 +17,12 @@
                     <h1 class="title-xxxlarge mb-4">Segnalazione disservizio</h1>
                 </div>
                 <div class="col-12">
-                    <x-info type="progress">
-                        <x-slot name="step_list">step_list.disservizio_step_1</x-slot>
+                    <x-info.rows type="progress" :rows="collect([])">
+                        {{-- <x-slot name="step_list">step_list.disservizio_step_1</x-slot> --}}
                         <x-slot name="step_num">1</x-slot>
                         <x-slot name="step_title">Autorizzazioni e condizioni</x-slot>
                         <x-slot name="step_tot">3</x-slot>
-                    </x-info>
+                    </x-info.rows>
                 </div>
             </div>
         </div>
@@ -49,11 +50,18 @@
                                 privacy</label>
                         </div>
                     </div>
-                    <x-button>
+
+                    <x-button type="advanced">
                         <x-slot name="label">Avanti</x-slot>
                         <x-slot name="primary">true</x-slot>
                         <x-slot name="class">mobile-full</x-slot>
                     </x-button>
+
+
+                    {{-- <x-button type="advanced" label="Avanti" class="mobile-full" primary="true">
+                    </x-button> --}}
+
+
                 </div>
             </div>
         </div>
