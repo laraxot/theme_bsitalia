@@ -38,30 +38,41 @@
                                 <div class="it-page-section mb-40 mb-lg-60" id="latest-posts">
                                     <x-card type="content_box" card-title="Ultimi messaggi" header-m0=true h2-class="mb-3">
 
-                                        <x-card type="latest_messages" date="05/04/2022"
-                                            card-title="Richiesta servizio mensa scolastica" header-m0=true
-                                            description="La richiesta AN4059281 è stata approv..." modalId="modal-message"
-                                            id="1" description-class="text-truncate">
-                                            </x-card.latest_messages>
+                                        <x-card type="latest_messages">
+                                            <x-slot name="date">05/04/2022</x-slot>
+                                            <x-slot name="card_title">Richiesta servizio mensa scolastica</x-slot>
+                                            <x-slot name="header_m0">true</x-slot>
+                                            <x-slot name="description">La richiesta AN4059281 è stata approv...</x-slot>
+                                            <x-slot name="modalId">modal-message</x-slot>
+                                            <x-slot name="id">1</x-slot>
+                                            <x-slot name="description_class">text-truncate</x-slot>
+                                        </x-card>
 
-                                            <x-card type="latest_messages" date="20/03/2022"
-                                                card-title="Richiesta servizio mensa scolastica" header-m0=true
-                                                description="La richiesta AN4059281 è stata ricevu..."
-                                                modalId="modal-message" id="2" description-class="text-truncate">
-                                                </x-card.latest_messages>
+                                        <x-card type="latest_messages">
+                                            <x-slot name="date">20/03/2022</x-slot>
+                                            <x-slot name="card_title">Richiesta servizio mensa scolastica</x-slot>
+                                            <x-slot name="header_m0">true</x-slot>
+                                            <x-slot name="description">La richiesta AN4059281 è stata ricevu...</x-slot>
+                                            <x-slot name="modalId">modal-message</x-slot>
+                                            <x-slot name="id">2</x-slot>
+                                            <x-slot name="description_class">text-truncate</x-slot>
+                                        </x-card>
 
-                                                <x-card type="latest_messages" date="15/02/2022"
-                                                    card-title="Iscrizione alla scuola dell’infanzia" header-m0=true
-                                                    description="La richiesta AFG059281 è stata ricevu..."
-                                                    modalId="modal-message" id="3"
-                                                    description-class="text-truncate">
-                                                    </x-card.latest_messages>
+                                        <x-card type="latest_messages">
+                                            <x-slot name="date">15/02/2022</x-slot>
+                                            <x-slot name="card_title">Iscrizione alla scuola dell’infanzia</x-slot>
+                                            <x-slot name="header_m0">true</x-slot>
+                                            <x-slot name="description">La richiesta AFG059281 è stata ricevu...</x-slot>
+                                            <x-slot name="modalId">modal-message</x-slot>
+                                            <x-slot name="id">3</x-slot>
+                                            <x-slot name="description_class">text-truncate</x-slot>
+                                        </x-card>
 
-                                                    <x-button label="Vedi altri messaggi"
-                                                        class="btn-xs btn-me btn-label
+                                        <x-button label="Vedi altri messaggi"
+                                            class="btn-xs btn-me btn-label
                   t-primary px-0">
-                                                    </x-button>
-                                                </x-card>
+                                        </x-button>
+                                    </x-card>
                                 </div>
 
                                 <div class="it-page-section mb-50 mb-lg-90" id="latest-activities">
