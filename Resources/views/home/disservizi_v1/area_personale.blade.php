@@ -5,8 +5,12 @@
         <div class="container" id="main-container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-10">
-                    <x-breadcrumb type="v2" :rows="$panel->getBreads()">
+                    {{-- <x-breadcrumb type="v2" :rows="$panel->getBreads()">
+                    </x-breadcrumb> --}}
+
+                    <x-breadcrumb type="v2">
                     </x-breadcrumb>
+
                     <x-heading type="heading">
                         <x-slot name="title">Giulia Rossi</x-slot>
                         <x-slot name="subTitle">CF: GLARSS72H25H501Y</x-slot>
