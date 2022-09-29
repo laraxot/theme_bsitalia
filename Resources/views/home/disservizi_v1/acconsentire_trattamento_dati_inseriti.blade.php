@@ -6,7 +6,7 @@
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-10">
                     <x-breadcrumb.rows type="v2" :rows="$_panel->getBreads()">
-                    </x-breadcrumb>
+                    </x-breadcrumb.rows>
                 </div>
             </div>
         </div>
@@ -23,6 +23,12 @@
                         <x-slot name="step_title">Autorizzazioni e condizioni</x-slot>
                         <x-slot name="step_tot">3</x-slot>
                     </x-info.rows>
+                    {{-- {{> cmp-info-progress/cmp-info-progress
+                        step-list=step-list.disservizio-step-1
+                        step-num="1"
+                        step-title="Autorizzazioni e condizioni"
+                        step-tot="3"
+                        }} --}}
                 </div>
             </div>
         </div>

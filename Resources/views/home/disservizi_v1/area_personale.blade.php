@@ -8,8 +8,8 @@
                     {{-- <x-breadcrumb type="v2" :rows="$panel->getBreads()">
                     </x-breadcrumb> --}}
 
-                    <x-breadcrumb type="v2">
-                    </x-breadcrumb>
+                    <x-breadcrumb.rows type="v2" :rows="collect([])">
+                    </x-breadcrumb.rows>
 
                     <x-heading type="heading">
                         <x-slot name="title">Giulia Rossi</x-slot>
@@ -115,16 +115,16 @@
 
                             <div class="col-12 col-lg-8 offset-lg-1 px-0 px-sm-3">
                                 <section class="it-page-section mb-40 mb-lg-60" id="practices">
-                                    <x-filter>
+                                    {{-- <x-filter>
                                         <x-slot name="title">Pratiche</x-slot>
                                         <x-slot name="id_input">pratiche</x-slot>
                                         <x-slot name="id_dropdown">pratiche</x-slot>
-                                    </x-filter>
+                                    </x-filter> --}}
 
                                     {{-- <x-accordion accordion=segnalazione-disservizio.area-personale.accordion.pratiche>
                                     </x-accordion> --}}
 
-                                    <x-accordion.rows :rows="collect([])"></x-accordion.rows>
+                                    {{-- <x-accordion.rows :rows="collect([])"></x-accordion.rows> --}}
 
                                     <x-button label="Vedi altre pratiche"
                                         class="accordion-view-more mb-2 pt-3 t-primary
@@ -134,16 +134,16 @@
                                 </section>
 
                                 <section class="it-page-section mb-50 mb-lg-90" id="payments">
-                                    <x-filter>
+                                    {{-- <x-filter>
                                         <x-slot name="title">Pagamenti</x-slot>
                                         <x-slot name="id_input">pagamenti</x-slot>
                                         <x-slot name="id_dropdown">pagamenti</x-slot>
-                                    </x-filter>
+                                    </x-filter> --}}
 
                                     {{-- <x-accordion accordion=segnalazione-disservizio.area-personale.accordion.pagamenti>
                                     </x-accordion> --}}
 
-                                    <x-accordion.rows :rows="collect([])"></x-accordion.rows>
+                                    {{-- <x-accordion.rows :rows="collect([])"></x-accordion.rows> --}}
 
                                     {{-- {{>cmp-accordion/cmp-accordion
                 accordion=segnalazione-disservizio.area-personale.accordion.pratiche
@@ -177,13 +177,13 @@
             </div>
         </div>
 
-        <x-modal type="message" date="15/03/2022" card-title="Iscrizione alla Scuola dell’infanzia"
+        {{-- <x-modal type="message" date="15/03/2022" card-title="Iscrizione alla Scuola dell’infanzia"
             description="La
                 graduatoria per l’iscrizione alla Scuola dell’Infanzia, a.a. 2022/2023 è stata pubblicata. Consulta la graduatoria
                 online e perfeziona la pratica."
             subtitle="Graduatoria 2022/23"
             link="Graduatoria Scuola dell'infanzia per l'anno
                 scolastico 2022/23">
-        </x-modal>
+        </x-modal> --}}
     </main>
 @endsection
