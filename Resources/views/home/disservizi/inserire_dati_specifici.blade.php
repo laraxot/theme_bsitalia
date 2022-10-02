@@ -32,7 +32,7 @@
                                     card-title="Luogo" subtitle="Indica il luogo del disservizio" margin-class="mb-40">
                                     <x-input.autocomplete placeholder="Cerca un luogo*" link=true class="mt-3">
                                     </x-input.autocomplete>
-                                    </x-card.content_box>
+                                </x-card.content_box>
                             </section>
 
                             <section class="it-page-section" id="report-info">
@@ -72,7 +72,7 @@
                                             allegare alla
                                             segnalazione</p>
                                     </div>
-                                    </x-card.content_box>
+                                </x-card.content_box>
                             </section>
 
                             <section class="it-page-section" id="report-author">
