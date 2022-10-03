@@ -52,11 +52,26 @@
                             </section>
 
                             <section class="it-page-section" id="report-info">
-                                <x-card type="content_box" class="p-big" bg-grey=true h2-class="mb-3" header-m0=true
-                                    required-icon=true card-title="Disservizio" margin-class="mb-40">
-                                    <x-input.select placeholder="Tipo di disservizio*" class="p-md-3 p-lg-4 pb-lg-0"
-                                        select-option-list=serv-1-disservizio.list label-text="Tipo di disservizio*"
-                                        label-hidden=true id="inefficiency" selectClass="u-grey-dark"></x-input.select>
+                                <x-card type="content_box">
+                                    <x-slot name="class">p-big</x-slot>
+                                    <x-slot name="bg_grey">true</x-slot>
+                                    <x-slot name="h2_class">mb-3</x-slot>
+                                    <x-slot name="header_m0">true</x-slot>
+                                    <x-slot name="required_icon">true</x-slot>
+                                    <x-slot name="card_title">Disservizio</x-slot>
+                                    <x-slot name="margin_class">mb-40</x-slot>
+
+                                    <x-input.select>
+                                        <x-slot name="placeholder">Tipo di disservizio*</x-slot>
+                                        <x-slot name="class">p-md-3 p-lg-4 pb-lg-0</x-slot>
+                                        <x-slot name="label_text">Tipo di disservizio*</x-slot>
+                                        <x-slot name="label_hidden">true</x-slot>
+                                        <x-slot name="id">inefficiency</x-slot>
+                                        <x-slot name="selectClass">u-grey-dark</x-slot>
+                                      
+                                        select-option-list=serv-1-disservizio.list 
+                                    </x-input.select>
+
                                     <div class="text-area-wrapper p-3 px-lg-4 pt-lg-5 pb-lg-0 bg-white">
                                         <x-input.text id="title" label="Titolo" required=true name="title"
                                             formClass="mb-0"></x-input.text>
@@ -88,7 +103,7 @@
                                             allegare alla
                                             segnalazione</p>
                                     </div>
-                                </x-card.content_box>
+                                </x-card>
                             </section>
 
                             <section class="it-page-section" id="report-author">
