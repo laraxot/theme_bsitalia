@@ -86,26 +86,26 @@
                                 <x-card type="content_box">
                                     <x-slot name="bg_grey">true</x-slot>
                                     <x-slot name="margin_class">mb-4 mb-lg-30</x-slot>
-                                    <x-info type="button_card">
+                                    <x-card type="info_button">
                                         <x-slot name="medium_title">Titolo segnalazione 2</x-slot>
                                         <x-slot name="label_2">ipologia segnalazione</x-slot>
                                         <x-slot name="show_more_disservizio">true</x-slot>
                                         <x-slot name="collapse_id">collapse2</x-slot>
                                         <x-slot name="true"></x-slot>
-                                    </x-info>
+                                    </x-card>
                                 </x-card>
 
 
                                 <x-card type="content_box">
                                     <x-slot name="bg_grey">true</x-slot>
                                     <x-slot name="margin_class">mb-4 mb-lg-30</x-slot>
-                                    <x-info type="button-card">
+                                    <x-card type="info_button">
                                         <x-slot name="medium_title">Titolo segnalazione 3</x-slot>
                                         <x-slot name="label_2">Tipologia segnalazione</x-slot>
                                         <x-slot name="show_more_disservizio">true</x-slot>
                                         <x-slot name="collapse_id">collapse3</x-slot>
                                         <x-slot name="info">true</x-slot>
-                                    </x-info>
+                                    </x-card>
                                 </x-card>
                             </div>
                             <div class="col-12 text-center">
@@ -152,6 +152,6 @@
         </div>
 
 
-        <x-modal type="clickMap"></x-modal>
+       {{-- <x-modal type="clickMap"></x-modal> --}}
     </main>
 @endsection
