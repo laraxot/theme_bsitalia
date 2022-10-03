@@ -1,4 +1,4 @@
-@extends('pub_theme::base.base', ['title' => 'Elenco segnalazioni - Nome del Comune'])
+@extends('pub_theme::layouts.app', ['title' => 'Elenco segnalazioni - Nome del Comune'])
 @section('content')
     <main>
         <div class="container" id="main-container">
@@ -17,7 +17,7 @@
 
             <div class="row justify-content-center">
                 <div class="col-lg-3 d-none d-lg-block">
-                    {{--<x-category.lists></x-category-list>--}}
+                    {{-- <x-category.lists></x-category-list> --}}
                 </div>
                 <div class="col-lg-8 offset-lg-1">
                     <div class="d-flex justify-content-between border-bottom border-light pb-3 mt-5">
@@ -67,25 +67,45 @@
 
                         <div class="tab-pane fade" id="data-ex-disservizio2" role="tabpanel">
                             <div class="row">
-                                <x-card type="content_box" bg-grey=true margin-class="mb-4 mb-lg-30">
-                                    <x-info type="button-card" medium-title="Buca in via Solferino"
-                                        label-2="Tipologia di segnalazione <br>
-                <span>Verde pubblico e arredo urbano</span>"
-                                        show-more-disservizio="true" collapse-class="pb-0" collapse-id="collapse1"
-                                        info=true></x-info>
+                                <x-card type="content_box">
+                                    <x-slot name="bs_grey">true</x-slot>
+                                    <x-slot name="margin_class">mb-4 mb-lg-30</x-slot>
+
+                                    <x-card type="info-button">
+                                        <x-slot name="medium_title">Buca in via Solferino</x-slot>
+                                        <x-slot name="label_2">Tipologia di segnalazione <br>
+                                            <span>Verde pubblico e arredo urbano</span>
+                                        </x-slot>
+                                        <x-slot name="show_more_disservizio">true</x-slot>
+                                        <x-slot name="collapse_class">pb-0</x-slot>
+                                        <x-slot name="collapse_id">collapse1</x-slot>
+                                        <x-slot name="info">true</x-slot>
+                                    </x-card>
                                 </x-card>
 
-                                <x-card type="content_box" bg-grey=true margin-class="mb-4 mb-lg-30">
-                                    <x-info type="button-card" medium-title="Titolo segnalazione 2"
-                                        label-2="Tipologia segnalazione" show-more-disservizio="true"
-                                        collapse-id="collapse2" info=true></x-info>
+                                <x-card type="content_box">
+                                    <x-slot name="bg_grey">true</x-slot>
+                                    <x-slot name="margin_class">mb-4 mb-lg-30</x-slot>
+                                    <x-info type="button_card">
+                                        <x-slot name="medium_title">Titolo segnalazione 2</x-slot>
+                                        <x-slot name="label_2">ipologia segnalazione</x-slot>
+                                        <x-slot name="show_more_disservizio">true</x-slot>
+                                        <x-slot name="collapse_id">collapse2</x-slot>
+                                        <x-slot name="true"></x-slot>
+                                    </x-info>
                                 </x-card>
 
 
-                                <x-card type="content_box" bg-grey=true margin-class="mb-4 mb-lg-30">
-                                    <x-info type="button-card" medium-title="Titolo segnalazione 3"
-                                        label-2="Tipologia segnalazione" show-more-disservizio="true"
-                                        collapse-id="collapse3" info=true></x-info>
+                                <x-card type="content_box">
+                                    <x-slot name="bg_grey">true</x-slot>
+                                    <x-slot name="margin_class">mb-4 mb-lg-30</x-slot>
+                                    <x-info type="button-card">
+                                        <x-slot name="medium_title">Titolo segnalazione 3</x-slot>
+                                        <x-slot name="label_2">Tipologia segnalazione</x-slot>
+                                        <x-slot name="show_more_disservizio">true</x-slot>
+                                        <x-slot name="collapse_id">collapse3</x-slot>
+                                        <x-slot name="info">true</x-slot>
+                                    </x-info>
                                 </x-card>
                             </div>
                             <div class="col-12 text-center">
