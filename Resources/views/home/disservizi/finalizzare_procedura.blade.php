@@ -1,20 +1,31 @@
-@extends('pub_theme::base.base', ['title' => 'Segnalazione disservizio - Nome del Comune', 'headerActive3' => 'true'])
+@extends('pub_theme::layouts.app', ['title' => 'Segnalazione disservizio - Nome del Comune', 'headerActive3' => 'true'])
 @section('content')
     <main>
         <div class="container" id="main-container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-10">
-                    <x-breadcrumb type="v2" :rows="$panel->getBreads()">
+                    <x-breadcrumb type="v2" :rows="$_theme->getBreads()">
                     </x-breadcrumb>
-                    <x-heading type="heading" heading-p0=true title="Segnalazione inviata" iconTitle="it-check-circle"
-                        iconClass="mr-10 icon-sm mb-1"
-                        subTitle="Grazie, abbiamo ricevuto la tua <strong>segnalazione AN4059281.</strong></p>
-        <p class='subtitle-small'>Sarà visibile sulla <a href='#' class='t-primary'> lista di tutte segnalazioni</a> una volta
-          presa in carico dall’amministrazione.</p>
-        <p class='subtitle-small pt-3 pt-lg-4'>Abbiamo inviato il riepilogo all’email:<br><strong>
-            giulia.bianchi@gmail.com</strong>"
-                        button=true label="Scarica la ricevuta (PDF 100KB)" bg-white=true outline-primary=true
-                        iconBtn="it-download" sm=true>
+                    <x-heading type="heading">
+                        <x-slot name="heading-p0">true</x-slot>
+                        <x-slot name="title">Segnalazione inviata</x-slot>
+                        <x-slot name="iconTitle">it-check-circle</x-slot>
+                        <x-slot name="iconClass">mr-10 icon-sm mb-1</x-slot>
+                        <x-slot name="subTitle">
+                            Grazie, abbiamo ricevuto la tua <strong>segnalazione AN4059281.</strong></p>
+                            <p class='subtitle-small'>Sarà visibile sulla <a href='#' class='t-primary'> lista di
+                                    tutte segnalazioni</a> una volta
+                                presa in carico dall’amministrazione.</p>
+                            <p class='subtitle-small pt-3 pt-lg-4'>Abbiamo inviato il riepilogo all’email:<br><strong>
+                                    giulia.bianchi@gmail.com</strong>
+                        </x-slot>
+                        <x-slot name="button">true</x-slot>
+                        <x-slot name="label"></x-slot>
+                        <x-slot name="Scarica la ricevuta (PDF 100KB)"></x-slot>
+                        <x-slot name="bg-white">true</x-slot>
+                        <x-slot name="outline-primary">true</x-slot>
+                        <x-slot name="iconBtn">it-download</x-slot>
+                        <x-slot name="sm">true</x-slot>
                     </x-heading>
                     <p class="mt-3">
                         <a href="#" class="t-primary text-paragraph">Consulta la richiesta</a>
@@ -26,14 +37,11 @@
             <div class="row justify-content-center mb-3 mb-md-5">
 
                 <div class="col-12 col-lg-10">
-                    {{-- <x-icon-list title="Servizi correlati" titleClass="mb-lg-4" id-title="related-service"
-                        icon-list=servizi-pagamento.finalizzare-procedura.servizi-correlati-disservizio></x-icon-list> --}}
-
-                        <x-lists.icon :rows="collect([])">
-                            <x-slot name="title">Servizi correlati</x-slot>
-                            <x-slot name="titleClass">mb-lg-4</x-slot>
-                            <x-slot name="id_title">related-service</x-slot>
-                        </x-lists.icon>
+                    <x-lists.icon :rows="collect([])">
+                        <x-slot name="title">Servizi correlati</x-slot>
+                        <x-slot name="titleClass">mb-lg-4</x-slot>
+                        <x-slot name="id_title">related-service</x-slot>
+                    </x-lists.icon>
                 </div>
             </div>
         </div>

@@ -4,35 +4,51 @@
         <div class="container" id="main-container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-10">
-                    <x-breadcrumb type="v2" :rows="$panel->getBreads()">
+                    <x-breadcrumb type="v2" :rows="$_theme->getBreads()">
                     </x-breadcrumb>
-                    <x-heading type="heading" title="Segnalazione disservizio">
+                    <x-heading type="heading">
+                        <x-slot name="title">Segnalazione disservizio</x-slot>
                     </x-heading>
                 </div>
                 <div class="col-12">
-                    <x-info type="progress" step-list=step-list.disservizio-step-2 step-num="2" step-tot="3"
-                        class="mb-lg-80" step-title="Dati di segnalazione"
-                        subtitle="I campi contraddistinti dal simbolo asterisco sono obbligatori"
-                        classSubtitle="mt-40 mb-3">
-                    </x-info>
+                    <x-info.rows type="progress" :rows="$_theme->getDisservizioStep2()">
+                        <x-slot name="step_title">Riepilogo</x-slot>
+                        <x-slot name="step_num">2</x-slot>
+                        <x-slot name="step_tot">3</x-slot>
+                        <x-slot name="class">mb-lg-80</x-slot>
+                        <x-slot name="step_title">Dati di segnalazione</x-slot>
+                        <x-slot name="subtitle">I campi contraddistinti dal simbolo asterisco sono obbligatori</x-slot>
+                        <x-slot name="classSubtitle">mt-40 mb-3</x-slot>
+                    </x-info.rows>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-12 col-lg-3 d-lg-block mb-4 d-none ">
-                    <x-nav type="scroll" id="one" accordion-title="INFORMAZIONI RICHIESTE"
-                        link-list=link-list.disservizio-dati-specifici>
+                    <x-nav.rows type="scroll" :rows="$_theme->getDisservizioDatiSpecifici()">
+                        <x-slot name="id">one</x-slot>
+                        <x-slot name="accordion_title">INFORMAZIONI RICHIESTE</x-slot>
                     </x-nav>
                 </div>
                 <div class="col-12 col-lg-8 offset-lg-1">
                     <div class="steppers-content" aria-live="polite">
                         <div class="it-page-sections-container">
                             <section class="it-page-section" id="report-place">
-                                <x-card type="content_box" class="p-big p-lg-4" bg-grey=true h2-class="mb-1" header-m0=true
-                                    card-title="Luogo" subtitle="Indica il luogo del disservizio" margin-class="mb-40">
-                                    <x-input.autocomplete placeholder="Cerca un luogo*" link=true class="mt-3">
-                                    </x-input.autocomplete>
-                                </x-card.content_box>
+                                <x-card type="content_box">
+                                    <x-slot name="class">p-big p-lg-4</x-slot>
+                                    <x-slot name="bg_grey">true</x-slot>
+                                    <x-slot name="h2_class">mb-1</x-slot>
+                                    <x-slot name="header_m0">true</x-slot>
+                                    <x-slot name="card_title">Luogo</x-slot>
+                                    <x-slot name="subtitle">Indica il luogo del disservizio</x-slot>
+                                    <x-slot name="margin_class">mb-40</x-slot>
+
+                                    <x-input :attrs="['autocomplete']">
+                                        <x-slot name="placeholder">Cerca un luogo*</x-slot>
+                                        <x-slot name="link">true</x-slot>
+                                        <x-slot name="class">mt-3</x-slot>
+                                    </x-input>
+                                </x-card>
                             </section>
 
                             <section class="it-page-section" id="report-info">

@@ -33,8 +33,9 @@
                         <x-slot name="calloutType">warning</x-slot>
                         <x-slot name="icon">it-horn</x-slot>
                         <x-slot name="title">Attenzione</x-slot>
-                        <x-slot name="txt">Le informazioni che hai fornito hanno valore di dichiarazione.<span class='d-lg-block'> Verifica
-                          che siano corrette.</span></x-slot>
+                        <x-slot name="txt">Le informazioni che hai fornito hanno valore di dichiarazione.<span
+                                class='d-lg-block'> Verifica
+                                che siano corrette.</span></x-slot>
                         <x-slot name="textClass">titillium text-paragraph</x-slot>
                     </x-callout>
 
@@ -46,13 +47,13 @@
 
                     <x-card type="content_box" class="mb-0" bg-grey=true header-m0=true h3-title=true h3-class="mb-4"
                         margin-class="mb-4" card-title="Disservizio">
-                        
-                            <x-info.rows type="summary" :rows="$_theme->getDisservizioInfoList()">
-                                <x-slot name="header_class">pb-2</x-slot>
-                                <x-slot name="info">{{ true }}</x-slot>
-                                <x-slot name="class">p-3 p-lg-4</x-slot>
-                            </x-info.rows>
-                       
+
+                        <x-info.rows type="summary" :rows="$_theme->getDisservizioInfoList()">
+                            <x-slot name="header_class">pb-2</x-slot>
+                            <x-slot name="info">{{ true }}</x-slot>
+                            <x-slot name="class">p-3 p-lg-4</x-slot>
+                        </x-info.rows>
+
 
                         {{-- <x-info-summary class="p-3 p-lg-4" header-class="pb-2" info=true info-list=disservizio-info.list>
                         </x-info-summary> --}}
@@ -63,20 +64,28 @@
                     <x-card type="content_box" class="mb-0" bg-grey=true header-m0=true h3-title=true h3-class="mb-4"
                         margin-class="mb-4" card-title="Autore della segnalazione">
 
-                        {{-- <x-info-summary type="no-modify" class="mb-4 mb-lg-30 p-3 p-lg-4" info-title="Giulia Bianchi"
-                            info=true disservizio-page=true info-list=disservizio-info.info-author></x-info-summary>
+                        <x-info.rows type="summary" type="no_modify" :rows="$_theme->getDisservizioInfoAuthor()">
+                            <x-slot name="class">mb-4 mb-lg-30 p-3 p-lg-4</x-slot>
+                            <x-slot name="info-title">Giulia Bianchi</x-slot>
+                            <x-slot name="info">true</x-slot>
+                            <x-slot name="disservizio-page">true</x-slot>
+                        </x-info.rows>
 
-                        <x-info-summary type="no-modify" class="p-3 p-lg-4" info-title="Contatti" info=true
-                            disservizio-page=true info-list=disservizio-info.info-contacts>
-                        </x-info-summary> --}}
+                        <x-info.rows type="summary" type="no_modify" :rows="$_theme->getDisservizioInfoContacts()">
+                            <x-slot name="class">p-3 p-lg-4</x-slot>
+                            <x-slot name="info-title">Contatti</x-slot>
+                            <x-slot name="info">true</x-slot>
+                            <x-slot name="disservizio-page">true</x-slot>
+                        </x-info.rows>
 
-                        {{-- <x-info.rows type="no_modify" :rows="collect([])">
-                        </x-info.rows> --}}
                     </x-card>
 
-                    {{-- <x-nav type="steps" next=true modalId="modal-terms" saveBtn=true
-                        aria-label-save="di segnalazione disservizio">
-                    </x-nav> --}}
+                    <x-nav type="steps">
+                        <x-slot name="next">true</x-slot>
+                        <x-slot name="modalId">modal-terms</x-slot>
+                        <x-slot name="saveBtn">true</x-slot>
+                        <x-slot name="aria-label-save">di segnalazione disservizio</x-slot>
+                    </x-nav>
                 </div>
             </div>
         </div>
