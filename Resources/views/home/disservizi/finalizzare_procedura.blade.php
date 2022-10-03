@@ -4,8 +4,8 @@
         <div class="container" id="main-container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-10">
-                    <x-breadcrumb type="v2" :rows="$_theme->getBreads()">
-                    </x-breadcrumb>
+                    <x-breadcrumb.rows type="v2" :rows="$_theme->getLinksBreadcrumbs()">
+                    </x-breadcrumb.rows>
                     <x-heading type="heading">
                         <x-slot name="heading-p0">true</x-slot>
                         <x-slot name="title">Segnalazione inviata</x-slot>

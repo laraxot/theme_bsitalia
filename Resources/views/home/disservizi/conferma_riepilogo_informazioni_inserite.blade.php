@@ -5,8 +5,8 @@
         <div class="container" id="main-container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-10">
-                    <x-breadcrumb type="v2" :rows="collect([])">
-                    </x-breadcrumb>
+                    <x-breadcrumb.rows type="v2" :rows="$_theme->getLinksBreadcrumbs()">
+                    </x-breadcrumb.rows>
 
                     <x-heading type="heading" {{-- title="Segnalazionedisservizio" --}}>
                         <x-slot name="title">Segnalazione disservizio</x-slot>
@@ -18,7 +18,7 @@
                         step-tot="3">
                     </x-info> --}}
 
-                    <x-info.rows type="progress" :rows="$_theme->getSteps()">
+                    <x-info.rows type="progress" :rows="$_theme->getDisservizioStep3()">
                         <x-slot name="step_title">Riepilogo</x-slot>
                         <x-slot name="step_num">3</x-slot>
                         <x-slot name="step_tot">3</x-slot>
@@ -45,13 +45,11 @@
 
                     <h2 class="title-xxlarge mb-4 mt-40">Segnalazione</h2>
 
-                    <x-card type="content_box" class="mb-0" bg-grey=true header-m0=true h3-title=true h3-class="mb-4"
-                        margin-class="mb-4" card-title="Disservizio">
+                    <x-card type="content_box" class="mb-0" bg_grey=true header_m0=true h3_title=true h3_class="mb-4"
+                        margin_class="mb-4">
+                        <x-slot name="title">Disservizio</x-slot>
 
-                        <x-info.rows type="summary" :rows="$_theme->getDisservizioInfoList()">
-                            <x-slot name="header_class">pb-2</x-slot>
-                            <x-slot name="info">{{ true }}</x-slot>
-                            <x-slot name="class">p-3 p-lg-4</x-slot>
+                        <x-info.rows type="summary" :rows="$_theme->getDisservizioInfoList()" class="p-3 p-lg-4" info=true header_class="pb-2">
                         </x-info.rows>
 
 
@@ -61,21 +59,16 @@
 
                     <h2 class="title-xxlarge mb-4 mt-40">Dati Generali</h2>
 
-                    <x-card type="content_box" class="mb-0" bg-grey=true header-m0=true h3-title=true h3-class="mb-4"
-                        margin-class="mb-4" card-title="Autore della segnalazione">
+                    <x-card type="content_box" class="mb-0" bg_grey=true header_m0=true h3_title=true h3_class="mb-4"
+                        margin_class="mb-4">
+                        <x-slot name="title">Autore della segnalazione</x-slot>
 
-                        <x-info.rows type="summary" type="no_modify" :rows="$_theme->getDisservizioInfoAuthor()">
-                            <x-slot name="class">mb-4 mb-lg-30 p-3 p-lg-4</x-slot>
-                            <x-slot name="info-title">Giulia Bianchi</x-slot>
-                            <x-slot name="info">true</x-slot>
-                            <x-slot name="disservizio-page">true</x-slot>
+                        <x-info.rows type="summary-no-modify" :rows="$_theme->getDisservizioInfoAuthor()" class="mb-4 mb-lg-30 p-3 p-lg-4" info=true disservizio_page=true>
+                            <x-slot name="title">Giulia Bianchi</x-slot>
                         </x-info.rows>
 
-                        <x-info.rows type="summary" type="no_modify" :rows="$_theme->getDisservizioInfoContacts()">
-                            <x-slot name="class">p-3 p-lg-4</x-slot>
-                            <x-slot name="info-title">Contatti</x-slot>
-                            <x-slot name="info">true</x-slot>
-                            <x-slot name="disservizio-page">true</x-slot>
+                        <x-info.rows type="summary-no-modify" :rows="$_theme->getDisservizioInfoContacts()" class="p-3 p-lg-4" info=true disservizio_page=true>
+                            <x-slot name="title">Contatti</x-slot>
                         </x-info.rows>
 
                     </x-card>
@@ -91,16 +84,16 @@
         </div>
         {{-- </div> --}}
 
-        {{-- <div class="bg-grey-card shadow-contacts">
+        <div class="bg-grey-card shadow-contacts">
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-lg-6 offset-lg-3 p-contacts">
-                        <x-card.rows type="contacts" :rows="collect([])">
-                        </x-card.rows>
+                        <x-contacts>
+                        </x-contacts>
                     </div>
                 </div>
             </div>
-        </div> --}}
+        </div>
 
         {{-- <x-modal type="terms_and_conditions"></x-modal> --}}
     </main>

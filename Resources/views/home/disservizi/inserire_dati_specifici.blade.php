@@ -4,8 +4,8 @@
         <div class="container" id="main-container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-10">
-                    <x-breadcrumb type="v2" :rows="$_theme->getBreads()">
-                    </x-breadcrumb>
+                    <x-breadcrumb.rows type="v2" :rows="$_theme->getLinksBreadcrumbs()">
+                    </x-breadcrumb.rows>
                     <x-heading type="heading">
                         <x-slot name="title">Segnalazione disservizio</x-slot>
                     </x-heading>
@@ -25,10 +25,10 @@
 
             <div class="row">
                 <div class="col-12 col-lg-3 d-lg-block mb-4 d-none ">
-                    <x-nav type="scroll" :link_list="$_theme->getDisservizioDatiSpecifici()">
+                    <x-nav.rows type="scroll" :rows="$_theme->getDisservizioDatiSpecifici()" id="one">
+                        <x-slot name="label">INFORMAZIONI RICHIESTE</x-slot>
                         <x-slot name="id">one</x-slot>
-                        <x-slot name="accordion_title">INFORMAZIONI RICHIESTE</x-slot>
-                    </x-nav>
+                    </x-nav.rows>
                 </div>
                 <div class="col-12 col-lg-8 offset-lg-1">
                     <div class="steppers-content" aria-live="polite">
@@ -141,7 +141,7 @@
                             <x-slot name="save">true</x-slot>
                             <x-slot name="saveBtn">true</x-slot>
                             <x-slot name="aria_label_save">di segnalazione disservizio</x-slot>
-                            </x-nav-steps>
+                        </x-nav-steps>
                     </div>
                 </div>
             </div>
@@ -152,8 +152,8 @@
             <div class="container">
                 <div class="row d-flex justify-content-center p-contacts">
                     <div class="col-12 col-lg-5">
-                        <x-card.rows type="contacts" :rows="collect([])">
-                        </x-card.rows>
+                        <x-contacts>
+                        </x-contacts>
                     </div>
                 </div>
             </div>

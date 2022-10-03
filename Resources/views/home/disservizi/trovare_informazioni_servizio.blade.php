@@ -4,8 +4,8 @@
         <div class="container" id="main-container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-10">
-                    <x-breadcrumb type="v2" :rows="$_theme->getBreads()">
-                    </x-breadcrumb>
+                    <x-breadcrumb.rows type="v2" :rows="$_theme->getLinksBreadcrumbs()">
+                    </x-breadcrumb.rows>
                 </div>
             </div>
         </div>
@@ -13,11 +13,9 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-10">
-                    <x-heading type="heading_detail">
+                    <x-heading type="detail">
                         <x-slot name="title">Segnalazione disservizio</x-slot>
-                        <x-slot name="subTitle">Un servizio aperto a tutti i cittadini per segnalare disservizi, guasti e
-                            criticità
-                            rilevati sul territorio comunale.</x-slot>
+                        <x-slot name="subTitle">Un servizio aperto a tutti i cittadini per segnalare disservizi, guasti e criticità rilevati sul territorio comunale.</x-slot>
                         <x-slot name="pClass">mb-3</x-slot>
                         <x-slot name="double_button">true</x-slot>
                         <x-slot name="label">Segnala disservizio</x-slot>
@@ -35,9 +33,14 @@
             <div class="row row-column-menu-left mt-lg-80 mt-3">
 
                 <div class="col-12 col-lg-3 mb-4 border-col">
-                    <x-nav type="scroll" accordion-title="INDICE DELLA PAGINA" id="one"
+                    {{-- <x-nav type="scroll" accordion-title="INDICE DELLA PAGINA" id="one"
                         link-list=link-list.segnalazioni-disservizio-1>
-                    </x-nav>
+                    </x-nav> --}}
+
+                    <x-nav.rows type="scroll" :rows="$_theme->segnalazioniDisservizio1()" id="one">
+                        <x-slot name="label">INDICE DELLA PAGINA</x-slot>
+                        <x-slot name="id">one</x-slot>
+                    </x-nav.rows>
                 </div>
 
                 <div class="col-12 col-lg-8 offset-lg-1">

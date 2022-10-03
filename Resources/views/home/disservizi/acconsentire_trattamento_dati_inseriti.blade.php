@@ -5,7 +5,7 @@
         <div class="container" id="main-container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-10">
-                    <x-breadcrumb.rows type="v2" :rows="$_panel->getBreads()">
+                    <x-breadcrumb.rows type="v2" :rows="$_theme->getLinksBreadcrumbs()">
                     </x-breadcrumb.rows>
                 </div>
             </div>
@@ -17,8 +17,7 @@
                     <h1 class="title-xxxlarge mb-4">Segnalazione disservizio</h1>
                 </div>
                 <div class="col-12">
-                    <x-info.rows type="progress" :rows="collect([])">
-                        {{-- <x-slot name="step_list">step_list.disservizio_step_1</x-slot> --}}
+                    <x-info.rows type="progress" :rows="$_theme->getDisservizioStep1()">
                         <x-slot name="step_num">1</x-slot>
                         <x-slot name="step_title">Autorizzazioni e condizioni</x-slot>
                         <x-slot name="step_tot">3</x-slot>
@@ -76,7 +75,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-lg-6 offset-lg-3 p-contacts">
-                        <x-card.rows type="contacts" :rows="collect([])"></x-card.rows>
+                        <x-contacts></x-contacts>
                     </div>
                 </div>
             </div>
