@@ -1,10 +1,10 @@
-@extends('pub_theme::base.base', ['title' => 'Segnalazione disservizio - Nome del Comune'])
-@section('content')
+@extends('pub_theme::layouts.app')
+@section('content') 
     <main>
         <div class="container" id="main-container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-10">
-                    <x-breadcrumb type="v2" :rows="$panel->getBreads()">
+                    <x-breadcrumb.rows :rows="$_theme->getLinksBreadcrumbs()">
                     </x-breadcrumb>
                 </div>
             </div>
@@ -12,18 +12,24 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-10">
-                    <x-heading type="heading".detail title="Segnalazione disservizio"
-                        subTitle="Un servizio aperto a tutti i cittadini per segnalare disservizi, guasti e criticità
-          rilevati sul territorio comunale."
-                        pClass="mb-3" double-button=true label="Segnala disservizio" second-label="Tutte le segnalazioni"
-                        class="text-button" label-tag-up="Servizio attivo" servizio-attivo=true>
-                        </x-heading.heading.detail>
+                    <x-heading type="detail">
+                        <x-slot name="title">Segnalazione disservizio</x-slot>
+                        <x-slot name="sub_title">Un servizio aperto a tutti i cittadini per segnalare disservizi, guasti e criticità
+                            rilevati sul territorio comunale.</x-slot>
+                        <x-slot name="label_tag_up">Servizio attivo</x-slot>
+                        <x-slot name="second_label">Tutte le segnalazioni</x-slot>
+                        <x-slot name="label">Segnala disservizio</x-slot>
+                        <x-slot name="servizio_attivo">{{ true }}</x-slot>
+                        <x-slot name="double_button">{{ true }}</x-slot>
+                        <x-slot name="class">text-button</x-slot>
+                        <x-slot name="pClass">mb-3</x-slot>
+                    </x-heading>
                 </div>
                 <hr class="d-none d-lg-block mb-0 mt-2">
             </div>
         </div>
 
-        <div class="container">
+        {{-- <div class="container">
             <div class="row row-column-menu-left mt-lg-80 mt-3">
 
                 <div class="col-12 col-lg-3 mb-4 border-col">
@@ -188,6 +194,6 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </main>
 @endsection
