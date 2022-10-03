@@ -1,10 +1,10 @@
-@extends('pub_theme::base.base', ['title' => 'Segnalazione disservizio - Nome del Comune', 'headerActive3' => 'true'])
+@extends('pub_theme::layouts.app', ['title' => 'Segnalazione disservizio - Nome del Comune', 'headerActive3' => 'true'])
 @section('content')
     <main>
         <div class="container" id="main-container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-10">
-                    <x-breadcrumb type="v2" :rows="$panel->getBreads()">
+                    <x-breadcrumb type="v2" :rows="$_theme->getBreads()">
                     </x-breadcrumb>
                 </div>
             </div>
@@ -13,12 +13,19 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-10">
-                    <x-heading type="heading".detail title="Segnalazione disservizio"
-                        subTitle="Un servizio aperto a tutti i cittadini per segnalare disservizi, guasti e criticità
-          rilevati sul territorio comunale."
-                        pClass="mb-3" double-button=true label="Segnala disservizio" second-label="Tutte le segnalazioni"
-                        class="text-button" label-tag-up="Servizio attivo" servizio-attivo=true>
-                        </x-heading.heading.detail>
+                    <x-heading type="heading_detail">
+                        <x-slot name="title">Segnalazione disservizio</x-slot>
+                        <x-slot name="subTitle">Un servizio aperto a tutti i cittadini per segnalare disservizi, guasti e
+                            criticità
+                            rilevati sul territorio comunale.</x-slot>
+                        <x-slot name="pClass">mb-3</x-slot>
+                        <x-slot name="double_button">true</x-slot>
+                        <x-slot name="label">Segnala disservizio</x-slot>
+                        <x-slot name="second_label">Tutte le segnalazioni</x-slot>
+                        <x-slot name="class">text-button</x-slot>
+                        <x-slot name="label_tag_up">Servizio attivo</x-slot>
+                        <x-slot name="servizio_attivo">true</x-slot>
+                    </x-heading>
                 </div>
                 <hr class="d-none d-lg-block mb-0 mt-2">
             </div>
@@ -93,7 +100,9 @@
                         <section class="it-page-section mb-30" id="costs">
                             <h2 class="title-xxlarge mb-3">Costi</h2>
                             <p class="text-paragraph lora">Il servizio è gratuito </p>
-                            <x-icon-link link="Allegato se necessario"></x-icon-link>
+                            <x-link type="link">
+                                <x-slot name="link">Allegato se necessario</x-slot>
+                            </x-link>
                         </section>
 
                         <section class="it-page-section mb-30 has-bg-grey p-3" id="service-access">
@@ -112,7 +121,10 @@
                             <p class="text-paragraph lora">Per conoscere i dettagli di scadenze, requisiti e altre
                                 informazioni
                                 importanti, leggi i termini e le condizioni di servizio.</p>
-                            <x-icon-link link="Termini e condizioni di servizio" dimensione-file="(PDF 1MB)"></x-icon-link>
+                            <x-link type="link">
+                                <x-slot name="link">Termini e condizioni di servizio</x-slot>
+                                <x-slot name="dimensione_file">(PDF 1MB)</x-slot>
+                            </x-link>
                         </section>
 
                         <section class="it-page-section" id="contacts">
@@ -146,10 +158,13 @@
                                 <div class="col-12 mb-30">
                                     <span class="text-paragraph-small">Argomenti:</span>
                                     <div class="d-flex flex-wrap gap-2 mt-10 mb-30">
-                                        <x-tag label-tag="Gestione rifiuti" class="t-primary bg-tag"></x-tag>
-                                        <x-tag label-tag="Igiene pubblica" class="t-primary bg-tag"></x-tag>
-                                        <x-tag label-tag="Spazi verdi" class="t-primary bg-tag"></x-tag>
-                                        <x-tag label-tag="Inquinamento" class="t-primary bg-tag"></x-tag>
+                                        <x-link type="tag" label-tag="Gestione rifiuti" class="t-primary bg-tag">
+                                        </x-link>
+                                        <x-link type="tag" label-tag="Igiene pubblica" class="t-primary bg-tag">
+                                        </x-link>
+                                        <x-link type="tag" label-tag="Spazi verdi" class="t-primary bg-tag"></x-link>
+                                        <x-link type="tag" label-tag="Inquinamento" class="t-primary bg-tag">
+                                        </x-link>
                                     </div>
                                     <p class="text-paragraph-small mb-0">Pagina aggiornata il 14/04/2022</p>
                                 </div>
