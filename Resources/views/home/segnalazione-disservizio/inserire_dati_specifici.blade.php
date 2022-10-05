@@ -55,20 +55,15 @@
                                     <x-slot name="card_title">Disservizio</x-slot>
                                     <x-slot name="margin_class">mb-40</x-slot>
 
-                                    <x-input.select>
-                                        <x-slot name="name">{{Str::slug('Tipo di disservizio')}}</x-slot>
-                                        <x-slot name="placeholder">Tipo di disservizio*</x-slot>
-                                        <x-slot name="class">p-md-3 p-lg-4 pb-lg-0</x-slot>
-                                        <x-slot name="label_text">Tipo di disservizio*</x-slot>
-                                        <x-slot name="label_hidden">true</x-slot>
-                                        <x-slot name="id">inefficiency</x-slot>
-                                        <x-slot name="selectClass">u-grey-dark</x-slot>
-
+                                    <x-input type="select" name="category_id" placeholder="Tipo di disservizio*"
+                                        class="p-md-3 p-lg-4 pb-lg-0" label="Tipo di disservizio*" label_hidden=true
+                                        id="inefficiency" selectClass="u-grey-dark" :options="$_theme->readJson('select-option-list.serv-1-disservizio.list')"
+                                    >
                                         select-option-list=serv-1-disservizio.list
                                     </x-input.select>
 
                                     <div class="text-area-wrapper p-3 px-lg-4 pt-lg-5 pb-lg-0 bg-white">
-                                        <x-input.text class="mb-0" placeholder="titolo" name="title">
+                                        <x-input type="text" class="mb-0" placeholder="titolo" name="title">
                                             <x-slot name="id">title</x-slot>
                                             <x-slot name="label">Titolo</x-slot>
                                             <x-slot name="required">true</x-slot>
@@ -76,7 +71,7 @@
                                             <x-slot name="formClass">mb-0</x-slot>
                                         </x-input.text>
                                     </div>
-                                    <x-input.text class="m-0 p-3 px-lg-4 pt-lg-5 pb-lg-4 bg-white" placeholder="dettagli" name="details">
+                                    <x-input type="text" class="m-0 p-3 px-lg-4 pt-lg-5 pb-lg-4 bg-white" placeholder="dettagli" name="details">
                                         <x-slot name="id">details</x-slot>
                                         <x-slot name="placeholder">Dettagli*</x-slot>
                                             <x-slot name="label">pt-lg-5 pb-lg-4 bg-white</x-slot>
