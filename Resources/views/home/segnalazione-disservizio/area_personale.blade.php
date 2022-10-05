@@ -25,12 +25,8 @@
                     <div class="tab-pane fade show active" id="data-ex-tab1" role="tabpanel">
                         <div class="row">
                             <div class="col-12 col-lg-3 d-lg-block mb-4 d-none ">
-                                <x-nav type="scroll">
-                                    <x-slot name="accordion_title">INDICE DELLA PAGINA</x-slot>
-                                    <x-slot name="id">one</x-slot>
-                                    <x-slot name="link_list">segnalazione-disservizio.area-personale.navscroll.page-1
-                                    </x-slot>
-                                </x-nav>
+                                <x-nav.rows type="scroll" :rows="$_theme->getSegnalazioneDisservizioAreaPersonaleNavscrollPage1()" id="one" label="INDICE DELLA PAGINA">
+                                </x-nav.rows>
                             </div>
 
                             <div class="col-12 col-lg-8 offset-lg-1">
@@ -169,8 +165,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-lg-6 offset-lg-3 p-contacts">
-                        <x-card.rows type="contacts" :rows="collect([])">
-                        </x-card.rows>
+                        <x-contacts></x-contacts>
                     </div>
                 </div>
             </div>

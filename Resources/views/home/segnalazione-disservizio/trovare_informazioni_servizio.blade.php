@@ -33,13 +33,7 @@
             <div class="row row-column-menu-left mt-lg-80 mt-3">
 
                 <div class="col-12 col-lg-3 mb-4 border-col">
-                    {{-- <x-nav type="scroll" accordion-title="INDICE DELLA PAGINA" id="one"
-                        link-list=link-list.segnalazioni-disservizio-1>
-                    </x-nav> --}}
-
-                    <x-nav.rows type="scroll" :rows="$_theme->segnalazioniDisservizio1()" id="one">
-                        <x-slot name="label">INDICE DELLA PAGINA</x-slot>
-                        <x-slot name="id">one</x-slot>
+                    <x-nav.rows type="scroll" :rows="$_theme->segnalazioniDisservizio1()" id="one" label="INDICE DELLA PAGINA">
                     </x-nav.rows>
                 </div>
 

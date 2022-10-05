@@ -25,9 +25,7 @@
 
             <div class="row">
                 <div class="col-12 col-lg-3 d-lg-block mb-4 d-none ">
-                    <x-nav.rows type="scroll" :rows="$_theme->getDisservizioDatiSpecifici()" id="one">
-                        <x-slot name="label">INFORMAZIONI RICHIESTE</x-slot>
-                        <x-slot name="id">one</x-slot>
+                    <x-nav.rows type="scroll" :rows="$_theme->getDisservizioDatiSpecifici()" id="one" label="INFORMAZIONI RICHIESTE">
                     </x-nav.rows>
                 </div>
                 <div class="col-12 col-lg-8 offset-lg-1">
