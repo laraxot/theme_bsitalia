@@ -31,7 +31,7 @@
 
                             <div class="col-12 col-lg-8 offset-lg-1">
                                 <div class="it-page-section mb-40 mb-lg-60" id="latest-posts">
-                                    <x-card type="content_box" card-title="Ultimi messaggi" header-m0=true h2-class="mb-3">
+                                    <x-card type="content_box" title="Ultimi messaggi" header_m0=true h2_class="mb-3">
 
                                         <x-card type="latest_messages">
                                             <x-slot name="date">05/04/2022</x-slot>
@@ -71,18 +71,18 @@
                                 </div>
 
                                 <div class="it-page-section mb-50 mb-lg-90" id="latest-activities">
-                                    <x-card type="content_box" card-title="Ultime attività" header-m0=true h2-class="mb-3">
+                                    <x-card type="content_box" title="Ultime attività" header_m0=true h2_class="mb-3">
 
-                                        <x-card type="icon" card-class="pt-20 pb-4 ps-4 pr-30"
-                                            title-class="t-primary mb-2 underline title-small-semi-bold" shadow-card=true
-                                            card-title="Segnalazione disservizio" header-m0=true date="15/04/2022"
-                                            icon="it-files">
+                                        <x-card type="icon" card-class="pt-20 pb-4 ps-4 pr-30" shadow_card=true header_m0=true>
+                                            <x-slot name="title" class="t-primary mb-2 underline title-small-semi-bold">Segnalazione disservizio</x-slot>
+                                            <x-slot name="date">15/04/2022</x-slot>
+                                            <x-slot name="icon">it-files</x-slot>
                                         </x-card>
 
-                                        <x-card type="icon" card-class="pt-20 pb-4 ps-4 pr-30"
-                                            title-class="t-primary mb-2 underline title-small-semi-bold" shadow-card=true
-                                            card-title="Pagamento contravvenzione" header-m0=true date="23/01/2022"
-                                            icon="it-files">
+                                        <x-card type="icon" card-class="pt-20 pb-4 ps-4 pr-30" shadow-card=true header-m0=true>
+                                            <x-slot name="title" class="t-primary mb-2 underline title-small-semi-bold">Pagamento contravvenzione</x-slot>
+                                            <x-slot name="date">23/01/2022</x-slot>
+                                            <x-slot name="icon">it-files</x-slot>
                                         </x-card>
 
                                         <x-card type="icon" card-class="pt-20 pb-4 ps-4 pr-30"

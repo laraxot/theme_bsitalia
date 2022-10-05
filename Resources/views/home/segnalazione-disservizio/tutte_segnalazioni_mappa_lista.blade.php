@@ -4,8 +4,8 @@
         <div class="container" id="main-container">
             <div class="row justify-content-center mb-md-40 mb-lg-80">
                 <div class="col-12 col-lg-10">
-                    <x-breadcrumb type="v2" :rows="collect([])">
-                    </x-breadcrumb>
+                    <x-breadcrumb.rows :rows="collect([])">
+                    </x-breadcrumb.rows>
                     <x-heading type="heading">
                         <x-slot name="title">Elenco segnalazioni</x-slot>
                         <x-slot name="subTitle">Negli ultimi 12 mesi sono state risolte 73 segnalazioni.</x-slot>
@@ -18,6 +18,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-3 d-none d-lg-block">
                     {{-- <x-category.lists></x-category-list> --}}
+                    <x-list.rows type="category" :rows="$_theme->getDisserviziCategories()"></x-list.rows>
                 </div>
                 <div class="col-lg-8 offset-lg-1">
                     <div class="d-flex justify-content-between border-bottom border-light pb-3 mt-5">
@@ -144,8 +145,8 @@
             <div class="container">
                 <div class="row d-flex justify-content-center p-contacts">
                     <div class="col-12 col-lg-5">
-                        <x-card.rows type="contacts" :rows="collect([])">
-                        </x-card.rows>
+                        {{-- <x-card.rows type="contact" :rows="collect([])">
+                        </x-card.rows> --}}
                     </div>
                 </div>
             </div>
