@@ -5,7 +5,7 @@
         <div class="container" id="main-container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-10">
-                    <x-breadcrumb.rows type="v2" :rows="$_theme->getLinksBreadcrumbs()">
+                    <x-breadcrumb.rows :rows="$_theme->getLinksBreadcrumbs()">
                     </x-breadcrumb.rows>
 
                     <x-heading type="heading" {{-- title="Segnalazionedisservizio" --}}>
