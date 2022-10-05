@@ -20,8 +20,7 @@
                                     giulia.bianchi@gmail.com</strong>
                         </x-slot>
                         <x-slot name="button">true</x-slot>
-                        <x-slot name="label"></x-slot>
-                        <x-slot name="Scarica la ricevuta (PDF 100KB)"></x-slot>
+                        <x-slot name="label">Scarica la ricevuta (PDF 100KB)</x-slot>
                         <x-slot name="bg-white">true</x-slot>
                         <x-slot name="outline-primary">true</x-slot>
                         <x-slot name="iconBtn">it-download</x-slot>
@@ -37,10 +36,11 @@
             <div class="row justify-content-center mb-3 mb-md-5">
 
                 <div class="col-12 col-lg-10">
-                    <x-lists.icon :rows="collect([])">
-                        <x-slot name="title">Servizi correlati</x-slot>
-                        <x-slot name="titleClass">mb-lg-4</x-slot>
-                        <x-slot name="id_title">related-service</x-slot>
+                    <x-lists.icon :rows="$_theme->getServiziCorrelatiDisservizio()" 
+                        titleClass="mb-lg-4" 
+                        title="Servizi correlati"
+                        id_title="related-service"
+                        >
                     </x-lists.icon>
                 </div>
             </div>
@@ -60,8 +60,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-lg-6 offset-lg-3 p-contacts">
-                        <x-card.rows type="contacts" :rows="collect([])">
-                        </x-card.rows>
+                        <x-contacts></x-contacts>
                     </div>
                 </div>
             </div>
