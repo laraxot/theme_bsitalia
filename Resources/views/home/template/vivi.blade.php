@@ -47,7 +47,7 @@
         {{--
         {{>cmp-list-card-img/cmp-list-card-img cards=cards.card-events label="Tutti gli eventi" buttonNext=true}}
         --}}
-        <x-card.rows type="img" :rows="$_theme->getCardEvents()" buttonNext=true></x-card.rows>
+        <x-card.rows type="img" :rows="$_theme->getCardEvents()" buttonNext=true label="Tutti gli eventi"></x-card.rows>
       </div>
     </div>
 
@@ -56,7 +56,7 @@
       {{--
       {{>cmp-list-card-img/cmp-list-card-img cards=cards.card-places label="Tutti i luoghi" buttonNext=true}}
       --}}
-      <x-card.rows type="img" :rows="$_theme->getCardPlaces()" buttonNext=true></x-card.rows>
+      <x-card.rows type="img" :rows="$_theme->getCardPlaces()" buttonNext=true label="Tutti i luoghi"></x-card.rows>
     </div>
 
     <div class="bg-primary">
@@ -79,6 +79,7 @@
             {{--
             {{>cmp-contacts/cmp-contacts city-problems=true}}
             --}}
+            <x-contacts></x-contacts>
 
           </div>
         </div>
