@@ -79,7 +79,7 @@
             {{--
             {{>cmp-contacts/cmp-contacts city-problems=true}}
             --}}
-            <x-contacts></x-contacts>
+            <x-contacts city_problems=true></x-contacts>
 
           </div>
         </div>
