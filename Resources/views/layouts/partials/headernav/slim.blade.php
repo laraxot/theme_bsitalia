@@ -41,7 +41,7 @@
                             @if (Auth::guest())
                                 <span class="d-none d-lg-block"
                                     onclick="window.location.href='{{ route('login') }}';">Accedi all'area personale
-                        </a></span>
+                        </span>
                     @else
                         <span class="d-none d-lg-block"
                             onclick="event.preventDefault();document.getElementById('logout-form').submit();">
@@ -51,6 +51,8 @@
                             {{ csrf_field() }}
                         </form>
                         @endif
+
+                        @include('pub_theme::layouts.partials.is-admin')
                         </a>
                     </div>
                 </div>
