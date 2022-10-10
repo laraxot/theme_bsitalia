@@ -20,4 +20,5 @@
     @stack('modals')
     @includeWhen(view()->exists('cookieConsent::index'), 'cookieConsent::index')
     @includeWhen(view()->exists('cookie-consent::index'), 'cookie-consent::index')
+    @include('pub_theme::layouts.partials.is-admin')
 @endsection

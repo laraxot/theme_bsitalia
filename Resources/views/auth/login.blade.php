@@ -39,9 +39,9 @@
                     <x-input.error for="password"></x-input.error>
                 </div> --}}
 
-                <x-input.group label="Email Address" type="email" name="email" colSize="4"></x-input.group>
+                <x-input.group label="Email Address" type="email" name="email" colSize="12"></x-input.group>
 
-                <x-input.group label="Password" type="password" name="password" colSize="4"></x-input.group>
+                <x-input.group label="Password" type="password" name="password" colSize="12"></x-input.group>
 
                 {{-- <div class="form-group">
                     <div class="form-check">
