@@ -12,3 +12,7 @@ https://italia.github.io/design-comuni-pagine-statiche/servizi/index.html   !!!!
 https://github.com/italia/design-comuni-pagine-statiche
 
 https://italia.github.io/design-comuni-pagine-statiche/sito/index.html
+
+
+https://italia.github.io/design-scuole-pagine-statiche/
+
