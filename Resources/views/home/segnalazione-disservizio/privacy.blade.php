@@ -11,7 +11,7 @@
                         <!-- Desktop -->
                         <div class="info-progress-wrapper d-none d-lg-flex w-100 px-3 flex-column justify-content-end step-active">
                             <div class="info-progress-body d-flex justify-content-between align-self-end align-items-end w-100 py-3">
-                                <span class="d-block h-100 title-medium text-uppercase">Informativa sulla Privacy</span>
+                                <span class="d-block h-100 title-medium text-uppercase">Informativa sulla Privacy7</span>
                             </div>
                         </div>
                         <!-- Desktop -->

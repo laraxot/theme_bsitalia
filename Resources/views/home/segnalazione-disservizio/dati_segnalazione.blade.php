@@ -13,7 +13,7 @@
 							<!-- Desktop -->
 							<div class="info-progress-wrapper d-none d-lg-flex w-100 px-3 flex-column justify-content-end completed">
 								<div class="info-progress-body d-flex justify-content-between align-self-end align-items-end w-100 py-3">
-									<span class="d-block h-100 title-medium text-uppercase">Informativa sulla privacy</span>
+									<span class="d-block h-100 title-medium text-uppercase">Informativa sulla privacy6</span>
 									<svg class="d-block icon icon-primary icon-sm" aria-hidden="true">
 										<use href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-check"></use>
 									</svg>
