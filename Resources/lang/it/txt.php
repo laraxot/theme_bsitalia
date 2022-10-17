@@ -6,4 +6,10 @@ return [
     'title' => [
         'placeholder' => 'Titolo',
     ],
+    'email' => [
+        'placeholder' => 'Email',
+    ],
+    'password' => [
+        'placeholder' => 'Password',
+    ],
 ];
