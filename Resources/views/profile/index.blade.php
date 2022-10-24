@@ -6,7 +6,7 @@
             <h3>First name: {{ $profile->getProfile()->firstname }}</h3>
             <h3>Last name: {{ $profile->getProfile()->surname }}</h3>
             <h3>Email: {{ $profile->getProfile()->email }}</h3>
-            <h3>Address: {{ $profile->getProfile()->address }}</h3>
+            <h3>Phone: {{ $profile->getProfile()->phone }}</h3>
         </div>
     </div>
 @endsection
