@@ -9,7 +9,8 @@ use Modules\Xot\Providers\XotBaseThemeServiceProvider;
 /**
  * Undocumented class.
  */
-class BsItaliaServiceProvider extends XotBaseThemeServiceProvider {
+class BsItaliaServiceProvider extends XotBaseThemeServiceProvider
+{
     public string $dir = __DIR__;
     public string $name = 'BsItalia';
     public string $ns = 'adm_theme';

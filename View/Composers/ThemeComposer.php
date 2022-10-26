@@ -18,7 +18,8 @@ use Modules\Mediamonitor\Services\MediaService;
 use Modules\Xot\Services\FileService;
 use Modules\Xot\View\Composers\XotBaseComposer;
 
-class ThemeComposer extends XotBaseComposer {
+class ThemeComposer extends XotBaseComposer
+{
     public array $video_markers = [];
 
     /*
@@ -37,12 +38,14 @@ class ThemeComposer extends XotBaseComposer {
      *
      * @return void
      */
-    public function compose(View $view) {
+    public function compose(View $view)
+    {
         // $view->with('adminlte', $this->adminlte);
         $view->with('_theme', $this);
     }
 
-    public function restaurantsJson() {
+    public function restaurantsJson()
+    {
         $json_path = (__DIR__.'/../../Resources/json/restaurants-geojson.json');
         $json_path = FileService::fixPath($json_path);
         $json = File::get($json_path);
@@ -51,7 +54,8 @@ class ThemeComposer extends XotBaseComposer {
         return $json->features;
     }
 
-    public function videoResults() {
+    public function videoResults()
+    {
         $q = 'renzi';
         $rows = Sentence::where('text', 'like', '%'.$q.'%')->get();
         // (new MyModel())->on('second_db_connnection')->get();
@@ -61,7 +65,8 @@ class ThemeComposer extends XotBaseComposer {
         return $rows;
     }
 
-    public function lastMedias() {
+    public function lastMedias()
+    {
         // $last_videos = Media::all()->take(-10);
         $last_videos = Press::all()->take(-10);
 
@@ -69,7 +74,8 @@ class ThemeComposer extends XotBaseComposer {
     }
 
     // per ora inserisco dati a caso
-    public function fakeData() {
+    public function fakeData()
+    {
         return [
             'Alessandro Ricci',
             'Coppa Italia',
@@ -78,30 +84,36 @@ class ThemeComposer extends XotBaseComposer {
         ];
     }
 
-    public function getNers() {
+    public function getNers()
+    {
         // dddx(Ner::all()->groupBy('type'));
         return Ner::all()->groupBy('type');
     }
 
-    public function getNersType(string $type, int $days): Collection {
+    public function getNersType(string $type, int $days): Collection
+    {
         return MediaService::make()->getNersType($type, $days, 10);
     }
 
-    public function channels(): Collection {
+    public function channels(): Collection
+    {
         $channels = Channel::where('logo', '!=', '')->get();
 
         return $channels;
     }
 
-    public function getVideoMarkers(): array {
+    public function getVideoMarkers(): array
+    {
         return $this->video_markers;
     }
 
-    public function getVideoMarkersJson(): string {
+    public function getVideoMarkersJson(): string
+    {
         return json_encode($this->getVideoMarkers());
     }
 
-    public function activateSubtitles(Collection $subtitles, string $q): Collection {
+    public function activateSubtitles(Collection $subtitles, string $q): Collection
+    {
         $q = strtolower($q);
         $pieces = explode(' ', $q);
         $count = $subtitles->count();

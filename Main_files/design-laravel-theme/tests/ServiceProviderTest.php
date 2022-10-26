@@ -7,8 +7,10 @@ use Illuminate\Events\Dispatcher;
 use italia\DesignLaravelTheme\Events\BuildingMenu;
 use italia\DesignLaravelTheme\ServiceProvider;
 
-class ServiceProviderTest extends TestCase {
-    public function testRegisterMenu() {
+class ServiceProviderTest extends TestCase
+{
+    public function testRegisterMenu()
+    {
         $events = new Dispatcher();
         $config = new Repository(
             ['bootstrap-italia.menu' => [

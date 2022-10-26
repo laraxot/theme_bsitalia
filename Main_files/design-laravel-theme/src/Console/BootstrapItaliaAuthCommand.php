@@ -6,7 +6,8 @@ namespace italia\DesignLaravelTheme\Console;
 
 use Laravel\Ui\AuthCommand;
 
-class BootstrapItaliaAuthCommand extends AuthCommand {
+class BootstrapItaliaAuthCommand extends AuthCommand
+{
     protected $signature = 'make:bootstrapitalia { type=bootstrap : The preset type (bootstrap) }{--views : Only scaffold the authentication views}{--force : Overwrite existing views by default}';
 
     protected $description = 'Scaffold basMakeBootstrapItaliaCommandic BootstrapItalia login and registration views and routes';
@@ -22,13 +23,15 @@ class BootstrapItaliaAuthCommand extends AuthCommand {
         'vendor/pagination/bootstrap-4.stub' => 'vendor/pagination/bootstrap-4.blade.php',
     ];
 
-    public function handle() {
+    public function handle()
+    {
         parent::handle();
 
         $this->info('Bootstrap-italia scaffolding generated successfully.');
     }
 
-    protected function ensureDirectoriesExist() {
+    protected function ensureDirectoriesExist()
+    {
         parent::ensureDirectoriesExist();
 
         if (! is_dir($directory = resource_path('views/vendor/pagination'))) {
@@ -36,7 +39,8 @@ class BootstrapItaliaAuthCommand extends AuthCommand {
         }
     }
 
-    protected function exportViews() {
+    protected function exportViews()
+    {
         parent::exportViews();
 
         foreach ($this->bootstrapItaliaViews as $key => $value) {
