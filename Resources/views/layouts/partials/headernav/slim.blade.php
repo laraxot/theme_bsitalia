@@ -4,8 +4,8 @@
             <div class="col-12">
                 <div class="it-header-slim-wrapper-content">
                     <a class="d-lg-block navbar-brand" target="_blank" href="#"
-                        aria-label="Vai al portale {Nome della Regione} - link esterno - apertura nuova scheda"
-                        title="Vai al portale {Nome della Regione}">Nome della Regione</a>
+                        aria-label="Vai al portale {{config('metatag.subtitle','')}} - link esterno - apertura nuova scheda"
+                        title="Vai al portale {{config('metatag.subtitle','')}}">{{config('metatag.subtitle','')}}</a>
                     <div class="it-header-slim-right-zone" role="navigation">
                         <div class="nav-item dropdown">
                             <button type="button" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
@@ -18,7 +18,7 @@
                             </button>
                             <div class="dropdown-menu">
                                 <div class="row">
-                                    <div class="col-12">https://teams.live.com/meet/9491694350802
+                                    <div class="col-12">
                                         <div class="link-list-wrapper">
                                             <ul class="link-list">
                                                 <li><a class="dropdown-item list-item" href="#"><span>ITA <span
