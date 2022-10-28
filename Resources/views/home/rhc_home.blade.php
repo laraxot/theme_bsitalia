@@ -17,7 +17,7 @@
                             <div class="card-wrapper card-space">
                                 <div class="card card-bg">
                                     <div class="card-body text-center">
-                                        <h2>{{$_theme->countAllReports()}}</h2>
+                                        <h2>{{ $_theme->countAllReports() }}</h2>
                                         <h5>Fonti Indicizzate</h5>
                                     </div>
                                 </div>
@@ -29,7 +29,7 @@
                             <div class="card-wrapper card-space">
                                 <div class="card card-bg">
                                     <div class="card-body text-center">
-                                        <h2>{{$_theme->countMyReports()}}</h2>
+                                        <h2>{{ $_theme->countMyReports() }}</h2>
                                         <h5>Fonti Proprietarie</h5>
                                     </div>
                                 </div>
@@ -41,7 +41,7 @@
                             <div class="card-wrapper card-space">
                                 <div class="card card-bg">
                                     <div class="card-body text-center">
-                                        <h2>{{--$_theme->keywords()->count()--}}</h2>
+                                        <h2>{{ $_theme->countMyKeywords() }}</h2>
                                         <h5>Keywords Monitorate</h5>
                                     </div>
                                 </div>
@@ -56,7 +56,8 @@
                             <div class="card-wrapper card-space">
                                 <div class="card card-bg">
                                     <div class="card-body text-center">
-                                        <x-chartjs.base chartid="chart_1" type="pie1" :labels="['clearWeb','onion','closInt']" :data="[50,30,20]"></x-chartjs.base>
+                                        <x-chartjs.base chartid="chart_1" type="pie1" :labels="['clearWeb', 'onion', 'closInt']"
+                                            :data="[50, 30, 20]"></x-chartjs.base>
                                     </div>
                                 </div>
                             </div>
@@ -67,7 +68,8 @@
                             <div class="card-wrapper card-space">
                                 <div class="card card-bg">
                                     <div class="card-body text-center">
-                                        <x-chartjs.base chartid="chart_2" type="pie1" :labels="['url','users','string']" :data="[123,5423,21323]"></x-chartjs.base>
+                                        <x-chartjs.base chartid="chart_2" type="pie1" :labels="['url', 'users', 'string']"
+                                            :data="[123, 5423, 21323]"></x-chartjs.base>
                                     </div>
                                 </div>
                             </div>
@@ -81,7 +83,8 @@
                             <div class="card-wrapper card-space">
                                 <div class="card card-bg">
                                     <div class="card-body text-center">
-                                        <x-chartjs.base chartid="chart_3" type="bar2" :labels="[65, 59, 80, 81, 56, 55, 40]" :data="[65, 59, 80, 81, 56, 55, 40]"></x-chartjs.base>
+                                        <x-chartjs.base chartid="chart_3" type="bar2" :labels="[65, 59, 80, 81, 56, 55, 40]"
+                                            :data="[65, 59, 80, 81, 56, 55, 40]"></x-chartjs.base>
                                     </div>
                                 </div>
                             </div>
