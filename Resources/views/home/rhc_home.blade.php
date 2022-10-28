@@ -56,8 +56,9 @@
                             <div class="card-wrapper card-space">
                                 <div class="card card-bg">
                                     <div class="card-body text-center">
-                                        <x-chartjs.base chartid="chart_1" type="pie1" :labels="['clearWeb', 'onion', 'closInt']"
-                                            :data="[50, 30, 20]"></x-chartjs.base>
+                                        <x-graph url="/api/mm/press" id="graph2"></x-graph>
+                                        <x-chartjs.base chartid="chart_1" type="pie1" title="" :labels="$_theme->getWebsiteChart()['labels']"
+                                            :data="$_theme->getWebsiteChart()['data']"></x-chartjs.base>
                                     </div>
                                 </div>
                             </div>
@@ -68,7 +69,7 @@
                             <div class="card-wrapper card-space">
                                 <div class="card card-bg">
                                     <div class="card-body text-center">
-                                        <x-chartjs.base chartid="chart_2" type="pie1" :labels="['url', 'users', 'string']"
+                                        <x-chartjs.base chartid="chart_2" type="pie1" title="" :labels="['url', 'users', 'string']"
                                             :data="[123, 5423, 21323]"></x-chartjs.base>
                                     </div>
                                 </div>
@@ -83,7 +84,7 @@
                             <div class="card-wrapper card-space">
                                 <div class="card card-bg">
                                     <div class="card-body text-center">
-                                        <x-chartjs.base chartid="chart_3" type="bar2" :labels="[65, 59, 80, 81, 56, 55, 40]"
+                                        <x-chartjs.base chartid="chart_3" type="bar2" title="Rilevamento Corrispondenze" :labels="[65, 59, 80, 81, 56, 55, 40]"
                                             :data="[65, 59, 80, 81, 56, 55, 40]"></x-chartjs.base>
                                     </div>
                                 </div>
