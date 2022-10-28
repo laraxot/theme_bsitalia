@@ -9,38 +9,19 @@
         <h1 class="pb-5">Log in</h1>
         <form class="login" method="POST" action="{{ route('login', ['referrer' => $referrer]) }}">
             @csrf
-            {{-- <input type='hidden' name='csrfmiddlewaretoken'
-                value='saxz92N0NAOO95HAGWI3Q9PIgo1xBhpw32xXbwHIlxTX2Q2O5qEnstLOKTxUMqXz' /> --}}
 
             <x-input.group label="Email Address" type="email" name="email" col_size="12" id="id_login"></x-input.group>
+            <x-input.group label="Password" type="password" name="password" col_size="12" id="id_password"
+                autocomplete="current-password"></x-input.group>
 
+            {{--
+            <x-input.group type="checkbox" name="remember" id="id_remember" />
 
-            {{-- <div class="form-group">
-                <input type="email" name="email" class="form-control " id="id_login">
-                <label for="id_login">Email</label>
-            </div> --}}
-
-
-            {{-- <div class="form-group">
-                <input type="text" name="login" class="form-control " id="id_login">
-                <label for="id_login">Login</label>
-            </div> --}}
-            <div class="form-group">
-                <input type="password" name="password" class="form-control input-password" id="id_password">
-                <label for="id_password">Password</label>
-                <span class="password-icon bg-transparent" aria-hidden="true">
-                    <svg class="password-icon-visible icon icon-sm">
-                        <use
-                            xlink:href="https://docs.italia.it/media/static/vendor/bootstrap-italia/svg/sprite.svg#it-password-visible">
-                        </use>
-                    </svg>
-                    <svg class="password-icon-invisible icon icon-sm d-none">
-                        <use
-                            xlink:href="https://docs.italia.it/media/static/vendor/bootstrap-italia/svg/sprite.svg#it-password-invisible">
-                        </use>
-                    </svg>
-                </span>
+            <div class="form-check">
+                <input type="checkbox" name="remember" wire:model.lazy="form_data.remember" id="id_remember1" />
+                <label for="id_remember1">pub_theme::txt.remember.label</label>
             </div>
+            --}}
             <div class="form-check">
                 <input id="id_remember" name="remember" type="checkbox">
                 <label for="id_remember">Ricordami</label>
