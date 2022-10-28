@@ -56,9 +56,9 @@
                             <div class="card-wrapper card-space">
                                 <div class="card card-bg">
                                     <div class="card-body text-center">
-                                        <x-graph url="/api/mm/press" id="graph2"></x-graph>
-                                        <x-chartjs.base chartid="chart_1" type="pie1" title="" :labels="$_theme->getWebsiteChart()['labels']"
-                                            :data="$_theme->getWebsiteChart()['data']"></x-chartjs.base>
+                                        <x-graph url="/api/intellinet/websitemonitorchart" id="graph01"></x-graph>
+                                        {{--<x-chartjs.base chartid="chart_1" type="pie1" title="" :labels="$_theme->getWebsiteChart()['labels']"
+                                            :data="$_theme->getWebsiteChart()['data']"></x-chartjs.base>--}}
                                     </div>
                                 </div>
                             </div>
