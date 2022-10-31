@@ -72,7 +72,7 @@
                                     <div class="card-body text-center">
                                         {{-- <x-chartjs.base chartid="chart_2" type="pie1" title="" :labels="['url', 'users', 'string']"
                                             :data="[123, 5423, 21323]"></x-chartjs.base> --}}
-                                        <x-graph url="/api/intellinet/websitemonitorchart" type="doughnut" id="graph02">
+                                        <x-graph url="/api/intellinet/graph02" type="doughnut" id="graph02">
                                         </x-graph>
                                     </div>
                                 </div>
@@ -87,8 +87,8 @@
                             <div class="card-wrapper card-space">
                                 <div class="card card-bg">
                                     <div class="card-body text-center">
-                                        <x-chartjs.base chartid="chart_3" type="bar2" title="Rilevamento Corrispondenze"
-                                            :labels="[65, 59, 80, 81, 56, 55, 40]" :data="[65, 59, 80, 81, 56, 55, 40]"></x-chartjs.base>
+                                        <h5>Corrispondenze Keywords</h5>
+                                        <x-graph url="/api/intellinet/graph03" type="bar" id="graph03"></x-graph>
                                     </div>
                                 </div>
                             </div>
@@ -107,19 +107,19 @@
                                                 <th>Entry Point</th>
                                             </tr>
                                             <tr>
-                                                <td>a</td>
-                                                <td>b</td>
-                                                <td>c</td>
+                                                <td>10/02/2022</td>
+                                                <td class="bg-danger">Critical</td>
+                                                <td>http://uno.it</td>
                                             </tr>
                                             <tr>
-                                                <td>a</td>
-                                                <td>b</td>
-                                                <td>c</td>
+                                                <td>12/02/2022</td>
+                                                <td class="bg-warning">Medium</td>
+                                                <td>http://due.it</td>
                                             </tr>
                                             <tr>
-                                                <td>a</td>
-                                                <td>b</td>
-                                                <td>c</td>
+                                                <td>14/02/2022</td>
+                                                <td class="bg-success">Low</td>
+                                                <td>http://tre.it</td>
                                             </tr>
                                         </table>
                                         </p>

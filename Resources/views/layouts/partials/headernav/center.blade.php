@@ -1,21 +1,22 @@
 <div class="it-header-center-wrapper">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="it-header-center-content-wrapper">
-          <div class="it-brand-wrapper">
-            <a href="#" title="Vai alla homepage" aria-label="Home {{config('metatag.title','Titolo')}}">
-              {{--<svg class="icon" aria-hidden="true">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="it-header-center-content-wrapper">
+                    <div class="it-brand-wrapper">
+                        <a href="#" title="Vai alla homepage"
+                            aria-label="Home {{ config('metatag.title', 'Titolo') }}">
+                            {{-- <svg class="icon" aria-hidden="true">
                 <use href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-pa"></use>
-              </svg>--}}
-              <img src="{{config('metatag.logo_img','#')}}">
-              <div class="it-brand-text">
-                <div class="it-brand-title">{{config('metatag.title','Titolo')}}</div>
-              </div>
-            </a>
-          </div>
-          <div class="it-right-zone">
-            {{-- Temporaneamente disabilitato. Fare settaggio
+              </svg> --}}
+                            <img src="{{ Theme::asset(config('metatag.logo_img', '#')) }}" style="height:10vh">
+                            <div class="it-brand-text">
+                                <div class="it-brand-title">{{-- config('metatag.title', 'Titolo') --}}</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="it-right-zone">
+                        {{-- Temporaneamente disabilitato. Fare settaggio
             <div class="it-socials d-none d-lg-flex">
               <span>Seguici su</span>
               <ul>
@@ -70,10 +71,10 @@
                   <use href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-search"></use>
                 </svg>
               </button>
-            </div>--}}
-          </div>
+            </div> --}}
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
