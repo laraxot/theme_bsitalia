@@ -52,7 +52,7 @@
                                           <ul class="dropdown-menu">
                                               @foreach ($subitems as $subitem)
                                                   <li><a class="dropdown-item"
-                                                          href="#">{{ $subitem->label }}</a></li>
+                                                          href="{{$subitem->link}}">{{ $subitem->label }}</a></li>
                                               @endforeach
                                           </ul>
                                       </li>
