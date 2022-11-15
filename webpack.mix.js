@@ -8,11 +8,10 @@ require('laravel-mix-polyfill');
 var public_path = 'Resources/dist';
 
 mix.js('Resources/js/app.js', 'js');
-
 mix.sass('Resources/scss/app.scss', 'css');
 //mix.sass('Resources/scss/bootstrap-italia-custom.scss', 'css');
 
-//mix.vue({ version: 3 });
+mix.vue({ version: 3 });
 
 //mix.setResourceRoot('../');
 mix.setPublicPath(public_path);
