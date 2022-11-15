@@ -47,6 +47,7 @@
 					{{-->partials/button/button label="Filtra" label-class="t-primary title-xsmall-semi-bold ms-1"
 					iconBtn="it-funnel" class="p-0 pe-2 d-lg-none" xs=true
 					modalId="modal-categories"--}}
+					{{--  
 					<x-partials.button.button>
 						<x-slot name="label">Filtra</x-slot>
 						<x-slot name="label_class">t-primary title-xsmall-semi-bold ms-1</x-slot>
@@ -56,6 +57,7 @@
 						<x-slot name="modalId">modal-categories</x-slot>
 						<x-slot name="class_icon"></x-slot>
           			</x-partials.button.button>
+					--}}
 
 
 					{{-->partials/button/button label="Rimuovi tutti i filtri" label-class="title-xsmall-semi-bold ms-1"
