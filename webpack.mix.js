@@ -34,7 +34,11 @@ mix.webpackConfig({
 
 });
 
-//*/
+mix.babelConfig({
+    //presets: ["@babel/preset-env"],
+    plugins: ['@babel/plugin-syntax-dynamic-import'],
+});
+
 mix.polyfill({
     enabled: true,
     useBuiltIns: "usage",
