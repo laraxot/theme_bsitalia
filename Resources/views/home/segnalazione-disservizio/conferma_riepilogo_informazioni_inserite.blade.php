@@ -49,8 +49,8 @@
                         margin_class="mb-4">
                         <x-slot name="title">Disservizio</x-slot>
 
-                        <x-info.rows type="summary" :rows="$_theme->getDisservizioInfoList()" class="p-3 p-lg-4" info=true header_class="pb-2">
-                        </x-info.rows>
+                        {{-- <x-info.rows type="summary" :rows="$_theme->getDisservizioInfoList()" class="p-3 p-lg-4" info=true header_class="pb-2">
+                        </x-info.rows> --}}
 
 
                         {{-- <x-info-summary class="p-3 p-lg-4" header-class="pb-2" info=true info-list=disservizio-info.list>
