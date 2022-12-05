@@ -56,17 +56,9 @@
                         </div>
                     </div>
 
-                    <x-button type="advanced">
+                    <x-button type="advanced" class="mobile-full" :primary="true">
                         <x-slot name="label">Avanti</x-slot>
-                        <x-slot name="primary">true</x-slot>
-                        <x-slot name="class">mobile-full</x-slot>
                     </x-button>
-
-
-                    {{-- <x-button type="advanced" label="Avanti" class="mobile-full" primary="true">
-                    </x-button> --}}
-
-
                 </div>
             </div>
         </div>

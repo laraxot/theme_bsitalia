@@ -32,9 +32,9 @@
                     <div class="steppers-content" aria-live="polite">
                         <div class="it-page-sections-container">
                             <section class="it-page-section" id="report-place">
-                                <x-card type="content_box">
-                                    <x-slot name="class">p-big p-lg-4</x-slot>
-                                    <x-slot name="bg_grey">true</x-slot>
+                                <x-card type="content_box" class="p-big p-lg-4" :bg_grey="true">
+                                    {{-- <x-slot name="class">p-big p-lg-4</x-slot> --}}
+                                    {{-- <x-slot name="bg_grey">true</x-slot> --}}
                                     <x-slot name="h2_class">mb-1</x-slot>
                                     <x-slot name="header_m0">true</x-slot>
                                     <x-slot name="card_title">Luogo</x-slot>
@@ -55,12 +55,16 @@
                                     <x-slot name="card_title">Disservizio</x-slot>
                                     <x-slot name="margin_class">mb-40</x-slot>
 
-                                    <x-input type="select" name="category_id" placeholder="Tipo di disservizio*"
+                                    {{-- <x-input type="select" name="category_id" placeholder="Tipo di disservizio*"
                                         class="p-md-3 p-lg-4 pb-lg-0" label="Tipo di disservizio*" label_hidden=true
                                         id="inefficiency" selectClass="u-grey-dark" :options="$_theme->readJson('select-option-list.serv-1-disservizio.list')"
                                     >
                                         select-option-list=serv-1-disservizio.list
-                                    </x-input.select>
+                                    </x-input> --}}
+
+                                    <x-input.group type="select" name="category" id="category" :options="$_theme->getTicketCategories()->pluck('name','name')->all()"
+                                        class="p-big p-lg-4" label="Tipo di disservizio">
+                                    </x-input.group> 
 
                                     <div class="text-area-wrapper p-3 px-lg-4 pt-lg-5 pb-lg-0 bg-white">
                                         <x-input type="text" class="mb-0" placeholder="titolo" name="title">
