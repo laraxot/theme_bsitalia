@@ -106,8 +106,8 @@
                     <div class="tab-pane" id="data-ex-tab3" role="tabpanel">
                         <div class="row">
                             <div class="d-none d-sm-none d-lg-block col-lg-3">
-                                <x-nav type="scroll" accordion-title="INDICE DELLA PAGINA" id="Three"
-                                    link-list=segnalazione-disservizio.area-personale.navscroll.page-3></x-nav>
+                                <x-nav.rows type="scroll" :rows="$_theme->getSegnalazioneDisservizioAreaPersonaleNavscrollPage3()" id="Three" label="INDICE DELLA PAGINA">
+                                </x-nav.rows>
                             </div>
 
                             <div class="col-12 col-lg-8 offset-lg-1 px-0 px-sm-3">
@@ -121,7 +121,7 @@
                                     {{-- <x-accordion accordion=segnalazione-disservizio.area-personale.accordion.pratiche>
                                     </x-accordion> --}}
 
-                                    <x-accordion.rows :rows="collect([])"></x-accordion.rows>
+                                    <x-accordion.rows :rows="$_theme->getSegnalazioneDisservizioAreaPersonaleAccordionPratiche()"></x-accordion.rows>
 
                                     <x-button label="Vedi altre pratiche"
                                         class="accordion-view-more mb-2 pt-3 t-primary
@@ -139,8 +139,8 @@
 
                                     {{-- <x-accordion accordion=segnalazione-disservizio.area-personale.accordion.pagamenti>
                                     </x-accordion> --}}
-
-                                    <x-accordion.rows :rows="collect([])"></x-accordion.rows>
+                                    
+                                    <x-accordion.rows :rows="$_theme->getSegnalazioneDisservizioAreaPersonaleAccordionPagamenti()"></x-accordion.rows>
 
                                     {{-- {{>cmp-accordion/cmp-accordion
                 accordion=segnalazione-disservizio.area-personale.accordion.pratiche

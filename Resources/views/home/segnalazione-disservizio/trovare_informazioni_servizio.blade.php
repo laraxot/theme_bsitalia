@@ -155,12 +155,12 @@
                                 <div class="col-12 mb-30">
                                     <span class="text-paragraph-small">Argomenti:</span>
                                     <div class="d-flex flex-wrap gap-2 mt-10 mb-30">
-                                        <x-icon type="tag" label-tag="Gestione rifiuti" class="t-primary bg-tag">
+                                        <x-icon type="tag" label="Gestione rifiuti" class="t-primary bg-tag">
                                         </x-icon>
-                                        <x-icon type="tag" label-tag="Igiene pubblica" class="t-primary bg-tag">
+                                        <x-icon type="tag" label="Igiene pubblica" class="t-primary bg-tag">
                                         </x-icon>
-                                        <x-icon type="tag" label-tag="Spazi verdi" class="t-primary bg-tag"></x-icon>
-                                        <x-icon type="tag" label-tag="Inquinamento" class="t-primary bg-tag">
+                                        <x-icon type="tag" label="Spazi verdi" class="t-primary bg-tag"></x-icon>
+                                        <x-icon type="tag" label="Inquinamento" class="t-primary bg-tag">
                                         </x-icon>
                                     </div>
                                     <p class="text-paragraph-small mb-0">Pagina aggiornata il 14/04/2022</p>
