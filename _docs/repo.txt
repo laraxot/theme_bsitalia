@@ -1,0 +1,3 @@
+git remote set-url --push --add origin https://github.com/laraxot/theme_bsitalia.git
+git remote set-url --push --add origin https://github.com/cadat85/theme_bsitalia.git
+  
