@@ -1,11 +1,9 @@
 @extends('pub_theme::layouts.plane')
 @section('body')
-    @include('theme::includes.flash')
+    <x-flash-message />
     @if (isset($headernav) && $headernav == 'off')
     @else
-
         @include('pub_theme::layouts.partials.headernav')
-
     @endif
     <div id="app">
         @yield('content')
