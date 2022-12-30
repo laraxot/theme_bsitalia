@@ -1,4 +1,4 @@
-@extends('theme::errors.illustrated-layout')
+@extends('ui::errors.illustrated-layout')
 
 @section('title', __('Server Error'))
 @section('code', '500')
