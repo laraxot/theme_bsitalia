@@ -4,10 +4,8 @@ declare(strict_types=1);
 
 use italia\DesignLaravelTheme\Events\BuildingMenu;
 
-class BootstrapItaliaTest extends TestCase
-{
-    public function testHeaderMenu()
-    {
+class BootstrapItaliaTest extends TestCase {
+    public function testHeaderMenu() {
         $bootstrapItalia = $this->makeBootstrapItalia();
 
         $this->getDispatcher()->listen(
@@ -21,8 +19,7 @@ class BootstrapItaliaTest extends TestCase
         $this->assertEquals('Home', $menu['header-menu'][0]['text']);
     }
 
-    public function testSlimHeaderMenu()
-    {
+    public function testSlimHeaderMenu() {
         $bootstrapItalia = $this->makeBootstrapItalia();
 
         $this->getDispatcher()->listen(
@@ -36,8 +33,7 @@ class BootstrapItaliaTest extends TestCase
         $this->assertEquals('Home', $menu['slim-header-menu'][0]['text']);
     }
 
-    public function testFooterMenu()
-    {
+    public function testFooterMenu() {
         $bootstrapItalia = $this->makeBootstrapItalia();
 
         $this->getDispatcher()->listen(
@@ -51,8 +47,7 @@ class BootstrapItaliaTest extends TestCase
         $this->assertEquals('Home', $menu['footer-menu'][0]['text']);
     }
 
-    public function testFooterBarMenu()
-    {
+    public function testFooterBarMenu() {
         $bootstrapItalia = $this->makeBootstrapItalia();
 
         $this->getDispatcher()->listen(
