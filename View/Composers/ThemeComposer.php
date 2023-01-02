@@ -42,14 +42,6 @@ class ThemeComposer extends XotBaseComposer {
         $view->with('_theme', $this);
     }
 
-    public function restaurantsJson() {
-        $json_path = (__DIR__.'/../../Resources/json/restaurants-geojson.json');
-        $json_path = FileService::fixPath($json_path);
-        $json = File::get($json_path);
-        $json = json_decode($json);
-
-        return $json->features;
-    }
 
     public function videoResults() {
         $q = 'renzi';
