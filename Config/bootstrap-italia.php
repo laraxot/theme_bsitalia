@@ -328,8 +328,8 @@ return [
     */
 
     'filters' => [
-        //italia\DesignLaravelTheme\Menu\Filters\HrefFilter::class,
-        //italia\DesignLaravelTheme\Menu\Filters\ActiveFilter::class,
-        //italia\DesignLaravelTheme\Menu\Filters\GateFilter::class,
+        // italia\DesignLaravelTheme\Menu\Filters\HrefFilter::class,
+        // italia\DesignLaravelTheme\Menu\Filters\ActiveFilter::class,
+        // italia\DesignLaravelTheme\Menu\Filters\GateFilter::class,
     ],
 ];
