@@ -5,4 +5,5 @@
 @section('message')
  __('Not Found')
  {!! $message !!}
+ {{ dddx(debug_backtrace()) }}
  @endsection
