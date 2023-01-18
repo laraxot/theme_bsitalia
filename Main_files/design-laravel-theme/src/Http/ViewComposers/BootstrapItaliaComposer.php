@@ -7,7 +7,8 @@ namespace italia\DesignLaravelTheme\Http\ViewComposers;
 use Illuminate\View\View;
 use italia\DesignLaravelTheme\BootstrapItalia;
 
-class BootstrapItaliaComposer {
+class BootstrapItaliaComposer
+{
     /**
      * @var BootstrapItalia
      */
@@ -24,7 +25,8 @@ class BootstrapItaliaComposer {
      *
      * @return void
      */
-    public function compose(View $view) {
+    public function compose(View $view)
+    {
         $view->with('bootstrapItalia', $this->bootstrapItalia);
     }
 }
