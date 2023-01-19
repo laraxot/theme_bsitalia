@@ -4,10 +4,8 @@ declare(strict_types=1);
 
 use Illuminate\Routing\Route;
 
-class BuilderTest extends TestCase
-{
-    public function testAddOneItem()
-    {
+class BuilderTest extends TestCase {
+    public function testAddOneItem() {
         $builder = $this->makeMenuBuilder();
 
         $builder->add_header(['text' => 'Home', 'url' => '/']);
@@ -16,8 +14,7 @@ class BuilderTest extends TestCase
         $this->assertEquals('/', $builder->header_menu[0]['url']);
     }
 
-    public function testAddMultipleItems()
-    {
+    public function testAddMultipleItems() {
         $builder = $this->makeMenuBuilder();
 
         $builder->add_header(['text' => 'Home', 'url' => '/']);
@@ -29,8 +26,7 @@ class BuilderTest extends TestCase
         $this->assertEquals('/about', $builder->header_menu[1]['url']);
     }
 
-    public function testAddMultipleItemsAtOnce()
-    {
+    public function testAddMultipleItemsAtOnce() {
         $builder = $this->makeMenuBuilder();
 
         $builder->add_header(
@@ -44,8 +40,7 @@ class BuilderTest extends TestCase
         $this->assertEquals('/about', $builder->header_menu[1]['url']);
     }
 
-    public function testHrefWillBeAdded()
-    {
+    public function testHrefWillBeAdded() {
         $builder = $this->makeMenuBuilder();
 
         $builder->add_header(['text' => 'Home', 'url' => '/']);
@@ -58,8 +53,7 @@ class BuilderTest extends TestCase
         );
     }
 
-    public function testDefaultHref()
-    {
+    public function testDefaultHref() {
         $builder = $this->makeMenuBuilder();
 
         $builder->add_header(['text' => 'Home']);
@@ -67,8 +61,7 @@ class BuilderTest extends TestCase
         $this->assertEquals('#', $builder->header_menu[0]['href']);
     }
 
-    public function testRouteHref()
-    {
+    public function testRouteHref() {
         $builder = $this->makeMenuBuilder();
         $this->getRouteCollection()->add(new Route('GET', 'about', ['as' => 'pages.about']));
 
@@ -77,8 +70,7 @@ class BuilderTest extends TestCase
         $this->assertEquals('http://example.com/about', $builder->header_menu[0]['href']);
     }
 
-    public function testSubmenuActiveWithHash()
-    {
+    public function testSubmenuActiveWithHash() {
         $builder = $this->makeMenuBuilder('http://example.com/home');
 
         $builder->add_header(
@@ -93,8 +85,7 @@ class BuilderTest extends TestCase
         $this->assertTrue($builder->header_menu[0]['active']);
     }
 
-    public function testCan()
-    {
+    public function testCan() {
         $gate = $this->makeGate();
         $gate->define(
             'show-about',
@@ -128,8 +119,7 @@ class BuilderTest extends TestCase
         $this->assertEquals('About', $builder->header_menu[0]['text']);
     }
 
-    public function testCanHeaders()
-    {
+    public function testCanHeaders() {
         $gate = $this->makeGate();
         $gate->define(
             'show-header',

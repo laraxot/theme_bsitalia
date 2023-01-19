@@ -17,14 +17,12 @@ use italia\DesignLaravelTheme\Menu\Filters\GateFilter;
 use italia\DesignLaravelTheme\Menu\Filters\HrefFilter;
 use Symfony\Component\HttpFoundation\Request as SymfonyRequest;
 
-class TestCase extends PHPUnit_Framework_TestCase
-{
+class TestCase extends PHPUnit_Framework_TestCase {
     private $dispatcher;
 
     private $routeCollection;
 
-    protected function makeMenuBuilder($uri = 'http://example.com', GateContract $gate = null)
-    {
+    protected function makeMenuBuilder($uri = 'http://example.com', GateContract $gate = null) {
         return new Builder([
             new HrefFilter($this->makeUrlGenerator($uri)),
             new ActiveFilter($this->makeActiveChecker($uri)),
@@ -32,28 +30,23 @@ class TestCase extends PHPUnit_Framework_TestCase
         ]);
     }
 
-    protected function makeActiveChecker($uri = 'http://example.com')
-    {
+    protected function makeActiveChecker($uri = 'http://example.com') {
         return new ActiveChecker($this->makeRequest($uri), $this->makeUrlGenerator($uri));
     }
 
-    private function makeRequest($uri)
-    {
+    private function makeRequest($uri) {
         return Request::createFromBase(SymfonyRequest::create($uri));
     }
 
-    protected function makeBootstrapItalia()
-    {
+    protected function makeBootstrapItalia() {
         return new BootstrapItalia($this->getFilters(), $this->getDispatcher(), $this->makeContainer());
     }
 
-    protected function makeUrlGenerator($uri = 'http://example.com')
-    {
+    protected function makeUrlGenerator($uri = 'http://example.com') {
         return new UrlGenerator($this->getRouteCollection(), $this->makeRequest($uri));
     }
 
-    protected function makeGate()
-    {
+    protected function makeGate() {
         $userResolver = function () {
             return new GenericUser([]);
         };
@@ -61,13 +54,11 @@ class TestCase extends PHPUnit_Framework_TestCase
         return new Gate($this->makeContainer(), $userResolver);
     }
 
-    protected function makeContainer()
-    {
+    protected function makeContainer() {
         return new Illuminate\Container\Container();
     }
 
-    protected function getDispatcher()
-    {
+    protected function getDispatcher() {
         if (! $this->dispatcher) {
             $this->dispatcher = new Dispatcher();
         }
@@ -75,13 +66,11 @@ class TestCase extends PHPUnit_Framework_TestCase
         return $this->dispatcher;
     }
 
-    private function getFilters()
-    {
+    private function getFilters() {
         return [];
     }
 
-    protected function getRouteCollection()
-    {
+    protected function getRouteCollection() {
         if (! $this->routeCollection) {
             $this->routeCollection = new RouteCollection();
         }
