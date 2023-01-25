@@ -4,7 +4,8 @@ declare(strict_types=1);
 
 namespace italia\DesignLaravelTheme\Menu;
 
-class Builder {
+class Builder
+{
     public $menu = [];
     public $slim_header_menu = [];
     public $header_menu = [];
@@ -16,43 +17,50 @@ class Builder {
      */
     private $filters;
 
-    public function __construct(array $filters = []) {
+    public function __construct(array $filters = [])
+    {
         $this->filters = $filters;
     }
 
-    public function add_slim_header() {
+    public function add_slim_header()
+    {
         $items = $this->transformItems(func_get_args());
         foreach ($items as $item) {
             array_push($this->slim_header_menu, $item);
         }
     }
 
-    public function add_header() {
+    public function add_header()
+    {
         $items = $this->transformItems(func_get_args());
         foreach ($items as $item) {
             array_push($this->header_menu, $item);
         }
     }
 
-    public function add_footer() {
+    public function add_footer()
+    {
         $items = $this->transformItems(func_get_args());
         foreach ($items as $item) {
             array_push($this->footer_menu, $item);
         }
     }
 
-    public function add_footer_bar() {
+    public function add_footer_bar()
+    {
         $items = $this->transformItems(func_get_args());
         foreach ($items as $item) {
             array_push($this->footer_bar, $item);
         }
     }
 
-    public function transformItems($items) {
+    public function transformItems($items)
+    {
         return array_filter(array_map([$this, 'applyFilters'], $items));
     }
 
-    protected function applyFilters($item) {
+    protected function applyFilters($item)
+    {
         if (is_string($item)) {
             return $item;
         }

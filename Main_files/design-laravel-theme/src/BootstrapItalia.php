@@ -9,7 +9,8 @@ use Illuminate\Contracts\Events\Dispatcher;
 use italia\DesignLaravelTheme\Events\BuildingMenu;
 use italia\DesignLaravelTheme\Menu\Builder;
 
-class BootstrapItalia {
+class BootstrapItalia
+{
     protected $menu;
 
     protected $filters;
@@ -28,7 +29,8 @@ class BootstrapItalia {
         $this->container = $container;
     }
 
-    public function menu() {
+    public function menu()
+    {
         if (! $this->menu) {
             $this->menu = $this->buildMenu();
         }
@@ -36,7 +38,8 @@ class BootstrapItalia {
         return $this->menu;
     }
 
-    protected function buildMenu() {
+    protected function buildMenu()
+    {
         $builder = new Builder($this->buildFilters());
 
         if (method_exists($this->events, 'dispatch')) {
@@ -53,7 +56,8 @@ class BootstrapItalia {
         ];
     }
 
-    protected function buildFilters() {
+    protected function buildFilters()
+    {
         return array_map([$this->container, 'make'], $this->filters);
     }
 }
