@@ -15,7 +15,7 @@
         </div>
     </div>
 </div>
-{{--  
+{{--
 <section class="hero-img mb-20 mb-lg-50">
 	<section class="it-hero-wrapper it-hero-small-size cmp-hero-img-small">
 		<div class="img-responsive-wrapper">
@@ -40,13 +40,13 @@
                 @endphp
                 <div class="col-lg-6 col-xl-4">
                     <!--start card-->
-                    <x-card-simple tpl="v2">
+                    <x-card tpl="v2">
                         <x-slot name="img_src">../assets/images/eventi-estate.png</x-slot>
                         <x-slot name="title">aaaa</x-slot>
                         <x-slot name="txt">Una iniziativa di invito alla lettura nel parco della Vittoria, dove
                             verrà presentato il concorso “vivere il comune”</x-slot>
                         <x-slot name="url">#</x-slot>
-                    </x-card-simple>
+                        </x-card-simple>
                 </div>
             @endforeach
             <div class="d-flex justify-content-end">

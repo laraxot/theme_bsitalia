@@ -15,7 +15,7 @@
         </div>
     </div>
 </div>
-{{--  
+{{--
 <section class="hero-img mb-20 mb-lg-50">
 	<section class="it-hero-wrapper it-hero-small-size cmp-hero-img-small">
 		<div class="img-responsive-wrapper">
@@ -33,7 +33,7 @@
         <div class="row g-4">
             <div class="col-lg-6 col-xl-4">
                 <!--start card-->
-                <x-card-simple tpl="v2">
+                <x-card tpl="v2">
                     <x-slot name="img_src">../assets/images/eventi-estate.png</x-slot>
                     <x-slot name="title">Un&#x27;estate indimenticabile!!</x-slot>
                     <x-slot name="txt">Una iniziativa di invito alla lettura nel parco della Vittoria, dove verrà
@@ -42,11 +42,11 @@
                     <x-slot name="calendar">26 Agosto 19:00</x-slot>
                     <x-slot name="category">Categoria</x-slot>
                     <x-slot name="url_category">#</x-slot>
-                </x-card-simple>
+                    </x-card-simple>
             </div>
             <div class="col-lg-6 col-xl-4">
                 <!--start card-->
-                <x-card-simple tpl="v2">
+                <x-card tpl="v2">
                     <x-slot name="img_src">../assets/images/eventi-estate.png</x-slot>
                     <x-slot name="title">Un&#x27;estate indimenticabile!!</x-slot>
                     <x-slot name="txt">Una iniziativa di invito alla lettura nel parco della Vittoria, dove verrà
@@ -56,7 +56,7 @@
                     <x-slot name="category">Categoria</x-slot>
                     <x-slot name="url_category">#</x-slot>
                     <x-slot name="date">18 MAG 2018</x-slot>
-                </x-card-simple>
+                    </x-card-simple>
             </div>
             <!--end card-->
             <div class="d-flex justify-content-end">
@@ -72,7 +72,7 @@
     <div class="row g-4">
         <div class="col-lg-6 col-xl-4">
             <!--start card-->
-            <x-card-simple tpl="v2">
+            <x-card tpl="v2">
                 <x-slot name="img_src">../assets/images/eventi-estate.png</x-slot>
                 <x-slot name="title">Un&#x27;estate indimenticabile!!</x-slot>
                 <x-slot name="txt">Una iniziativa di invito alla lettura nel parco della Vittoria, dove verrà
@@ -81,7 +81,7 @@
                 <x-slot name="category">Categoria</x-slot>
                 <x-slot name="url_category">#</x-slot>
                 <x-slot name="date">15 Ottobre 2022</x-slot>
-            </x-card-simple>
+                </x-card-simple>
         </div>
 
         <!--end card-->
