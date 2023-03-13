@@ -14,14 +14,6 @@
             <x-input.group label="Password" type="password" name="password" col_size="12" id="id_password"
                 autocomplete="current-password"></x-input.group>
 
-            {{--
-            <x-input.group type="checkbox" name="remember" id="id_remember" />
-
-            <div class="form-check">
-                <input type="checkbox" name="remember" wire:model.lazy="form_data.remember" id="id_remember1" />
-                <label for="id_remember1">pub_theme::txt.remember.label</label>
-            </div>
-            --}}
             <div class="form-check">
                 <input id="id_remember" name="remember" type="checkbox">
                 <label for="id_remember">Ricordami</label>
