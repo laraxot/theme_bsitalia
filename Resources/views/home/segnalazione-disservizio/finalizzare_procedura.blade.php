@@ -6,7 +6,7 @@
                 <div class="col-12 col-lg-10">
                     <x-breadcrumb.rows :rows="$_theme->getLinksBreadcrumbs()">
                     </x-breadcrumb.rows>
-                    <x-heading type="heading">
+                    <x-std tpl="heading">
                         <x-slot name="heading-p0">true</x-slot>
                         <x-slot name="title">Segnalazione inviata</x-slot>
                         <x-slot name="iconTitle">it-check-circle</x-slot>
@@ -25,7 +25,7 @@
                         <x-slot name="outline-primary">true</x-slot>
                         <x-slot name="iconBtn">it-download</x-slot>
                         <x-slot name="sm">true</x-slot>
-                    </x-heading>
+                    </x-std>
                     <p class="mt-3">
                         <a href="#" class="t-primary text-paragraph">Consulta la richiesta</a>
                         <span class="text-paragraph"> nella tua area riservata</span>
@@ -36,8 +36,8 @@
             <div class="row justify-content-center mb-3 mb-md-5">
 
                 <div class="col-12 col-lg-10">
-                    <x-lists.icon :rows="$_theme->getServiziCorrelatiDisservizio()" 
-                        titleClass="mb-lg-4" 
+                    <x-lists.icon :rows="$_theme->getServiziCorrelatiDisservizio()"
+                        titleClass="mb-lg-4"
                         title="Servizi correlati"
                         id_title="related-service"
                         >

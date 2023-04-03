@@ -13,7 +13,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-10">
-                    <x-heading type="detail">
+                    <x-std tpl="heading.detail">
                         <x-slot name="title">Segnalazione disservizio</x-slot>
                         <x-slot name="subTitle">Un servizio aperto a tutti i cittadini per segnalare disservizi, guasti e criticità rilevati sul territorio comunale.</x-slot>
                         <x-slot name="pClass">mb-3</x-slot>
@@ -23,7 +23,7 @@
                         <x-slot name="class">text-button</x-slot>
                         <x-slot name="label_tag_up">Servizio attivo</x-slot>
                         <x-slot name="servizio_attivo">true</x-slot>
-                    </x-heading>
+                    </x-std>
                 </div>
                 <hr class="d-none d-lg-block mb-0 mt-2">
             </div>

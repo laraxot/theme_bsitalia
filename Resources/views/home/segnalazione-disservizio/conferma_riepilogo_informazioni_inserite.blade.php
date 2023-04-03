@@ -8,8 +8,8 @@
                     <x-breadcrumb.rows :rows="$_theme->getLinksBreadcrumbs()">
                     </x-breadcrumb.rows>
 
-                    <x-heading type="heading" title="Segnalazione disservizio">
-                    </x-heading>
+                    <x-std tpl="heading" title="Segnalazione disservizio">
+                    </x-std>
                 </div>
 
                 <div class="col-12">

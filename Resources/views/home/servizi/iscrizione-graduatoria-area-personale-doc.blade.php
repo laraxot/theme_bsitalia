@@ -1,12 +1,12 @@
 {{-- #>base/base title="Area personale - Nome del Comune" logged=true --}}
 @extends('pub_theme::base.base', ['title' => 'Area personale - Nome del Comune', 'logged' => 'true'])
-@section('content') 
+@section('content')
 <main>
     <div class="container" id="main-container">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-10">
                 <x-breadcrumbs link2="Home" link3="Documenti"></x-breadcrumbs>
-                <x-heading title="Graduatoria scuola dell'infanzia per l'anno educativo 2022/23"></x-heading>
+                <x-std tpl="heading" title="Graduatoria scuola dell'infanzia per l'anno educativo 2022/23"></x-std>
             </div>
             <hr class="d-none d-lg-block mb-2">
         </div>

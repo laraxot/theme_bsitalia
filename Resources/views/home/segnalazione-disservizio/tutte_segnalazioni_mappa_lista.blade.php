@@ -6,11 +6,11 @@
                 <div class="col-12 col-lg-10">
                     <x-breadcrumb.rows :rows="collect([])">
                     </x-breadcrumb.rows>
-                    <x-heading type="heading">
+                    <x-std tpl="heading">
                         <x-slot name="title">Elenco segnalazioni</x-slot>
                         <x-slot name="subTitle">Negli ultimi 12 mesi sono state risolte 73 segnalazioni.</x-slot>
                         <x-slot name="heading-p0">true</x-slot>
-                    </x-heading>
+                    </x-std>
                 </div>
                 <hr class="d-none d-lg-block mt-30 mb-2">
             </div>

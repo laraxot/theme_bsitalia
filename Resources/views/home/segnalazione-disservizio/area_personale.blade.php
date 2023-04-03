@@ -10,10 +10,10 @@
                     <x-breadcrumb.rows :rows="$_theme->getLinksBreadcrumbs2()">
                     </x-breadcrumb.rows>
 
-                    <x-heading type="heading">
+                    <x-std tpl="heading">
                         <x-slot name="title">Giulia Rossi</x-slot>
                         <x-slot name="subTitle">CF: GLARSS72H25H501Y</x-slot>
-                    </x-heading>
+                    </x-std>
                 </div>
                 <div class="col-12 p-0">
                     <x-nav type="tab"></x-nav>
@@ -139,7 +139,7 @@
 
                                     {{-- <x-accordion accordion=segnalazione-disservizio.area-personale.accordion.pagamenti>
                                     </x-accordion> --}}
-                                    
+
                                     <x-accordion.rows :rows="$_theme->getSegnalazioneDisservizioAreaPersonaleAccordionPagamenti()"></x-accordion.rows>
 
                                     {{-- {{>cmp-accordion/cmp-accordion

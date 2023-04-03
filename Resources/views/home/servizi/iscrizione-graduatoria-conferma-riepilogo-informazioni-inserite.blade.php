@@ -1,14 +1,14 @@
 @extends('pub_theme::base.base', ['title' => 'Iscrizione alla Scuola dell’infanzia - Nome del Comune', 'headerActive3' => 'true'])
-@section('content') 
+@section('content')
 <main>
     <div class="container" id="main-container">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-10">
                 <x-breadcrumbs /cmp-breadcrumbs link1="Home" link2="Servizi" link3="Iscrizioni"></x-breadcrumbs>
-                <x-heading title="Iscrizione alla scuola dell'infanzia"
+                <x-std tpl="heading" title="Iscrizione alla scuola dell'infanzia"
                     description="Hai bisogno di assistenza?
         <a href='#' class='title-small-semi-bold t-primary'>Contattaci</a>">
-                </x-heading>
+                </x-std>
             </div>
 
             <div class="col-12">

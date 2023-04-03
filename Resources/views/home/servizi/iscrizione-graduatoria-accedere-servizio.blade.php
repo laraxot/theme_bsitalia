@@ -1,13 +1,13 @@
 {{-- #>base/base title="Accesso area riservata - Nome del Comune" --}}
 @extends('pub_theme::base.base', ['title' => 'Accesso area riservata - Nome del Comune'])
-@section('content') 
+@section('content')
 <main>
     <div class="container" id="main-container">
         <div class="row">
             <div class="col-12 col-lg-10 offset-lg-1">
                 <x-breadcrumbs link2="Home" link3="Accesso"></x-breadcrumbs>
-                <x-heading title="Accedi"
-                    subTitle="Per accedere al sito e ai suoi servizi, utilizza una delle seguenti modalità."></x-heading>
+                <x-std tpl="heading" title="Accedi"
+                    subTitle="Per accedere al sito e ai suoi servizi, utilizza una delle seguenti modalità."></x-std>
             </div>
         </div>
         <hr class="d-none d-lg-block mt-0 mb-4">

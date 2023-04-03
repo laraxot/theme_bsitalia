@@ -1,12 +1,12 @@
 {{-- #>base/base title="Area personale - Nome del Comune" logged=true --}}
 @extends('pub_theme::base.base', ['title' => 'Area personale - Nome del Comune', 'logged' => 'true'])
-@section('content') 
+@section('content')
 <main>
     <div class="container" id="main-container">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-10">
                 <x-breadcrumbs link2="Home" link3="Area personale"></x-breadcrumbs>
-                <x-heading title="Giulia Bianchi" subTitle="CF: GLABNC72H25H501Y" class="pb-2"></x-heading>
+                <x-std tpl="heading" title="Giulia Bianchi" subTitle="CF: GLABNC72H25H501Y" class="pb-2"></x-std>
             </div>
             <div class="col-12 p-0">
                 <x-nav-tab step-list=step-list.tab-area-personale-1></x-nav-tab>

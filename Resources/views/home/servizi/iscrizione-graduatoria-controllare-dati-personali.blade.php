@@ -6,11 +6,11 @@
                 <div class="col-12 col-lg-10">
                     <x-breadcrumbs link1="Home" link2="Servizi" link3="Iscrizioni"></x-breadcrumbs>
 
-                    <x-heading title="Iscrizione alla scuola dell'infanzia"
+                    <x-std tpl="heading" title="Iscrizione alla scuola dell'infanzia"
                         subTitle="Inserisci le informazioni necessarie per richiedere l’iscrizione alla Scuola dell’infanzia. <br>
         Potrai ricontrollare tutti i dati nel riepilogo, prima di inviare la richiesta."
                         description="Hai bisogno di assistenza? <a class='title-small-semi-bold t-primary' href='#'>Contattaci</a>"
-                        desClass="mt-lg-2 mb-4"></x-heading>
+                        desClass="mt-lg-2 mb-4"></x-std>
                 </div>
                 <div class="col-12">
                     <x-info-progress step-list=iscrizione-graduatoria.info-progress.step-2 step-num="2"

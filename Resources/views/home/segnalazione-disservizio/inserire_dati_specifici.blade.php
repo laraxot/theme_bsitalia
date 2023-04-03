@@ -6,9 +6,9 @@
                 <div class="col-12 col-lg-10">
                     <x-breadcrumb.rows :rows="$_theme->getLinksBreadcrumbs()">
                     </x-breadcrumb.rows>
-                    <x-heading type="heading">
+                    <x-std tpl="heading">
                         <x-slot name="title">Segnalazione disservizio</x-slot>
-                    </x-heading>
+                    </x-std>
                 </div>
                 <div class="col-12">
                     <x-info.rows type="progress" :rows="$_theme->getDisservizioStep2()">
@@ -64,7 +64,7 @@
 
                                     <x-input.group type="select" name="category" id="category" :options="$_theme->getTicketCategories()->pluck('name','name')->all()"
                                         class="p-big p-lg-4" label="Tipo di disservizio">
-                                    </x-input.group> 
+                                    </x-input.group>
 
                                     <div class="text-area-wrapper p-3 px-lg-4 pt-lg-5 pb-lg-0 bg-white">
                                         <x-input type="text" class="mb-0" placeholder="titolo" name="title">

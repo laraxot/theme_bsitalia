@@ -14,13 +14,13 @@
 				link2="Home"
 				link3="Elenco segnalazioni"
 				--}}
-				<x-heading>
+				<x-std tpl="heading">
 					<x-slot name="title">Elenco segnalazioni</x-slot>
 					<x-slot name="subTitle">Negli ultimi 12 mesi sono state risolte 73 segnalazioni.</x-slot>
 					<x-slot name="heading_p0">true</x-slot>
 					<x-slot name="iconTitle"></x-slot>
 					<x-slot name="iconClass"></x-slot>
-				</x-heading>
+				</x-std>
 				{{--> cmp-heading/cmp-heading
 				title="Elenco segnalazioni"
 				subTitle="Negli ultimi 12 mesi sono state risolte 73 segnalazioni."
@@ -47,7 +47,7 @@
 					{{-->partials/button/button label="Filtra" label-class="t-primary title-xsmall-semi-bold ms-1"
 					iconBtn="it-funnel" class="p-0 pe-2 d-lg-none" xs=true
 					modalId="modal-categories"--}}
-					{{--  
+					{{--
 					<x-partials.button.button>
 						<x-slot name="label">Filtra</x-slot>
 						<x-slot name="label_class">t-primary title-xsmall-semi-bold ms-1</x-slot>
@@ -81,8 +81,8 @@
 
 				@php
 				/*
-				
-				
+
+
 				<div class="tab-content">
 					<div class="tab-pane fade show active" id="data-ex-disservizio1" role="tabpanel">
 						<div class="row">
@@ -135,7 +135,7 @@
 							{{/cmp-card/cmp-card-content-box}}
 						</div>
 						<div class="col-12 text-center">
-							{{>partials/button/button label="Carica altre segnalazioni" 
+							{{>partials/button/button label="Carica altre segnalazioni"
 							class="btn btn-outline-primary mobile-full py-3 mt-10 mx-auto"}}
 						</div>
 						<div class="col-lg-6 mt-50 mb-4 mb-lg-0">
@@ -152,7 +152,7 @@
 				</div>
 				*/
 				@endphp
-			
+
 			</div>
 		</div>
 	</div>
@@ -174,7 +174,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	{{-->cmp-modal/modal-clickMap--}}
 
 </main>
