@@ -370,7 +370,8 @@ A more practical example that actually uses the database:
     {
         $events->listen(BuildingMenu::class, function (BuildingMenu $event) {            
 
-            $items = Page::all()->map(function (Page $page) {
+            $items = Page::all()->map(
+function (Page $page) {
                 return [
                     'text' => $page['title'],
                     'url' => route('admin.pages.edit', $page)
