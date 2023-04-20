@@ -1,15 +1,22 @@
-<?php
-
-declare(strict_types=1);
-
-return [
-    'title' => [
-        'placeholder' => 'Titolo',
-    ],
-    'email' => [
-        'placeholder' => 'Email',
-    ],
-    'password' => [
-        'placeholder' => 'Password',
-    ],
-];
+<?php return array (
+  'title' => 
+  array (
+    'placeholder' => 'Titolo',
+  ),
+  'email' => 
+  array (
+    'placeholder' => 'Email',
+  ),
+  'password' => 
+  array (
+    'placeholder' => 'Password',
+  ),
+  'date_start' => 
+  array (
+    'label' => 'Data Inizio',
+  ),
+  'date_end' => 
+  array (
+    'label' => 'Data Fine',
+  ),
+);
