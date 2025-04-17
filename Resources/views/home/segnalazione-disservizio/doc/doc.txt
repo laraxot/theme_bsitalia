@@ -1,0 +1,7 @@
+sono partito da questo link
+
+https://github.com/italia/design-comuni-pagine-statiche/tree/main/src/pages/servizi
+
+e ho preso tutte le pagine che iniziano per segnalazione-disservizio
+
+poi ho controllato che esistessero i componenti e li ho inclusi nelle pagine
